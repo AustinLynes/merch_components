@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
-import { faTimes } from '@fortawesome/fontawesome-svg-core'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 const Item = (props) => {
     // GSAP 
     const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, ...rest } = props
