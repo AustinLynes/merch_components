@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const CAROSEL = styled.div`
         flex-grow:1;
@@ -15,7 +16,7 @@ export const IMAGE = styled.img`
     object-fit:contain ;
 `
 
-export const BUTTON = styled.i`
+export const BUTTON = styled(FontAwesomeIcon)`
         position:absolute;
         top:50%;
         ${props=> props.right ? `right: 20px;` : `left: 20px;`}

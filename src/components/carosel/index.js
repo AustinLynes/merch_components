@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { CAROSEL, IMAGE, BUTTON } from './Style'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 
