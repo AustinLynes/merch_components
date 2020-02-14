@@ -6,7 +6,6 @@ all you have to do is pass in your data shape to an Component like Item and it w
 also you can pass in callbacks to toggle the state of the actual card. 
 
 ```js
-
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -28,29 +27,63 @@ function App() {
 }
 
 export default App;
-
 ```
-        note im going to update the updateItem->updateItemCallback and the deleteItem->deleteItemCallback on vers++
-        sidenote.. need to fix spelling on Carousel on vers++
+**Container**
+*** 
+ Default Container will be able to be dragged once implemented on fronted
 
 **Header**
----
+***
 
-
-**Item**  
----
-    ```{ id, onSale, itemName, itemCost, imageSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem }```
+**Item**
+***  
+  ```json
+  { 
+    "id" : 0,
+    "itemName": "Item",
+    "itemCost": 0.00,
+    "imageSrc": "src/to/item-image",
+    "saleCost": 0.00,
+    "onSale":   false,
+    "toggleOnSale": "()=>{}",
+    "submitCallback",
+    "updateItem", 
+    "deleteItem"
+  }
+   ```
      
-**Navigation** 
---- 
- ```{ *buttons* }```
+**Navigation**
+*** 
+```json
+{ "buttons": "[]" }
  ```
-    where buttons is an array of button objects with { id, name, url }
-```
+ where buttons is an array of button objects with { id, name, url }
 **Carosel**
---- 
-    { images }
-        where images is an array of images.. will cycle    
-Container -> Default Container will be able to be dragged once implemented on fronted
-Image { src, size } 
-  size[medium, small, null] will result in 3 different sized images aspect ratio scaled accordingly
+***
+```json
+  { 
+    "images": "[]" 
+  }
+```
+  where images is an array of images.. will cycle    
+
+
+**Image** 
+```json
+{
+   "size": "[medium, small, none]",
+   "src": "src to image", 
+}
+``` 
+will result in 3 different sized images aspect ratio scaled accordingly
+
+***
+**--/UPDATE LOG/-->**
+| Notes                              | completed |
+|------------------------------------|-----------|
+| updateItem->updateItemCallback     | [NO]      |
+| toggleOnSale->toggleOnSaleCallback | [NO]      |
+| deleteItem->deleteItemCallback     | [NO]      |
+| spelling on Carousel on vers++     | [NO]      |
+
+***
