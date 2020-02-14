@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { CAROSEL, IMAGE, BUTTON } from './Style'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+
 
 const Carosel = (props) => {
     const { images, ...rest } = props
@@ -11,13 +14,13 @@ const Carosel = (props) => {
     }
     const decrement = () => {
         var i = index;
-        index <= 0 ? setIndex(images.length - 1) : setIndex(i-=1)
+        index <= 0 ? setIndex(images.length - 1) : setIndex(i -= 1)
     }
     return (
         <CAROSEL>
-            <BUTTON className='fas fa-angle-left' onClick={decrement} />
+            <FontAwesomeIcon icon={faAngleLeft} onClick={decrement} />
             {images.map((image, i) => (i === index && <IMAGE src={image} />))}
-            <BUTTON right className='fas fa-angle-right' onClick={increment} />
+            <FontAwesomeIcon right icon={faAngleRight} onClick={increment} />
         </CAROSEL>
     )
 }
