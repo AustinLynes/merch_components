@@ -8,6 +8,7 @@ display:flex;
 position:relative;
 margin:0 10px;
 max-width:50%;
+height: 225px;
 max-height:${props => props.scale ? `${225 * props.scale}px`:'225px'};
 flex-flow:row wrap;
 border-radius:10px;
