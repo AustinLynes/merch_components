@@ -1,4 +1,5 @@
 import React from 'react'
+import {IMAGE}from './style'
 
 const Image = (props) => {
 
