@@ -18,7 +18,7 @@ box-shadow: 5px 5px 8px rgba(127,127,127,.3),
 `
 
 export const Image = styled.img`
-max-width:50%;
+max-width:70%;
 max-height:${props => props.scale ? `${300 * props.scale}px`:'300px'};
 object-fit:contain;
 margin:0 auto;
