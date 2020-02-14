@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export const Item_ = styled.div`
@@ -77,7 +78,7 @@ color: black;
 text-align:center;
 border:none;
 `
-export const CloseButton = styled.i`
+export const CloseButton = styled(FontAwesomeIcon)`
 position:absolute;
 top: 5px;
 right:5px;

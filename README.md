@@ -30,3 +30,24 @@ function App() {
 export default App;
 
 ```
+        note im going to update the updateItem->updateItemCallback and the deleteItem->deleteItemCallback on vers++
+        sidenote.. need to fix spelling on Carousel on vers++
+
+
+**Item**  
+---
+    ```{ id, onSale, itemName, itemCost, imageSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem }```
+     
+**Navigation** 
+--- 
+ ```{ *buttons* }```
+ ```
+    where buttons is an array of button objects with { id, name, url }
+```
+**Carosel**
+--- 
+    { images }
+        where images is an array of images.. will cycle    
+Container -> Default Container will be able to be dragged once implemented on fronted
+Image { src, size } 
+  size[medium, small, null] will result in 3 different sized images aspect ratio scaled accordingly

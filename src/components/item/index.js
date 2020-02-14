@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
-
+import { faTimes } from '@fortawesome/fontawesome-svg-core'
 const Item = (props) => {
     // GSAP 
-    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem, ...rest } = props
+    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, ...rest } = props
 
-    const [payload, setPayload] = useState({id,itemName, saleCost, itemCost })
+    const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost })
 
     const toggle = (id) => {
         toggleOnSale(id);
@@ -51,7 +51,7 @@ const Item = (props) => {
                 onChange={handleChanges}
                 value={payload.itemName}
             />
-            <CloseButton id={id} className={'fas fa-times'} onClick={_deleteItem} />
+            <CloseButton id={id} icon={faTimes} onClick={_deleteItem} />
         </Item_>
     )
 }
