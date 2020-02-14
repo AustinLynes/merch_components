@@ -1,128 +1,60 @@
-import React from 'react'
-import styled from 'styled-components';
-const Item_ = styled.div`
-      flex-grow:1;
-      display:flex;
-      position:relative;
-      margin:0 10px;
-      max-width:50%;
-      max-height:${props => props.scale ? `${225 * props.scale}px` : '225px'};
-      flex-flow:row wrap;
-      border-radius:10px;
-      padding:4rem 0;
-      box-shadow: 5px 5px 8px rgba(127,127,127,.3), 
-                      -5px -5px 8px rgba(255,255,255,1);
-      `
+import React, { useState, useEffect } from 'react';
+import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 
-const Image = styled.img`
-      max-width:50%;
-      max-height:${props => props.scale ? `${225 * props.scale}px` : '225px'};
-      object-fit:contain;
-      margin:0 auto;
-      `
+const Item = (props) => {
+    // GSAP 
+    const { id, onSale, itemName, itemCost,shirtSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem, ...rest } = props
 
-const ItemName = styled.input`
-      position:absolute;
-      bottom:0;
-      left:0px;
-      padding:5px 5px 0;
-      margin-bottom:2px;
-      margin-left:12px;
-      width:40%;
-      background:transparent;
-      font-size:2.2rem;
-      color: black;
-      -webkit-text-fill-color: white; 
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
-      text-align:center;
-      border:none;
-      border-bottom:2px solid rgba(0,0,0,.2);
-      `
+    const [payload, setPayload] = useState({id,itemName, saleCost, itemCost })
 
-const Cost = styled.input`
-      position:absolute;
-      bottom:0;
-      right:0px;
-      padding:5px;
-      width:120px;
-      background:transparent;
-      font-size:2.2rem;
-      color: black;
-      -webkit-text-fill-color: white; 
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
-      text-align:center;
-      text-decoration-color:darkslategrey;
-      text-decoration: ${props => props.onSale ? "line-through" : "none"};
-      border:none;
-      `
-const SaleCost = styled.input`
-      position:absolute;
-      top:0;
-      left:0px;
-      padding:5px;
-      width:100px;
-      padding:10px;
-      border-radius:10px;
-      box-shadow:2px 4px 5px rgba(0,0,0,.1);
-      background:transparent;
-      background:yellow;
-      font-size:2rem;
-      color: black;
-      -webkit-text-fill-color: white; 
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
-      text-align:center;
-      border:none;
-      `
-const CloseButton = styled.i`
-      position:absolute;
-      top: 5px;
-      right:5px;
-      border-radius:50%;
-      font-size:1.4rem;
-      padding:5px;
-      width:20px;
-      height:20px;
-      text-align:center;
-      border:none;
-      color: black;
-      -webkit-text-fill-color: #595959; 
-      -webkit-text-stroke-width: 0.5px;
-      -webkit-text-stroke-color: white;
-      text-align:center;
-      `
-export const Item =(props)=>{
-    const {state, ...rest} = props
+    //SET->REF
+    console.log('im here boss!');
 
+    const toggle = (id) => {
+        toggleOnSale(id);
+    }
+    //-> SET ANIM 
+    // GSAP so
+    const handleChanges = (e) => {
+        setPayload({ ...payload, [e.target.name]: e.target.value })
+        updateItem(e.target.id, payload);
+    }
+    const _deleteItem = (e) => {
+        deleteItem(e.target.id);
+    }
+
+    // abstract scale to a parent var... then.. apply scale to the carosel 
+    // navigation needs background color.. then customize buttons 
+    // 
+    const scale = 0.5;
     return (
-        <Item_ id={state.item.id}>
-        {/* <Image  id={id} src={shirtSrc} alt='shirt' /> */}
-        <Cost
-          name='itemCost'
-          id={state.item.id + 'ic'}
-          onSale={state.item.onSale}
-          type='number'
-          onChange={handleChanges}
-          value={state.payload.itemCost}
-        />
-        {onSale && (
-          <SaleCost
-            id={state.item.id + 'sc'}
-            type='number'
-            name='saleCost'
-            onChange={handleChanges}
-            value={state.payload.saleCost}
-          />
-        )}
-        <ItemName
-          id={state.item.id + 'in'}
-          name='itemName'
-          onChange={state.item.handleChanges}
-          value={state.payload.itemName}
-        />
-        <CloseButton id={state.item.id} />
-      </Item_>
+        <Item_ scale={scale} id={id} onContextMenu={e => { e.preventDefault(); toggle(e.target.id); }}>
+            <Image scale={scale + 0.2} id={id} src={shirtSrc} alt='shirt' />
+            <Cost
+                name='itemCost'
+                id={id + 'ic'}
+                onSale={onSale}
+                type='number'
+                onChange={handleChanges}
+                value={payload.itemCost}
+            />
+            {onSale && (
+                <SaleCost
+                    id={id + 'sc'}
+                    type='number'
+                    name='saleCost'
+                    onChange={handleChanges}
+                    value={payload.saleCost}
+                />
+            )}
+            <ItemName
+                id={id + 'in'}
+                name='itemName'
+                onChange={handleChanges}
+                value={payload.itemName}
+            />
+            <CloseButton id={id} className={'fas fa-times'} onClick={_deleteItem} />
+        </Item_>
     )
 }
+export default Item

@@ -1,4 +1,4 @@
-import Item from "./components/item.js";
+import Item from "./components/item/";
 
 export {
     Item
