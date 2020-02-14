@@ -8,8 +8,8 @@ display:flex;
 position:relative;
 margin:0 10px;
 max-width:50%;
-max-height:${props => props.scale ? `${375 * props.scale}px`:'375px'};
-height: 375px;
+height: 300px;
+max-height:${props => props.scale ? `${300 * props.scale}px`:'300px'};
 flex-flow:row wrap;
 border-radius:10px;
 padding:4rem 0;
@@ -19,7 +19,7 @@ box-shadow: 5px 5px 8px rgba(127,127,127,.3),
 
 export const Image = styled.img`
 max-width:50%;
-max-height:${props => props.scale ? `${225 * props.scale}px`:'225px'};
+max-height:${props => props.scale ? `${300 * props.scale}px`:'300px'};
 object-fit:contain;
 margin:0 auto;
 `
