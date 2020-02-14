@@ -6,7 +6,7 @@
   "author": "Austin Lynes - Merch OS Labs Team -",
   "scripts": {
     "patch": "npm version patch",
-    "publish": "npm publish",
+    "publish-pkg": "npm publish",
     "build": "webpack --mode production"
   },
   "license": "MIT",
