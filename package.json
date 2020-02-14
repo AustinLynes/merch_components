@@ -1,12 +1,12 @@
 {
   "name": "merch_components",
-  "version": "0.1.39",
+  "version": "0.1.40",
   "description": "default library for merchOS Labs project",
   "main": "./lib/index.js",
   "author": "Austin Lynes - Merch OS Labs Team -",
   "scripts": {
     "patch": "npm version patch",
-    "publish":"npm publish",
+    "publish": "npm publish",
     "build": "webpack --mode production"
   },
   "license": "MIT",
