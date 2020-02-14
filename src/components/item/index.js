@@ -15,6 +15,7 @@ const Item = (props) => {
     const handleChanges = (e) => {
         setPayload({ ...payload, [e.target.name]: e.target.value })
         updateItem(e.target.id, payload);
+        return item;
     }
     const _deleteItem = (e) => {
         deleteItem(e.target.id);
