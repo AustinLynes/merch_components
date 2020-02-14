@@ -17,9 +17,9 @@ const Carosel = (props) => {
     }
     return (
         <CAROSEL>
-            <FontAwesomeIcon icon={faAngleLeft} onClick={decrement} />
+            <BUTTON icon={faAngleLeft} onClick={decrement} />
             {images.map((image, i) => (i === index && <IMAGE src={image} />))}
-            <FontAwesomeIcon right icon={faAngleRight} onClick={increment} />
+            <BUTTON right icon={faAngleRight} onClick={increment} />
         </CAROSEL>
     )
 }
