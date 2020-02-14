@@ -3,12 +3,9 @@ import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 
 const Item = (props) => {
     // GSAP 
-    const { id, onSale, itemName, itemCost,shirtSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem, ...rest } = props
+    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale,saleCost,submitCallback, updateItem, deleteItem, ...rest } = props
 
     const [payload, setPayload] = useState({id,itemName, saleCost, itemCost })
-
-    //SET->REF
-    console.log('im here boss!');
 
     const toggle = (id) => {
         toggleOnSale(id);
@@ -29,7 +26,7 @@ const Item = (props) => {
     const scale = 0.5;
     return (
         <Item_ scale={scale} id={id} onContextMenu={e => { e.preventDefault(); toggle(e.target.id); }}>
-            <Image scale={scale + 0.2} id={id} src={shirtSrc} alt='shirt' />
+            <Image scale={scale + 0.2} id={id} src={imageSrc} alt='shirt' />
             <Cost
                 name='itemCost'
                 id={id + 'ic'}
