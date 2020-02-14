@@ -4,7 +4,7 @@ import Carosel from './components/carosel'
 import Navigation from './components/navigation'
 import Image from './components/image'
 import Button from './components/button'
-
+import ButtonGroup from './components/button-group'
 
 
 export {
@@ -13,5 +13,6 @@ export {
     Carosel,
     Navigation,
     Image,
-    Button
+    Button,
+    ButtonGroup
 };
