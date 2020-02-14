@@ -1,5 +1,5 @@
 import React from 'react'
-import { BUTTONGROUP } from './style'
+import { BUTTONGROUP } from './style.js'
 
 const ButtonGroup = () => {
     return (
