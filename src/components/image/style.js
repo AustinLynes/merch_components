@@ -5,9 +5,9 @@ export const IMAGE = styled.img`
         object-fit:cover;
         max-height:${props => {
         if (props.size === 'small')
-                return '150px;'
+                return '225px;'
         if (props.size === 'medium')
-                return '300px;'
+                return '375px;'
         else return '600px'
 }};
 `

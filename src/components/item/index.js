@@ -3,7 +3,7 @@ import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 const Item = (props) => {
     // GSAP 
-    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, ...rest } = props
+    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem,scale, ...rest } = props
 
     const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost })
 
@@ -24,7 +24,6 @@ const Item = (props) => {
     // abstract scale to a parent var... then.. apply scale to the carosel 
     // navigation needs background color.. then customize buttons 
     // 
-    const scale = 0.5;
     return (
         <Item_ scale={scale} id={id} onContextMenu={e => { e.preventDefault(); toggle(e.target.id); }}>
             <Image scale={scale + 0.2} id={id} src={imageSrc} alt='shirt' />
