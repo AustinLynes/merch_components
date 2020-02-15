@@ -11,7 +11,7 @@ export const SEARCH_BAR = styled.div`
     border:2px solid black;
     border-radius:10px;
 `
-const QUERY = styled.input`
+export const QUERY = styled.input`
     border:none;
     font-size:1.4rem;
 `
