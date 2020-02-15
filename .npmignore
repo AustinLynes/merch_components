@@ -2,4 +2,4 @@ src
 demo
 .bablerc
 webpack.config.js
-src/__mock
+src/demo
