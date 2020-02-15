@@ -8,6 +8,7 @@ export const HEADER = styled.div`
     justify-content:space-between;
     width:100%;
     padding:1rem;
+    max-height:125px;
     background:#333;
 `
 export const TITLE = styled.h2`
@@ -32,7 +33,7 @@ export const QUERY = styled.input`
     font-size:1.4rem;
 `
 export const LOGO = styled.img`
-    width:20%;
+    width:10%;
     object-fit:contain;
 `
 
