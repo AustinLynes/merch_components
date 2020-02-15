@@ -1,18 +1,15 @@
-// Header
 // Logo
-// Title
-// Search Bar
-// Cart Button
 import React from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, TITLE, CART_BUTTON } from './style'
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_BUTTON } from './style'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
-    const { title, ...rest } = props;
+    const { title,logoSrc, ...rest } = props;
 
     return (
         <HEADER>
+            <LOGO src={logoSrc}/>
             <TITLE>{title}</TITLE>
             <SEARCH_BAR>
                 <QUERY />

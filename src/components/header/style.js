@@ -31,6 +31,11 @@ export const QUERY = styled.input`
     border:none;
     font-size:1.4rem;
 `
+export const LOGO = styled.img`
+    width:20%;
+    object-fit:contain;
+`
+
 export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
     color: grey;
     width:5%;
