@@ -8,7 +8,7 @@ export const HEADER = styled.div`
     padding:1rem;
     background:#333;
 `
-export const TITLE = styled.h1`
+export const TITLE = styled.h2`
     width:40%;
     color:white;
     margin:0;
