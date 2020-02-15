@@ -25,7 +25,8 @@ export const SEARCH_BAR = styled.div`
     border-radius:10px;
 `
 export const QUERY = styled.input`
-    width:85%;
+    border-radius:10px;
+    width:80%;
     border:none;
     font-size:1.4rem;
 `
@@ -36,7 +37,7 @@ export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
     font-size:1.4rem;
  `
 
- export const CART_BUTTON = styled(FontAwesomeIcon)`
+export const CART_BUTTON = styled(FontAwesomeIcon)`
     color:dodgerblue;
     font-size:2.3rem;
  `
