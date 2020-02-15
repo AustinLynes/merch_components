@@ -25,6 +25,7 @@ export const SEARCH_BAR = styled.div`
     border-radius:10px;
 `
 export const QUERY = styled.input`
+    padding-left:5px;
     border-radius:10px;
     width:80%;
     border:none;
