@@ -4,9 +4,8 @@
 // Search Bar
 // Cart Button
 import React from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, Title } from './style'
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, TITLE, CART_BUTTON } from './style'
+import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
@@ -14,11 +13,12 @@ const Header = (props) => {
 
     return (
         <HEADER>
-            <Title>{title}</Title>
+            <TITLE>{title}</TITLE>
             <SEARCH_BAR>
                 <QUERY />
                 <SEARCH_BUTTON icon={faSearch} />
             </SEARCH_BAR>
+            <CART_BUTTON icon={faShoppingCart}/>
         </HEADER>
     )
 }

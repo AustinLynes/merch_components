@@ -9,7 +9,7 @@ export const HEADER = styled.div`
     background:#333;
 `
 export const TITLE = styled.h1`
-    width:100%;
+    width:40%;
     color:white;
 `
 export const SEARCH_BAR = styled.div`
@@ -25,4 +25,9 @@ export const QUERY = styled.input`
 export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
     color: grey;
     font-size:1.4rem;
+ `
+
+ export const CART_BUTTON = styled(FontAwesomeIcon)`
+    color:dodgerblue;
+    font-size:3rem;
  `
