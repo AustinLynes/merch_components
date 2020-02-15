@@ -20,8 +20,7 @@ export const SEARCH_BAR = styled.div`
     display:flex;
     flex-flow:row wrap;
     align-items:center;
-    width:20%;
-    padding:5px;
+    width:15%;
     border:1px solid grey;
     border-radius:10px;
 `
