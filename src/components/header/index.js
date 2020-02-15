@@ -6,6 +6,7 @@
 import React from 'react'
 import { HEADER } from './style'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = (props) => {
 
@@ -15,7 +16,10 @@ const Header = (props) => {
     return (
         <HEADER>
             <h2>{title}</h2>
-            <div><input /><faSearch /></div>
+            <div>
+                <input />
+                <FontAwesomeIcon icon={faSearch} />
+            </div>
         </HEADER>
     )
 }
