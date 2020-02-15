@@ -39,5 +39,5 @@ export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
 
  export const CART_BUTTON = styled(FontAwesomeIcon)`
     color:dodgerblue;
-    font-size:5rem;
+    font-size:2.3rem;
  `
