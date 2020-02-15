@@ -15,7 +15,7 @@ export const QUERY = styled.input`
     border:none;
     font-size:1.4rem;
 `
- export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
+export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
     color: grey;
     font-size:1.4rem;
  `
