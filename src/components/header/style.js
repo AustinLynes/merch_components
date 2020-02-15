@@ -11,6 +11,7 @@ export const HEADER = styled.div`
 export const TITLE = styled.h1`
     width:40%;
     color:white;
+    margin:0;
 `
 export const SEARCH_BAR = styled.div`
     background:white;
