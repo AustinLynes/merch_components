@@ -4,7 +4,7 @@
 // Search Bar
 // Cart Button
 import React from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY } from './style'
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, Title } from './style'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -14,7 +14,7 @@ const Header = (props) => {
 
     return (
         <HEADER>
-            <h2>{title}</h2>
+            <Title>{title}</Title>
             <SEARCH_BAR>
                 <QUERY />
                 <SEARCH_BUTTON icon={faSearch} />
