@@ -8,6 +8,8 @@ import Button from './components/button'
 import ButtonGroup from './components/button-group'
 
 
+import Header from './components/header'
+
 export {
     Item,
     Container,
@@ -15,5 +17,6 @@ export {
     Navigation,
     Image,
     Button,
-    ButtonGroup
+    ButtonGroup,
+    Header
 };
