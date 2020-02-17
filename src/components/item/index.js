@@ -3,7 +3,8 @@ import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 const Item = (props) => {
     // GSAP 
-    const { style, id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale, ...rest } = props;
+    const { style, item, ...rest } = props;
+    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale, } = item
     const { wrapperStyle, imageStyle, costStyle, saleCostStyle, nameStyle, closeButtonStyle } = style;
     const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
 
