@@ -1,14 +1,11 @@
-import Item from "./components/item/";
-import Container from './components/container'
-import Carosel from './components/carosel'
-import Navigation from './components/navigation'
-import Image from './components/image'
-
-import Button from './components/button'
-import ButtonGroup from './components/button-group'
-
-
-import Header from './components/header'
+import Item from "./components/item/";// [ X ] isDynamic
+import Container from './components/container'// [ NO ] isDynamic   CONTAINER IS A STATIC CONTAINER PLEASE OVERWITE with styled(Continer)
+import Carosel from './components/carosel'// [ X ] isDynamic
+import Navigation from './components/navigation'// [ X ] isDynamic
+import Image from './components/image'// [ NO ] isDynamic IMAGE IS A STATIC ITEM, PLEASE OVERRIDE WITH styled(Image)
+import Button from './components/button'  // [ X ] isDynamic
+import ButtonGroup from './components/button-group' // [ NO ] isDynamic BUTTON GROUP TAKES IN ALL INTERCHANGEABLE ATTRS
+import Header from './components/header' //[ X ] isDynamic
 
 export {
     Item,

@@ -7,6 +7,7 @@ const Header = (props) => {
 
     const { style, title, logoSrc, ...rest } = props;
     const { _header, _logo, _title, _searchBar, _query, _searchIcon, _cartIcon } = style
+   
     return (
         <HEADER style={_header}>
             <LOGO style={_logo} src={logoSrc} />

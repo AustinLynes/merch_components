@@ -3,9 +3,9 @@ import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 const Item = (props) => {
     // GSAP 
-    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem,scale, ...rest } = props
-
-    const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost })
+    const { style, id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale, ...rest } = props;
+    const { wrapperStyle, imageStyle, costStyle, saleCostStyle, nameStyle, closeButtonStyle } = style;
+    const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
 
     const toggle = (id) => {
         toggleOnSale(id);
@@ -13,7 +13,7 @@ const Item = (props) => {
     //-> SET ANIM 
     // GSAP so
     const handleChanges = (e) => {
-        setPayload({ ...payload, [e.target.name]: e.target.value })
+        setPayload({ ...payload, [e.target.name]: e.target.value });
         updateItem(e.target.id, payload);
         return item;
     }
@@ -25,10 +25,24 @@ const Item = (props) => {
     // navigation needs background color.. then customize buttons 
     // 
     return (
-        <Item_ scale={scale} id={id} onContextMenu={e => { e.preventDefault(); toggle(e.target.id); }}>
-            <Image scale={scale + 0.2} id={id} src={imageSrc} alt='shirt' />
+        <Item_
+            style={wrapperStyle}
+            scale={scale}
+            id={id}
+            onContextMenu={e => {
+                e.preventDefault();
+                toggle(e.target.id);
+            }}>
+            <Image
+                id={id}
+                style={imageStyle}
+                scale={scale + 0.2}
+                alt='shirt'
+                src={imageSrc}
+            />
             <Cost
                 name='itemCost'
+                style={costStyle}
                 id={id + 'ic'}
                 onSale={onSale}
                 type='number'
@@ -38,6 +52,7 @@ const Item = (props) => {
             {onSale && (
                 <SaleCost
                     id={id + 'sc'}
+                    style={saleCostStyle}
                     type='number'
                     name='saleCost'
                     onChange={handleChanges}
@@ -48,10 +63,11 @@ const Item = (props) => {
                 id={id + 'in'}
                 name='itemName'
                 onChange={handleChanges}
+                style={nameStyle}
                 value={payload.itemName}
             />
-            <CloseButton id={id} icon={faTimes} onClick={_deleteItem} />
+            <CloseButton style={closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
         </Item_>
     )
 }
-export default Item
+export default Item;

@@ -5,4 +5,16 @@ export const BUTTON = styled.button`
     border:none;
     width:20%;
     border-radius:10px;
+    ${props => {
+        if (props.style) {
+            return `
+                padding:${props.style.padding};
+                border:${props.style.border};
+                width:${props.style.width}
+                border-radius:${props.style.borderRadius};
+            `
+        }
+
+    }}
+
 `

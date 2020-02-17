@@ -15,7 +15,7 @@ export const HEADER = styled.div`
             return `
             box-sizing:border-box;
             display:${props.style.display};
-            flex-flow:row wrap;
+            flex-flow:${props.style.flexDirection} wrap;
             justify-content:${props.style.justifyContent};
             width:${props.style.width};
             padding:${props.style.padding};

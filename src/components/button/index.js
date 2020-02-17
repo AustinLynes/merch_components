@@ -1,9 +1,9 @@
 import React from 'react'
 import { BUTTON } from './style.js'
 const Button = (props) => {
-    const { name, onClickCallback, ...rest } = props
+    const { style, name, onClickCallback, ...rest } = props
 
-    return <BUTTON name={name} onClick={onClickCallback}>{name}</BUTTON>
+    return <BUTTON style={style} name={name} onClick={onClickCallback}>{name}</BUTTON>
 }
 
 export default Button
