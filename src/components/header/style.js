@@ -6,13 +6,13 @@ export const HEADER = styled.div`
         if (props.style) {
             return `
             box-sizing:border-box;
-            display:${props.header.display};
+            display:${props._header.display};
             flex-flow:row wrap;
-            justify-content:${props.header.justifyContent};
-            width:${props.header.width};
-            padding:${props.header.padding};
-            max-height:${props.header.maxHeight};
-            background:${props.header.background};
+            justify-content:${props._header.justifyContent};
+            width:${props._header.width};
+            padding:${props._header.padding};
+            max-height:${props._header.maxHeight};
+            background:${props._header.background};
                 `
         } else {
             return `
@@ -33,7 +33,7 @@ export const LOGO = styled.img`
 ${props => {
         if (props.style) {
             return `
-            width:${props.logo.width};
+            width:${props._logo.width};
             object-fit:contain;
                 `
         } else {
@@ -49,9 +49,9 @@ export const TITLE = styled.h2`
 ${props => {
         if (props.style) {
             return `
-            width:${props.title.width};
-            color:${props.title.color};
-            margin:${props.title.margin};
+            width:${props._title.width};
+            color:${props._title.color};
+            margin:${props._title.margin};
                 `
         } else {
             return `
@@ -67,13 +67,13 @@ export const SEARCH_BAR = styled.div`
 ${props => {
         if (props.style) {
             return `
-            background:${props.searchBar.background};
-            display:${props.searchBar.display};
-            flex-flow:${props.searchBar.flexDirection} wrap;
-            align-items:${props.searchBar.alignItems};
-            width:${props.searchBar.width};
-            border:${props.searchBar.border};
-            border-radius:${props.searchBar.borderRadius};
+            background:${props._searchBar.background};
+            display:${props._searchBar.display};
+            flex-flow:${props._searchBar.flexDirection} wrap;
+            align-items:${props._searchBar.alignItems};
+            width:${props._searchBar.width};
+            border:${props._searchBar.border};
+            border-radius:${props._searchBar.borderRadius};
                 `
         } else {
             return `
@@ -93,11 +93,11 @@ export const QUERY = styled.input`
 ${props => {
         if (props.style) {
             return `
-            padding:${props.query.padding};
-            border:${props.query.border};
-            border-radius:${props.query.bordeRadius};
-            width:${props.query.width};
-            font-size:${props.query.fontSize};
+            padding:${props._query.padding};
+            border:${props._query.border};
+            border-radius:${props._query.bordeRadius};
+            width:${props._query.width};
+            font-size:${props._query.fontSize};
                 `
         } else {
             return `
@@ -116,10 +116,10 @@ export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
 ${props => {
         if (props.style) {
             return `
-            color: ${props.searchIcon.color};
-            width: ${props.searchIcon.width};
-            padding:${props.searchIcon.padding};
-            font-size:${props.searchIcon.fontSize};
+            color: ${props._searchIcon.color};
+            width: ${props._searchIcon.width};
+            padding:${props._searchIcon.padding};
+            font-size:${props._searchIcon.fontSize};
                 `
         } else {
             return `
@@ -137,8 +137,8 @@ export const CART_BUTTON = styled(FontAwesomeIcon)`
 ${props => {
         if (props.style) {
             return `
-            color:${props.cartIcon.color};
-            font-size:${props.cartIcon.fontSize};
+            color:${props._cartIcon.color};
+            font-size:${props._cartIcon.fontSize};
                 `
         } else {
             return `

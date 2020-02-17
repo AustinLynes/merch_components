@@ -6,15 +6,7 @@ import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 const Header = (props) => {
 
     const { style, title, logoSrc, ...rest } = props;
-    const {
-        header: _header,
-        logo: _logo,
-        title: _title,
-        searchBar: _searchBar,
-        query: _query,
-        searchIcon: _searchIcon,
-        cartIcon: _cartIcon
-    } = style
+    const { _header, _logo, _title, _searchBar, _query, _searchIcon, _cartIcon } = style
     return (
         <HEADER style={_header}>
             <LOGO style={_logo} src={logoSrc} />
