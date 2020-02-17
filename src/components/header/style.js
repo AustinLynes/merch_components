@@ -2,6 +2,14 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const HEADER = styled.div`
+    box-sizing:border-box;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    width:100%;
+    padding:1rem;
+    max-height:125px;
+    background:#333;
     ${props => {
         if (props.style) {
             return `
@@ -14,17 +22,6 @@ export const HEADER = styled.div`
             max-height:${props.style.maxHeight};
             background:${props.style.background};
                 `
-        } else {
-            return `
-            box-sizing:border-box;
-            display:flex;
-            flex-flow:row wrap;
-            justify-content:space-between;
-            width:100%;
-            padding:1rem;
-            max-height:125px;
-            background:#333;
-            `
         }
     }}
    
