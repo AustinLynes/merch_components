@@ -26,7 +26,7 @@ const Item = (props) => {
     // 
     return (
         <Item_
-            style={wrapperStyle}
+            style={style && wrapperStyle}
             scale={scale}
             id={id}
             onContextMenu={e => {
@@ -42,7 +42,7 @@ const Item = (props) => {
             />
             <Cost
                 name='itemCost'
-                style={costStyle}
+                style={style && costStyle}
                 id={id + 'ic'}
                 onSale={onSale}
                 type='number'
@@ -52,7 +52,7 @@ const Item = (props) => {
             {onSale && (
                 <SaleCost
                     id={id + 'sc'}
-                    style={saleCostStyle}
+                    style={style && saleCostStyle}
                     type='number'
                     name='saleCost'
                     onChange={handleChanges}
@@ -63,10 +63,10 @@ const Item = (props) => {
                 id={id + 'in'}
                 name='itemName'
                 onChange={handleChanges}
-                style={nameStyle}
+                style={style && nameStyle}
                 value={payload.itemName}
             />
-            <CloseButton style={closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
+            <CloseButton style={style && closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
         </Item_>
     )
 }
