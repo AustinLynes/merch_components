@@ -27,22 +27,22 @@ export const HEADER = styled.div`
    
 `
 export const LOGO = styled.img`
+width:10%;
+object-fit:contain;
 ${props => {
         if (props.style) {
             return `
             width:${props.style.width};
             object-fit:contain;
                 `
-        } else {
-            return `
-            width:10%;
-            object-fit:contain;
-            `
         }
     }}
  
 `
 export const TITLE = styled.h2`
+width:20%;
+color:white;
+margin:0;
 ${props => {
         if (props.style) {
             return `
@@ -50,17 +50,18 @@ ${props => {
             color:${props.style.color};
             margin:${props.style.margin};
                 `
-        } else {
-            return `
-            width:20%;
-            color:white;
-            margin:0;
-            `
         }
     }}
    
 `
 export const SEARCH_BAR = styled.div`
+background:white;
+display:flex;
+flex-flow:row wrap;
+align-items:center;
+width:15%;
+border:1px solid grey;
+border-radius:10px;
 ${props => {
         if (props.style) {
             return `
@@ -72,21 +73,16 @@ ${props => {
             border:${props.style.border};
             border-radius:${props.style.borderRadius};
                 `
-        } else {
-            return `
-            background:white;
-            display:flex;
-            flex-flow:row wrap;
-            align-items:center;
-            width:15%;
-            border:1px solid grey;
-            border-radius:10px;
-            `
         }
     }}
 
 `
 export const QUERY = styled.input`
+padding-left:5px;
+border-radius:10px;
+width:80%;
+border:none;
+font-size:1.4rem;
 ${props => {
         if (props.style) {
             return `
@@ -96,20 +92,16 @@ ${props => {
             width:${props.style.width};
             font-size:${props.style.fontSize};
                 `
-        } else {
-            return `
-            padding-left:5px;
-            border-radius:10px;
-            width:80%;
-            border:none;
-            font-size:1.4rem;
-            `
         }
     }}
   
 `
 
 export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
+color: grey;
+width:5%;
+padding:10px;
+font-size:1.4rem;
 ${props => {
         if (props.style) {
             return `
@@ -118,30 +110,20 @@ ${props => {
             padding:${props.style.padding};
             font-size:${props.style.fontSize};
                 `
-        } else {
-            return `
-            color: grey;
-            width:5%;
-            padding:10px;
-             font-size:1.4rem;
-            `
         }
     }}
    
  `
 
 export const CART_BUTTON = styled(FontAwesomeIcon)`
+color:dodgerblue;
+font-size:2.3rem;
 ${props => {
         if (props.style) {
             return `
             color:${props.style.color};
             font-size:${props.style.fontSize};
                 `
-        } else {
-            return `
-            color:dodgerblue;
-            font-size:2.3rem;
-            `
         }
     }}
    
