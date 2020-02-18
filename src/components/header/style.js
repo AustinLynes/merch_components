@@ -39,16 +39,21 @@ ${props => {
     }}
  
 `
-export const TITLE = styled.h2`
+export const TITLE = styled.input`
 width:20%;
 color:white;
 margin:0;
+background:transparent;
+border:none;
+border-bottom:1px solid white;
 ${props => {
         if (props.style) {
             return `
             width:${props.style.width};
             color:${props.style.color};
+            background:${props.style.background};
             margin:${props.style.margin};
+            border:${props.style.border};
                 `
         }
     }}
