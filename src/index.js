@@ -8,7 +8,7 @@ import ButtonGroup from './components/button-group' // [ NO ] isDynamic BUTTON G
 import Header from './components/header' // [ X ] isDynamic
 import Footer from './components/footer'// [ X ] isDynamic
 import TextBanner from './components/text-banner'
-
+import LinkBar from './components/link-bar'
 export {
     Item,
     Container,
@@ -19,5 +19,6 @@ export {
     ButtonGroup,
     Header,
     Footer,
-    TextBanner
+    TextBanner,
+    LinkBar
 };
