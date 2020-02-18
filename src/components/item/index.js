@@ -36,7 +36,7 @@ const Item = (props) => {
             }}>
             <Image
                 id={id}
-                style={imageStyle}
+                style={style && style.imageStyle}
                 scale={scale + 0.2}
                 alt='shirt'
                 src={imageSrc}
