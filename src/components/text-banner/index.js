@@ -5,7 +5,7 @@ const TextBanner = (props) => {
     const { messege, ...rest } = props
     return (
         <BANNER>
-            <MESSEGE placeholder={`${messege}`} />
+            <MESSEGE>{messege}</MESSEGE>
         </BANNER>
     )
 }

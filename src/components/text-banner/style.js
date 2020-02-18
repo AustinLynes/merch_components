@@ -15,7 +15,7 @@ ${props=>{
 }}
 `
 
-export const MESSEGE = styled.input`
+export const MESSEGE = styled.h2`
 width:100%;
 color:black;
 border:none;
