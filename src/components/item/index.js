@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import styled from 'styled-components';
 const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
     const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale, } = item
-    const { wrapperStyle, imageStyle, costStyle, saleCostStyle, nameStyle, closeButtonStyle } = style;
     const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
 
     const toggle = (id) => {
@@ -27,7 +27,7 @@ const Item = (props) => {
     // 
     return (
         <Item_
-            style={style && wrapperStyle}
+            style={style && style.wrapperStyle}
             scale={scale}
             id={id}
             onContextMenu={e => {
@@ -43,7 +43,7 @@ const Item = (props) => {
             />
             <Cost
                 name='itemCost'
-                style={style && costStyle}
+                style={style && style.costStyle}
                 id={id + 'ic'}
                 onSale={onSale}
                 type='number'
@@ -53,7 +53,7 @@ const Item = (props) => {
             {onSale && (
                 <SaleCost
                     id={id + 'sc'}
-                    style={style && saleCostStyle}
+                    style={style && style.saleCostStyle}
                     type='number'
                     name='saleCost'
                     onChange={handleChanges}
@@ -64,10 +64,10 @@ const Item = (props) => {
                 id={id + 'in'}
                 name='itemName'
                 onChange={handleChanges}
-                style={style && nameStyle}
+                style={style && style.nameStyle}
                 value={payload.itemName}
             />
-            <CloseButton style={style && closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
+            <CloseButton style={style && style.closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
         </Item_>
     )
 }
