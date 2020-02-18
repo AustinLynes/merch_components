@@ -5,7 +5,8 @@ import Navigation from './components/navigation'// [ X ] isDynamic
 import Image from './components/image'// [ NO ] isDynamic IMAGE IS A STATIC ITEM, PLEASE OVERRIDE WITH styled(Image)
 import Button from './components/button'  // [ X ] isDynamic
 import ButtonGroup from './components/button-group' // [ NO ] isDynamic BUTTON GROUP TAKES IN ALL INTERCHANGEABLE ATTRS
-import Header from './components/header' //[ X ] isDynamic
+import Header from './components/header' // [ X ] isDynamic
+import Footer from './components/footer'// [ X ] isDynamic
 
 export {
     Item,
@@ -15,5 +16,6 @@ export {
     Image,
     Button,
     ButtonGroup,
-    Header
+    Header,
+    Footer
 };

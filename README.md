@@ -30,11 +30,32 @@ export default App;
 ```
 **Container**
 *** 
- Default Container will be able to be dragged once implemented on fronted
+```js
+{...}
+import{ Container }from 'merch_components';
+
+const Component = () => {
+  {...}
+  return (
+    <Container>{..wraps most components}</Container>
+  )
+}
+```
+
 
 **Header**
 ***
+```js
+{...}
+import{Header}from 'merch_components';
 
+const Component = () => {
+  {...}
+  return (
+    <Header title='title of store' logoSrc='url-or-path/to/src' style={...anyOverridingStyles}/>
+  )
+}
+```
 **Item**
 ***  
   ```json
@@ -51,13 +72,47 @@ export default App;
     "deleteItem"
   }
    ```
-     
+    ^^^ the object structure for the item itself
+    vvv how to use an Item 
+```js
+import {Container, Item}from 'merch_components';
+
+const Component = ()=>{
+  
+  const [data, setData] = ({...^})
+  const style = {
+    ...someStyles
+    }
+  
+  
+  return (
+    <Container>
+      <Item item={data} style={style}/>
+    </Container>
+  )
+}
+```
 **Navigation**
 *** 
 ```json
 { "buttons": "[]" }
  ```
- where buttons is an array of button objects with { id, name, url }
+ 
+ ```js
+{...}
+import{Navigation}from 'merch_components';
+
+const Component = () => {
+  {...}  
+  return (
+    <Navigation buttons={[buttons1, button2]} style={...anyOverridingStyles}/>
+  )
+}
+```
+
+
+### where buttons is an array of button objects with { id, name, url }
+
 **Carosel**
 ***
 ```json
@@ -65,7 +120,7 @@ export default App;
     "images": "[]" 
   }
 ```
-  where images is an array of images.. will cycle    
+### where images is an array of images.. will cycle    
 
 
 **Image** 
@@ -75,8 +130,58 @@ export default App;
    "src": "src to image", 
 }
 ``` 
-will result in 3 different sized images aspect ratio scaled accordingly
+### will result in 3 different sized images aspect ratio scaled accordingly
 
+**Button** 
+*** 
+```js
+{...}
+import{Button, ButtonGroup}from 'merch_components';
+
+const Component = () => {
+  {...}
+  return (
+    <ButtonGroup>
+    {...}
+       <Button name='name-of-button' onClickCallback={()=>{...}} />
+    </ButtonGroup>
+  )
+}
+```
+
+**ButtonGroup**
+***
+```js
+{...}
+import{Button, ButtonGroup}from 'merch_components';
+
+const Component = () => {
+  {...}
+  return (
+    <ButtonGroup>
+    {...}
+    <Button />
+    </ButtonGroup>
+  )
+}
+```
+
+**Footer**
+***
+```json
+{ "buttons": "[]" }
+ ```
+ ```js
+{...}
+import{ Footer }from 'merch_components';
+
+const Component = () => {
+  {...}  
+  return (
+    <Footer buttons={[buttons1, button2]} style={...anyOverridingStyles}/>
+  )
+}
+```
 ***
 **--/UPDATE LOG/-->**
 | Notes                              | completed |
