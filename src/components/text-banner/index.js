@@ -1,11 +1,11 @@
 import React from 'react';
-import { BANNER, MESSEGE } from './style';
+import { BANNER, MESSAGE } from './style';
 
 const TextBanner = (props) => {
-    const { messege, ...rest } = props
+    const { message, ...rest } = props
     return (
         <BANNER>
-            <MESSEGE>{messege}</MESSEGE>
+            <MESSAGE>{message}</MESSAGE>
         </BANNER>
     )
 }

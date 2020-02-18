@@ -15,7 +15,7 @@ ${props=>{
 }}
 `
 
-export const MESSEGE = styled.h2`
+export const MESSAGE = styled.h2`
 width:100%;
 color:black;
 border:none;
