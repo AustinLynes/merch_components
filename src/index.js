@@ -7,6 +7,7 @@ import Button from './components/button'  // [ X ] isDynamic
 import ButtonGroup from './components/button-group' // [ NO ] isDynamic BUTTON GROUP TAKES IN ALL INTERCHANGEABLE ATTRS
 import Header from './components/header' // [ X ] isDynamic
 import Footer from './components/footer'// [ X ] isDynamic
+import TextBanner from './components/text-banner'
 
 export {
     Item,
@@ -17,5 +18,6 @@ export {
     Button,
     ButtonGroup,
     Header,
-    Footer
+    Footer,
+    TextBanner
 };
