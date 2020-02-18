@@ -10,7 +10,7 @@ const Header = (props) => {
     return (
         <HEADER style={style && style.headerStyle}>
             <LOGO style={style && style.logoStyle} src={logoSrc} />
-            <TITLE style={style && style.titleStyle}>{title}</TITLE>
+            <TITLE style={style && style.titleStyle} placeholder={title}/>
             <SEARCH_BAR style={style && style.searchBarStyle}>
                 <QUERY style={style && style.queryStyle} />
                 <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} />
