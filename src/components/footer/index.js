@@ -7,7 +7,7 @@ export const Navigation = (props) => {
     return (
         <FOOTER>
             {
-                buttons && buttons.map(button => (<BUTTON key={button.id} >{button.name}</BUTTON>))
+                buttons && buttons.map(button => (<BUTTON >{button.name}</BUTTON>))
             }
         </FOOTER>
     )

@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        {items && items.map((item, i)=>(<Item {...item} ></Item>))}
+        {items && items.map((item, i)=>(<Item item={item} />))}
       </Container>
     </div>
   );
@@ -178,7 +178,7 @@ import{ Footer }from 'merch_components';
 const Component = () => {
   {...}  
   return (
-    <Footer buttons={[buttons1, button2]} style={...anyOverridingStyles}/>
+    <Footer buttons={[ {...button1 }, {...button2 } ]} style={{...anyOverridingStyles}}/>
   )
 }
 ```

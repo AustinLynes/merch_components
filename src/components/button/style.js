@@ -10,7 +10,7 @@ export const BUTTON = styled.button`
             return `
                 padding:${props.style.padding};
                 border:${props.style.border};
-                width:${props.style.width}
+                width:${props.style.width};
                 border-radius:${props.style.borderRadius};
             `
         }
