@@ -37,7 +37,7 @@ export const PREVIEW = styled.iframe`
   border:none;
   border-radius:10px;
   width:100%;
-  height:100px;
+  height:200px;
   overflow:hidden;
   pointer-events: none;
   filter: blur(2px);
@@ -53,9 +53,13 @@ export const PREVIEW = styled.iframe`
 `
 
 export const LINKCARD = styled.div`
-    position:relative;
+    padding:1rem;
   width:30%;
   background:lightgray;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+
   ${props => {
         if (props.style) {
 
