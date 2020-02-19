@@ -5,10 +5,12 @@ import { LINKBAR, LINK, LINKCARD } from './style.js'
 const LinkBar = (props) => {
 
     const { links, ...rest } = props;
-
+    console.log(links);
     return (
         <LINKBAR>
-            {links && links.map((link, i) => (<LINKCARD key={i}><LINK>{link.name}</LINK></LINKCARD>))}
+            {
+                links && links.map((link, i) => (<LINKCARD key={i}><LINK>{link.name}</LINK></LINKCARD>))
+            }
         </LINKBAR>
     )
 }
