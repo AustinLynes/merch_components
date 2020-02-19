@@ -17,9 +17,14 @@ export const LINKBAR = styled.div`
 `
 
 export const LINK = styled.p`
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
     z-index:10;
-  padding:1rem;
-  color:black;
+    padding:1rem;
+    color:black;
   ${props => {
         if (props.style) {
 
@@ -29,7 +34,6 @@ export const LINK = styled.p`
 `
 
 export const PREVIEW = styled.iframe`
-z-index: -1;
   border:none;
   border-radius:10px;
   width:100%;
