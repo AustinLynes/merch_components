@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const LINKBAR = styled.div`
-    position:relative;
     box-sizing:border-box;
     width:100%;
     display:flex;
@@ -43,6 +42,7 @@ export const PREVIEW = styled.iframe`
 `
 
 export const LINKCARD = styled.div`
+    position:relative;
   width:30%;
   background:lightgray;
   ${props => {
