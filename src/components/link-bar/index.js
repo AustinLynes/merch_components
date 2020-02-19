@@ -6,7 +6,7 @@ const LinkBar = (props) => {
 
     return (
         <LINKBAR>
-            {links && links.map(link => (<LINK className={`fas fa-${link.name}`}/>))}     
+            {links && links.map(link => ( <LINK className={`fab fa-${link.name}`} /> ))}     
         </LINKBAR>
     )
 }
