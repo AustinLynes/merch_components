@@ -1,12 +1,14 @@
 import React from 'react'
-import { LINKBAR, LINK  } from './style.js'
+
+import { LINKBAR, LINK, LINKCARD } from './style.js'
+
 const LinkBar = (props) => {
-    
-    const {links, ...rest} = props;
+
+    const { links, ...rest } = props;
 
     return (
         <LINKBAR>
-            {links && links.map(link => ( <LINK icon={`fab fa-${link.name}`} /> ))}     
+            {links && links.map((link, i) => (<LINKCARD key={i}><LINK>{link.name}</LINK></LINKCARD>))}
         </LINKBAR>
     )
 }

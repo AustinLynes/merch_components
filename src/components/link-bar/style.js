@@ -11,10 +11,19 @@ export const LINKBAR = styled.div`
     }}
 `
 
-export const LINK = styled(FontAwesomeIcon)`
-  width:30%;
+export const LINK = styled.p`
   padding:1rem;
   color:black;
+  ${props => {
+        if (props.style) {
+
+        }
+    }}
+
+`
+
+export const LINKCARD = styled.div`
+  width:30%;
   ${props => {
         if (props.style) {
 
