@@ -119,17 +119,3 @@ ${props => {
     }}
    
  `
-
-export const CART_BUTTON = styled(FontAwesomeIcon)`
-color:dodgerblue;
-font-size:2.3rem;
-${props => {
-        if (props.style) {
-            return `
-            color:${props.style.color};
-            font-size:${props.style.fontSize};
-                `
-        }
-    }}
-   
- `

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Item_, CloseButton, Cost, Image, ItemName, SaleCost } from './style'
+import { ITEM, CLOSE_BUTTON, IMAGE } from './style'
+import { INPUT } from '../global/style';
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components';
+
 const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
@@ -22,7 +23,7 @@ const Item = (props) => {
     // navigation needs background color.. then customize buttons 
     // 
     return (
-        <Item_
+        <ITEM
             style={style && style.wrapperStyle}
             scale={scale}
             id={id}
@@ -30,14 +31,14 @@ const Item = (props) => {
                 e.preventDefault();
                 toggle(e.target.id);
             }}>
-            <Image
+            <IMAGE
                 id={id}
                 style={style && style.imageStyle}
                 scale={scale + 0.2}
                 alt='shirt'
                 src={imageSrc}
             />
-            <Cost
+            <INPUT
                 name='itemCost'
                 style={style && style.costStyle}
                 id={id + 'ic'}
@@ -45,9 +46,10 @@ const Item = (props) => {
                 type='number'
                 onChange={handleChanges}
                 value={payload.itemCost}
+                isCost={true}
             />
             {onSale && (
-                <SaleCost
+                <INPUT
                     id={id + 'sc'}
                     style={style && style.saleCostStyle}
                     type='number'
@@ -56,15 +58,15 @@ const Item = (props) => {
                     value={payload.saleCost}
                 />
             )}
-            <ItemName
+            <INPUT
                 id={id + 'in'}
                 name='itemName'
                 onChange={handleChanges}
                 style={style && style.nameStyle}
                 value={payload.itemName}
             />
-            <CloseButton style={style && style.closeButtonStyle} id={id} icon={faTimes} />
-        </Item_>
+            <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
+        </ITEM>
     )
 }
 export default Item;

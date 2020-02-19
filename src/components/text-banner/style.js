@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const BANNER = styled.div`
 width:100%;
-height:75px;
+height:125px;
 background:yellow;
+padding:1rem;
 ${props=>{
     if(props.style) return `
         width:${props.style.width};
@@ -16,7 +17,8 @@ ${props=>{
 `
 
 export const MESSAGE = styled.h2`
-width:100%;
+width:90%;
+margin:0 auto;
 color:black;
 border:none;
 ${props=>{

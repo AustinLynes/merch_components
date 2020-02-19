@@ -143,11 +143,24 @@ const Component = () => {
   return (
     <ButtonGroup>
     {...}
-       <Button name='name-of-button' onClickCallback={()=>{...}} />
+       <Button name='name-of-button' style={...optionalStyles} onClickCallback={()=>{...}} />
     </ButtonGroup>
   )
 }
 ```
+**name => the text that is displayed on the button**<br/>
+**style => any optional styles to override the object, acceptes an object { }** <br/>
+**onClickCallback => what you want to happen when this item is called.** <br/>
+
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
 
 **ButtonGroup**
 ***

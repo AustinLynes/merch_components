@@ -1,5 +1,5 @@
 import React from 'react'
-import { BUTTON } from './style.js'
+import { BUTTON } from '../global/style.js'
 const Button = (props) => {
     const { style, name, onClickCallback, ...rest } = props
 

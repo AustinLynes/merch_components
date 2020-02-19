@@ -5,7 +5,6 @@ import { LINKBAR, LINK, LINKCARD, PREVIEW } from './style.js'
 const LinkBar = (props) => {
 
     const { links, ...rest } = props;
-    console.log(links);
     return (
         <LINKBAR>
             {
