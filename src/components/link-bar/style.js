@@ -17,12 +17,12 @@ export const LINKBAR = styled.div`
 `
 
 export const LINK = styled.p`
-    position:absolute;
+    /* position:absolute;
     top:0;
     right:0;
     width:100%;
     height:100%;
-    z-index:10;
+    z-index:10; */
     padding:1rem;
     color:black;
   ${props => {
