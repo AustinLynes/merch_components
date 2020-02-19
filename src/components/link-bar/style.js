@@ -33,6 +33,8 @@ export const PREVIEW = styled.iframe`
   position:absolute;
   overflow:hidden;
   pointer-events: none;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
   top:0;
   left:0;
   ${props => {
