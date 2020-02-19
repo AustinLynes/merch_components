@@ -31,6 +31,7 @@ export const PREVIEW = styled.iframe`
   max-width:100%;
   max-height:100%;
   position:absolute;
+  overflow:hidden;
   top:0;
   left:0;
   ${props => {
