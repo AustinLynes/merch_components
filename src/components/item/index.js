@@ -63,7 +63,7 @@ const Item = (props) => {
                 style={style && style.nameStyle}
                 value={payload.itemName}
             />
-            <CloseButton style={style && style.closeButtonStyle} id={id} icon={faTimes} onClick={_deleteItem} />
+            <CloseButton style={style && style.closeButtonStyle} id={id} icon={faTimes} />
         </Item_>
     )
 }
