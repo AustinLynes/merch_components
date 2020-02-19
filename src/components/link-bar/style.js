@@ -2,10 +2,13 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const LINKBAR = styled.div`
+    box-sizing:border-box;
     width:100%;
     display:flex;
     flex-flow:row wrap;
+    justify-content:space-between;
     background:green;
+    padding:2rem;
     ${props => {
         if (props.style) {
 
