@@ -28,10 +28,11 @@ export const LINK = styled.p`
 `
 
 export const PREVIEW = styled.iframe`
-  max-width:100%;
-  max-height:100%;
+  width:100%;
+  height:100%;
   position:absolute;
   overflow:hidden;
+  pointer-events: none;
   top:0;
   left:0;
   ${props => {
