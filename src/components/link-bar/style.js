@@ -29,6 +29,9 @@ export const LINK = styled.p`
 `
 
 export const PREVIEW = styled.iframe`
+z-index: -1;
+  border:none;
+  border-radius:10px;
   width:100%;
   height:100%;
   position:absolute;
