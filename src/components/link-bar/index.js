@@ -11,7 +11,7 @@ const LinkBar = (props) => {
             {
                 links && links.map((link, i) => (
                     <LINKCARD key={i}>
-                        <PREVIEW src={link.src} scrolling='no'/>
+                        <PREVIEW src={link.src}/>
                         <LINK>{link.name}</LINK>
                     </LINKCARD>
                 ))

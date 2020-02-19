@@ -33,7 +33,7 @@ export const LINK = styled.p`
 
 `
 
-export const PREVIEW = styled.iframe`
+export const PREVIEW = styled.img`
   border:none;
   border-radius:10px;
   width:100%;
