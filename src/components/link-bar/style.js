@@ -38,7 +38,6 @@ export const PREVIEW = styled.iframe`
   border-radius:10px;
   width:100%;
   height:100%;
-  position:absolute;
   overflow:hidden;
   pointer-events: none;
   filter: blur(2px);
