@@ -14,7 +14,7 @@ export const LINKBAR = styled.div`
 export const LINK = styled(FontAwesomeIcon)`
   width:30%;
   padding:1rem;
-  color:white;
+  color:black;
   ${props => {
         if (props.style) {
 
