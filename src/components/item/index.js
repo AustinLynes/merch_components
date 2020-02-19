@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
-    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale, } = item
+    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
     const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
 
     const toggle = (id) => {
@@ -18,10 +18,6 @@ const Item = (props) => {
         updateItem(e.target.id, payload);
         return item;
     }
-    const _deleteItem = (e) => {
-        deleteItem(e.target.id);
-    }
-
     // abstract scale to a parent var... then.. apply scale to the carosel 
     // navigation needs background color.. then customize buttons 
     // 

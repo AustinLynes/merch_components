@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { LINKBAR, LINK, LINKCARD } from './style.js'
+import { LINKBAR, LINK, LINKCARD, PREVIEW } from './style.js'
 
 const LinkBar = (props) => {
 
@@ -9,7 +9,12 @@ const LinkBar = (props) => {
     return (
         <LINKBAR>
             {
-                links && links.map((link, i) => (<LINKCARD key={i}><LINK>{link.name}</LINK></LINKCARD>))
+                links && links.map((link, i) => (
+                    <LINKCARD key={i}>
+                        <PREVIEW src={link.src}/>
+                        <LINK>{link.name}</LINK>
+                    </LINKCARD>
+                ))
             }
         </LINKBAR>
     )
