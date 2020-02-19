@@ -17,6 +17,7 @@ export const LINKBAR = styled.div`
 `
 
 export const LINK = styled.p`
+    z-index:10;
   padding:1rem;
   color:black;
   ${props => {
