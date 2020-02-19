@@ -37,7 +37,7 @@ export const PREVIEW = styled.iframe`
   border:none;
   border-radius:10px;
   width:100%;
-  height:100%;
+  height:100px;
   overflow:hidden;
   pointer-events: none;
   filter: blur(2px);
