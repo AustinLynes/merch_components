@@ -32,7 +32,7 @@ export const PREVIEW = styled.iframe`
   max-height:100%;
   position:absolute;
   top:0;
-  right:0;
+  left:0;
   ${props => {
         if (props.style) {
 
