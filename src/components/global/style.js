@@ -7,6 +7,8 @@ export const BUTTON = styled.button`
     border:none;
     width:20%;
     border-radius:10px;
+    background:transparent;
+    box-shadow:2px 4px 4px rgba(0,0,0,.2), -2px -4px 4px rgba(255,255,255,.2); 
     /* any overriding styles will be displayed here  */
     ${props => {
         if (props.style) {
@@ -35,12 +37,12 @@ export const ICON = styled(FontAwesomeIcon)`
         border:1px solid dodgerblue;
 
         ${props => {
-                if(props.isCarousel)return `
+        if (props.isCarousel) return `
                     position:absolute;
                     top:50%;
                     ${props => props.right ? `right: 20px;` : `left: 20px;`}
                 `
-                if (props.style) return `
+        if (props.style) return `
                         position:${props.style.position};
                         bottom:${props.style.bottomPos};
                         top:${props.style.topPos};
@@ -58,7 +60,7 @@ export const ICON = styled(FontAwesomeIcon)`
                         background:${props.style.backgroundColor};
                         margin:${props.style.margin};
                           `
-        }}
+    }}
 `
 
 export const LINK = styled.button`
@@ -66,8 +68,8 @@ export const LINK = styled.button`
     border:none;
     color:white;
     font-size:1.2rem;
-    ${props =>{
-        if(props.style) return`
+    ${props => {
+        if (props.style) return `
             position:${props.style.position};
             bottom:${props.style.bottomPos};
             top:${props.style.topPos};
@@ -97,7 +99,7 @@ color: black;
 -webkit-text-stroke-color: black; */
 text-align:center;
 ${props => {
-        if(props.isCost)return `
+        if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.style) return `
