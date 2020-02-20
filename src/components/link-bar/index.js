@@ -10,10 +10,10 @@ const LinkBar = (props) => {
     const checkName = (n) => {
         var i = null;
         switch (n) {
-            case "facebook": i = faFacebook;
-            case "github": i = faGit;
-            case "twitter": i = faTwitter;
-            case 'twitch': i = faTwitch;
+            case "facebook": return i = faFacebook;
+            case "github": return i = faGit;
+            case "twitter": return i = faTwitter;
+            case 'twitch': return i = faTwitch;
         }
         return i;
     }
