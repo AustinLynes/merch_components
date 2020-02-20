@@ -7,24 +7,26 @@ import { ICON } from '../global/style.js'
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
-    const checkName = (__name) => {
-        var __icon = null;
-
-        switch (__name) {
-            case "facebook":    __icon = faFacebook;
-            case "github":      __icon = faGit;
-            case "twitter":     __icon = faTwitter;
-            case 'twitch':      __icon = faTwitch;
+    const checkName = (n) => {
+        var i = null;
+        switch (n) {
+            case "facebook": i = faFacebook;
+            case "github": i = faGit;
+            case "twitter": i = faTwitter;
+            case 'twitch': i = faTwitch;
         }
-        
-        return __icon;
+        return i;
     }
+
     return (
         <LINKBAR>
             {
                 links && links.map((link, i) => (
                     <LINKCARD key={i}>
-                        <ICON style={style && style.iconStyle} icon={() => checkName(link.name)} />
+                        <ICON style={style && style.iconStyle} icon={() => {
+                            console.log(link.name);
+                            return checkName(link.name);
+                        }} />
                         <LINK>{link.name}</LINK>
                     </LINKCARD>
                 ))
