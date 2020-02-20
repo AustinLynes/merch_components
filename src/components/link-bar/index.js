@@ -6,7 +6,7 @@ import { faFacebook, faGit, faTwitter, faTwitch } from '@fortawesome/free-brands
 import { ICON } from '../global/style.js'
 
 const LinkBar = (props) => {
-    const { links, ...rest } = props;
+    const { links, style, ...rest } = props;
     const checkName = (__name) => {
         switch (__name) {
             case "facebook": return faFacebook;
