@@ -122,3 +122,18 @@ ${props => {
     }}
    
  `
+
+ export const CART_COUNT = styled.p`
+    padding: 1rem;
+    font-size:1.4rem;
+    ${props => {
+        if (props.style) {
+            return `
+            color: ${props.style.color};
+            width: ${props.style.width};
+            padding:${props.style.padding};
+            font-size:${props.style.fontSize};
+                `
+        }
+    }}
+ `

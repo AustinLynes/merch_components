@@ -1,6 +1,6 @@
 // Logo
 import React from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE } from './style'
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE,CART_COUNT } from './style'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { ICON } from '../global/style'
 const Header = (props) => {
