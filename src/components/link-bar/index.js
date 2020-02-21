@@ -2,7 +2,7 @@ import React from 'react'
 
 import { LINKBAR, LINK, LINKCARD, PREVIEW } from './style.js'
 
-import { faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { ICON } from '../global/style.js'
 
 const LinkBar = (props) => {
@@ -17,7 +17,9 @@ const LinkBar = (props) => {
                             link.name === 'facebook' ? faFacebook
                                 : link.name === 'github' ? faGithub
                                     : link.name === 'twitter' ? faTwitter
-                                        : null
+                                        : link.name === 'linkedin' ? faLinkedinIn
+                                            : link.name === 'instagram' ? faInstagram
+                                                : null
                         } />
                         <LINK>{link.name}</LINK>
                     </LINKCARD>

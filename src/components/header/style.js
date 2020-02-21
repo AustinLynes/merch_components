@@ -8,19 +8,19 @@ export const HEADER = styled.div`
     justify-content:space-between;
     width:100%;
     padding:1rem;
-    max-height:125px;
-    background:#333;
+    height:200px;
+    background:#303030;
     ${props => {
         if (props.style) {
             return `
-            box-sizing:border-box;
-            display:${props.style.display};
-            flex-flow:${props.style.flexDirection} wrap;
-            justify-content:${props.style.justifyContent};
-            width:${props.style.width};
-            padding:${props.style.padding};
-            max-height:${props.style.maxHeight};
-            background:${props.style.background};
+                box-sizing:border-box;
+                display:${props.style.display};
+                flex-flow:${props.style.flexDirection} wrap;
+                justify-content:${props.style.justifyContent};
+                width:${props.style.width};
+                padding:${props.style.padding};
+                max-height:${props.style.maxHeight};
+                background:${props.style.background};
                 `
         }
     }}
@@ -46,6 +46,7 @@ margin:0;
 background:transparent;
 border:none;
 border-bottom:1px solid white;
+font-size:3rem;
 ${props => {
         if (props.style) {
             return `
@@ -54,19 +55,21 @@ ${props => {
             background:${props.style.background};
             margin:${props.style.margin};
             border:${props.style.border};
+            font-size:${props.style.fontSize};
                 `
         }
     }}
    
 `
 export const SEARCH_BAR = styled.div`
-background:white;
+width:413px;
+height:69px;
 display:flex;
 flex-flow:row wrap;
 align-items:center;
-width:15%;
-border:1px solid grey;
 border-radius:10px;
+border:1px solid grey;
+background:white;
 ${props => {
         if (props.style) {
             return `
