@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const ITEM = styled.div`
 flex-grow:1;
 display:flex;
+position:relative;
+margin:0 10px;
 max-width:50%;
-height: 642px;
+height: 300px;
 max-height:${props => props.scale ? `${300 * props.scale}px` : '300px'};
 flex-flow:row wrap;
-border:1px solid black;
+border-radius:10px;
+padding:4rem 0;
 box-shadow: 5px 5px 8px rgba(127,127,127,.3), 
                 -5px -5px 8px rgba(255,255,255,1);
 
@@ -30,7 +33,8 @@ ${props => {
 `
 
 export const IMAGE = styled.img`
-max-width:100%;
+max-width:70%;
+max-height:${props => props.scale ? `${300 * props.scale}px` : '300px'};
 object-fit:contain;
 margin:0 auto;
 ${props => {
