@@ -56,11 +56,10 @@ ${props => {
     }}
 `
 export const INPUT = styled.input`
-text-align:end;
 background:transparent;
 font-size:1.2rem;
 color: black;
-text-align:center;
+text-align:end;
 border-radius:10px;
 border:1px solid lightgrey;
 width:50%;
