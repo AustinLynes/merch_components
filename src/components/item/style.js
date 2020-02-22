@@ -65,7 +65,7 @@ text-align:center;
 width:50%;
 padding:5px;
 border:none;
-font-size:12px;
+font-size:16px;
 
 ${props => {
         if (props.isCost) return `
