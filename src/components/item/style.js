@@ -30,6 +30,7 @@ border:none;
 background:transparent;
 border-radius:10px;
 border:1px solid lightgrey;
+height:fit-content;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
@@ -57,7 +58,6 @@ font-size:1.2rem;
 color: black;
 text-align:center;
 border:none;
-height:fit-content;
 ${props => {
         if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
