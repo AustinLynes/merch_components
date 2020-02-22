@@ -153,12 +153,12 @@ export const PLACEHOLDER = styled.div`
 
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
+display:block;
 background:dodgerblue;
 padding:2rem;
 border-radius:50%;
 color:white;
 font-size:3rem;
-margin:0 auto;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
