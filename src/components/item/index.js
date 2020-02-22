@@ -47,7 +47,7 @@ const Item = (props) => {
                 toggle(e.target.id);
             }}>
 
-            <INPUT_WRAPPER ref={el => switch0_ref = el}>
+            <INPUT_WRAPPER ref={switch0_ref}>
                 <INPUT id={id + 'in'} name='itemName' onChange={handleChanges} style={style && style.nameStyle} value={payload.itemName} />
 
             </INPUT_WRAPPER>
@@ -63,7 +63,7 @@ const Item = (props) => {
             }
 
             <INPUT
-                ref={el => switch1_ref = el}
+                ref={switch1_ref}
                 name='itemCost'
                 style={style && style.costStyle}
                 id={id + 'ic'}
@@ -76,7 +76,7 @@ const Item = (props) => {
 
             {onSale && (
                 <INPUT
-                    ref={el => switch2_ref = el}
+                    ref={switch2_ref}
                     id={id + 'sc'}
                     style={style && style.saleCostStyle}
                     type='number'
