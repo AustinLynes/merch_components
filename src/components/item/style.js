@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const ITEM = styled.div`
+export const WRAPPER = styled.div`
 flex-grow:1;
 display:flex;
-position:relative;
-max-width:50%;
 height: 300px;
 border:2px solid black;
 flex-flow:row wrap;
@@ -28,8 +26,7 @@ ${props => {
 `
 
 export const IMAGE = styled.img`
-max-width:70%;
-max-height:${props => props.scale ? `${300 * props.scale}px` : '300px'};
+max-width:100%;
 object-fit:contain;
 margin:0 auto;
 ${props => {
@@ -54,10 +51,7 @@ width:20px;
 height:20px;
 text-align:center;
 border:none;
-color: black;
--webkit-text-fill-color: #595959; 
--webkit-text-stroke-width: 0.5px;
--webkit-text-stroke-color: white;
+color: grey;
 text-align:center;
 ${props => {
         if (props.style) return `

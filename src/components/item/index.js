@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ITEM, CLOSE_BUTTON, IMAGE } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE } from './style'
 import { INPUT } from '../global/style';
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
     // GSAP 
@@ -23,7 +24,7 @@ const Item = (props) => {
     // navigation needs background color.. then customize buttons 
     // 
     return (
-        <ITEM
+        <WRAPPER
             style={style && style.wrapperStyle}
             scale={scale}
             id={id}
@@ -38,13 +39,15 @@ const Item = (props) => {
                 style={style && style.nameStyle}
                 value={payload.itemName}
             />
-            <IMAGE
-                id={id}
-                style={style && style.imageStyle}
-                scale={scale + 0.2}
-                alt='shirt'
-                src={imageSrc}
-            />
+            {imageSrc ? 
+           ( <IMAGE
+            id={id}
+            style={style && style.imageStyle}
+            scale={scale + 0.2}
+            alt='shirt'
+            src={imageSrc}
+            />):(<FontAwesomeIcon icon={faPlus}/>)
+            }
             <INPUT
                 name='itemCost'
                 style={style && style.costStyle}
@@ -67,7 +70,7 @@ const Item = (props) => {
             )}
 
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
-        </ITEM>
+        </WRAPPER>
     )
 }
 export default Item;
