@@ -135,6 +135,7 @@ export const PLACEHOLDER = styled.div`
     border-radius:10px;
     width:60%;
     height:500px;
+    width:25%;
     padding:1rem;
     ${props => {
         if (props.style) return `
