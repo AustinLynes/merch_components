@@ -5,13 +5,10 @@ export const ITEM = styled.div`
 flex-grow:1;
 display:flex;
 position:relative;
-margin:0 10px;
 max-width:50%;
 height: 300px;
-max-height:${props => props.scale ? `${300 * props.scale}px` : '300px'};
 border:2px solid black;
 flex-flow:row wrap;
-padding:4rem 0;
 
 ${props => {
         if (props.style) return `

@@ -31,7 +31,7 @@ const Item = (props) => {
                 e.preventDefault();
                 toggle(e.target.id);
             }}>
-                <INPUT
+            <INPUT
                 id={id + 'in'}
                 name='itemName'
                 onChange={handleChanges}
@@ -65,7 +65,7 @@ const Item = (props) => {
                     value={payload.saleCost}
                 />
             )}
-            
+
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
         </ITEM>
     )
