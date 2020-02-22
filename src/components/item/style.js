@@ -149,6 +149,7 @@ ${props => {
     }}
 `
 export const CLOSE_BUTTON = styled(FontAwesomeIcon)`
+z-index:10;
 position:absolute;
 top: 5px;
 right:5px;
