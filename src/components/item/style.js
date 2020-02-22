@@ -23,6 +23,7 @@ ${props => {
     }}
 `
 export const INPUT_WRAPPER = styled.div`
+width:100%;
 background:white;
 border:none;
 border-radius:10px;
@@ -116,6 +117,7 @@ ${props => {
          `
     }}
 `
+// plus icon needs to be turned into its own card.. 
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
 background:dodgerblue;
