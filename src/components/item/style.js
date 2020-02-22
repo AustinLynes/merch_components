@@ -128,7 +128,7 @@ export const PLACEHOLDER = styled.div`
     display:flex;
     flex-flow:row wrap;
     justify-content:center;
-    align-items:center;
+    align-content:center;
     border:1px solid lightgrey;
     border-radius:10px;
     width:60%;
