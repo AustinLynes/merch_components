@@ -60,20 +60,22 @@ ${props => {
 `
 export const INPUT = styled.input`
 background:transparent;
-font-size:18px;
 color: black;
 text-align:center;
 width:50%;
 padding:5px;
 border:none;
+font-size:12px;
+
 ${props => {
         if (props.isCost) return `
             color:limegreen;
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.isDescp) return `
-            width:80%;
-            text-decoration: ${props => props.onSale ? "line-through" : "none"};
+            width:95%;
+            font-size:18px;
+
         `
         if (props.style) return `
             position:${props.style.position};
