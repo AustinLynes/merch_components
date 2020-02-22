@@ -67,7 +67,7 @@ const Item = (props) => {
                 />) : (
                     <PLACEHOLDER>
                         <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                        <p>click to edit</p>
+                        <p style={{width:'100%', textAlign:'center'}}>click to edit</p>
                     </PLACEHOLDER>)
             }
             <INPUT_WRAPPER ref={switch1_ref}>

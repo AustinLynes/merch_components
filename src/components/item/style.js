@@ -153,7 +153,6 @@ export const PLACEHOLDER = styled.div`
 
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
-display:block;
 background:dodgerblue;
 padding:2rem;
 border-radius:50%;
