@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
-    const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
-    const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
+    const { id, onSale, itemName, itemDescription, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
+    const [payload, setPayload] = useState({ id, itemDescription, itemName, saleCost, itemCost });
     const [editSwitches, setEditSwitches] = useState([0, 0, 0])
 
     const switch0_ref = useRef(null)
@@ -67,10 +67,10 @@ const Item = (props) => {
                 />) : (
                     <PLACEHOLDER>
                         <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                        <p style={{width:'100%', textAlign:'center'}}>click to edit</p>
+                        <p style={{ width: '100%', textAlign: 'center' }}>click to edit</p>
                     </PLACEHOLDER>)
             }
-             <INPUT_WRAPPER ref={switch1_ref}>
+            <INPUT_WRAPPER ref={switch1_ref}>
                 <INPUT
                     name='itemDescription'
                     style={style && style.descriptionStyle}
