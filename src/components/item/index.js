@@ -29,7 +29,7 @@ const Item = (props) => {
     const handleSwitch = (e) => {
         const refs = [switch0_ref, switch1_ref, switch2_ref];
         refs.map((ref, i) => {
-            console.log(`imma ref.. ${ref.innerHTML}, ---> :: \n ${ref}`);
+            console.log('******* ', ref);
             //    ref.children.map(child=>{
             //        console.log(child)
             //    })
