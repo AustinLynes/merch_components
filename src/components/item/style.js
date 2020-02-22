@@ -63,7 +63,7 @@ color: black;
 text-align:center;
 border-radius:10px;
 border:1px solid lightgrey;
-width:40%;
+width:50%;
 ${props => {
         if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
@@ -159,10 +159,10 @@ export const PLACEHOLDER = styled.div`
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
 background:dodgerblue;
-padding:2rem;
+padding:1.4rem;
 border-radius:50%;
 color:white;
-font-size:3rem;
+font-size:2.5rem;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
