@@ -123,6 +123,29 @@ ${props => {
     }}
 `
 // plus icon needs to be turned into its own card.. 
+export const PLACEHOLDER = styled.div`
+    border:1px solid lightgrey;
+    border-radius:10px;
+    width:100%;
+    padding:1rem;
+    ${props => {
+        if (props.style) return `
+             position:${props.style.position};
+            bottom:${props.style.bottomPos};
+            top:${props.style.topPos};
+            right:${props.style.rightPos};
+            left:${props.style.leftPos};
+            padding:${props.style.padding};
+            width:${props.style.width};
+            font-size:${props.style.fontSize};
+            text-align:${props.style.textAlign};
+            border:${props.style.border};
+            background:${props.style.backgroundColor};
+            margin:${props.style.margin};
+    `
+    }}
+`
+
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
 background:dodgerblue;
