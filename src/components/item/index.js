@@ -72,7 +72,6 @@ const Item = (props) => {
             }
             <INPUT_WRAPPER ref={switch1_ref}>
                 <INPUT
-                    ref={switch1_ref}
                     name='itemCost'
                     style={style && style.costStyle}
                     id={id + 'ic'}
