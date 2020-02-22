@@ -10,6 +10,7 @@ justify-content:center;
 height: 642px;
 max-height: 642px;
 border:2px solid black;
+width:25%;
 max-width:50%;
 ${props => {
         if (props.style) return `
@@ -62,6 +63,7 @@ color: black;
 text-align:center;
 border-radius:10px;
 border:1px solid lightgrey;
+width:40%;
 ${props => {
         if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
@@ -112,7 +114,7 @@ ${props => {
 
 export const IMAGE = styled.img`
 max-width:90%;
-height:500px;
+height:480px;
 object-fit:contain;
 margin:0 auto;
 ${props => {
@@ -135,7 +137,6 @@ export const PLACEHOLDER = styled.div`
     border-radius:10px;
     width:60%;
     height:500px;
-    width:25%;
     padding:1rem;
     ${props => {
         if (props.style) return `
