@@ -117,7 +117,7 @@ ${props => {
 
 export const IMAGE = styled.img`
 max-width:90%;
-height:480px;
+height:460px;
 object-fit:contain;
 margin:0 auto;
 ${props => {
@@ -139,7 +139,7 @@ export const PLACEHOLDER = styled.div`
     border:1px solid lightgrey;
     border-radius:10px;
     width:60%;
-    height:500px;
+    height:460px;
     padding:1rem;
     ${props => {
         if (props.style) return `
