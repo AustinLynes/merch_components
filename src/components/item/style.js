@@ -4,9 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const WRAPPER = styled.div`
 position:relative;
 display:flex;
+flex-flow:row wrap;
+justify-content:center;
 height: 642px;
 border:2px solid black;
-flex-flow:row wrap;
 ${props => {
         if (props.style) return `
             position:${props.style.position};
@@ -25,7 +26,7 @@ ${props => {
 `
 
 export const INPUT_WRAPPER = styled.div`
-width:100%;
+width:70%;
 border:none;
 background:transparent;
 border-radius:10px;
