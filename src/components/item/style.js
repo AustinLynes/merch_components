@@ -154,7 +154,7 @@ background:dodgerblue;
 padding:2rem;
 border-radius:50%;
 color:white;
-font-size:2rem;
+font-size:3rem;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
