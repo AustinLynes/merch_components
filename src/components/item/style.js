@@ -9,11 +9,9 @@ margin:0 10px;
 max-width:50%;
 height: 300px;
 max-height:${props => props.scale ? `${300 * props.scale}px` : '300px'};
+border:2px solid black;
 flex-flow:row wrap;
-border-radius:10px;
 padding:4rem 0;
-box-shadow: 5px 5px 8px rgba(127,127,127,.3), 
-                -5px -5px 8px rgba(255,255,255,1);
 
 ${props => {
         if (props.style) return `
