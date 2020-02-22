@@ -56,7 +56,6 @@ ${props => {
     }}
 `
 export const INPUT = styled.input`
-
 background:transparent;
 font-size:1.2rem;
 color: black;
