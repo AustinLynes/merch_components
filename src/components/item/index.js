@@ -29,9 +29,10 @@ const Item = (props) => {
     const handleSwitches = () => {
         const refs = [switch0_ref, switch1_ref, switch2_ref];
         refs.map( ref=>{
-           ref.children.map(child=>{
-               console.log(child)
-           })
+            console.log(`imma ref.. ${ref.innerHTML}, ---> :: \n ${ref}`);
+        //    ref.children.map(child=>{
+        //        console.log(child)
+        //    })
         })
     }
     // abstract scale to a parent var... then.. apply scale to the carosel 
