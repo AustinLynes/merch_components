@@ -131,7 +131,7 @@ export const PLACEHOLDER = styled.div`
     align-items:center;
     border:1px solid lightgrey;
     border-radius:10px;
-    width:70%;
+    width:60%;
     height:500px;
     padding:1rem;
     ${props => {
