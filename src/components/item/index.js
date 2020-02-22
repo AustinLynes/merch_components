@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT,PLACEHOLDER } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT, PLACEHOLDER } from './style'
 import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -65,7 +65,10 @@ const Item = (props) => {
                     alt='shirt'
                     src={imageSrc}
                 />) : (
-                <PLACEHOLDER><PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} /></PLACEHOLDER>)
+                    <PLACEHOLDER>
+                        <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
+                        <p>click to edit</p>
+                    </PLACEHOLDER>)
             }
 
             <INPUT
