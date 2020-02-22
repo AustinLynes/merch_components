@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER } from './style'
 import { INPUT } from '../global/style';
-import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
@@ -29,6 +29,7 @@ const Item = (props) => {
     const handleSwitch = (e) => {
         const refs = [switch0_ref, switch1_ref, switch2_ref];
         refs.map((ref, i) => {
+
             console.log('******* ', ref);
             //    ref.children.map(child=>{
             //        console.log(child)
@@ -54,7 +55,7 @@ const Item = (props) => {
 
             <INPUT_WRAPPER ref={switch0_ref}>
                 <INPUT id={id + 'in'} name='itemName' onChange={handleChanges} style={style && style.nameStyle} value={payload.itemName} />
-
+                <FontAwesomeIcon icon={faPencilAlt}/>
             </INPUT_WRAPPER>
 
             {imageSrc ?
