@@ -9,6 +9,7 @@ justify-content:center;
 height: 642px;
 max-height: 642px;
 border:2px solid black;
+max-width:30%;
 ${props => {
         if (props.style) return `
             position:${props.style.position};
