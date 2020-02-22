@@ -23,7 +23,10 @@ ${props => {
     }}
 `
 export const INPUT_WRAPPER = styled.div`
-
+background:white;
+border:none;
+border-radius:10px;
+border:1px solid lightgrey;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
@@ -45,18 +48,32 @@ ${props => {
     `
     }}
 `
-export const IMAGE = styled.img`
-max-width:90%;
-height:500px;
-object-fit:contain;
-margin:0 auto;
+export const INPUT = styled.input`
+background:transparent;
+font-size:1.2rem;
+color: black;
+text-align:center;
 ${props => {
+        if (props.isCost) return `
+            text-decoration: ${props => props.onSale ? "line-through" : "none"};
+        `
         if (props.style) return `
-            max-width:${props.style.maxWidth};
-            max-height:${props.style.maxHeight};
-            object-fit:${props.style.objectFit};
-            margin:${props.style.margin};
+            position:${props.style.position};
+            bottom:${props.style.bottomPos};
+            top:${props.style.topPos};
+            right:${props.style.rightPos};
+            left:${props.style.leftPos};
             padding:${props.style.padding};
+            width:${props.style.width};
+            font-size:${props.style.fontSize};
+            color: black;  // this is black as a fallback... 
+            -webkit-text-fill-color: ${props.style.textFillColor}; 
+            -webkit-text-stroke-width: ${props.style.strokeWidth};
+            -webkit-text-stroke-color: ${props.style.strokeColor};
+            text-align:${props.style.textAlign};
+            border:${props.style.border};
+            background:${props.style.backgroundColor};
+            margin:${props.style.margin};
          `
     }}
 `
@@ -81,6 +98,22 @@ ${props => {
             background:${props.style.backgroundColor};
             margin:${props.style.margin};
     `
+    }}
+`
+
+export const IMAGE = styled.img`
+max-width:90%;
+height:500px;
+object-fit:contain;
+margin:0 auto;
+${props => {
+        if (props.style) return `
+            max-width:${props.style.maxWidth};
+            max-height:${props.style.maxHeight};
+            object-fit:${props.style.objectFit};
+            margin:${props.style.margin};
+            padding:${props.style.padding};
+         `
     }}
 `
 
