@@ -34,6 +34,8 @@ width:55%;
 border:none;
 background:transparent;
 height:fit-content;
+border-radius:10px;
+border:1px solid lightgrey;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
@@ -59,10 +61,8 @@ export const INPUT = styled.input`
 background:transparent;
 font-size:1.2rem;
 color: black;
-text-align:end;
-border-radius:10px;
-border:1px solid lightgrey;
-width:20%;
+text-align:center;
+width:50%;
 padding:5px;
 ${props => {
         if (props.isCost) return `
