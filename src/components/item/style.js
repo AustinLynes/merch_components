@@ -60,7 +60,7 @@ ${props => {
 `
 export const INPUT = styled.input`
 background:transparent;
-font-size:1.2rem;
+font-size:18px;
 color: black;
 text-align:center;
 width:50%;

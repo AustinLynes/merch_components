@@ -91,7 +91,6 @@ const Item = (props) => {
                     type='number'
                     onChange={handleChanges}
                     value={payload.itemCost}
-                    isCost={true}
                 />
                 <EDIT_ICON icon={faPencilAlt} />
 
