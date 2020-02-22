@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WRAPPER = styled.div`
+margin-top:75px;
 position:relative;
 display:flex;
 flex-flow:row wrap;
@@ -9,7 +10,7 @@ justify-content:center;
 height: 642px;
 max-height: 642px;
 border:2px solid black;
-max-width:30%;
+max-width:50%;
 ${props => {
         if (props.style) return `
             position:${props.style.position};
@@ -18,7 +19,7 @@ ${props => {
             flex-grow:${props.style.flexGrow};
             margin:${props.style.margin};
             height: ${props.style.height};
-            max-width:${props.style.maxWidth};
+            width: ${props.style.width};
             max-height:${props.style.maxHeight};
             border-radius:${props.style.borderRadius};
             padding:${props.style.padding};
