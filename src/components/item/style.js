@@ -31,7 +31,7 @@ ${props => {
 `
 
 export const INPUT_WRAPPER = styled.div`
-width:55%;
+width:60%;
 border:none;
 background:transparent;
 height:fit-content;
