@@ -7,6 +7,7 @@ display:flex;
 flex-flow:row wrap;
 justify-content:center;
 height: 642px;
+max-height: 642px;
 border:2px solid black;
 ${props => {
         if (props.style) return `
@@ -150,7 +151,7 @@ export const PLACEHOLDER = styled.div`
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
 background:dodgerblue;
-padding:1rem;
+padding:1rem 2rem;
 width:50px;
 height:50px;
 border-radius:50%;
