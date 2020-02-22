@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER,EDIT_ICON } from './style'
 import { INPUT } from '../global/style';
 import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -55,7 +55,7 @@ const Item = (props) => {
 
             <INPUT_WRAPPER ref={switch0_ref}>
                 <INPUT id={id + 'in'} name='itemName' onChange={handleChanges} style={style && style.nameStyle} value={payload.itemName} />
-                <FontAwesomeIcon icon={faPencilAlt}/>
+                <EDIT_ICON icon={faPencilAlt}/>
             </INPUT_WRAPPER>
 
             {imageSrc ?
