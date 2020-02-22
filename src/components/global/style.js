@@ -42,6 +42,10 @@ export const ICON = styled(FontAwesomeIcon)`
                     top:50%;
                     ${props => props.right ? `right: 20px;` : `left: 20px;`}
                 `
+        if (props.isCart) return `
+            border:none;
+            font-size:
+        `
         if (props.style) return `
                         position:${props.style.position};
                         bottom:${props.style.bottomPos};

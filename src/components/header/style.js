@@ -123,9 +123,10 @@ ${props => {
    
  `
 
- export const CART_COUNT = styled.p`
+export const CART_COUNT = styled.p`
     padding: 1rem;
     font-size:1.4rem;
+    width:100%;
     ${props => {
         if (props.style) {
             return `
@@ -137,3 +138,30 @@ ${props => {
         }
     }}
  `
+
+export const CART = styled.div`
+display:flex;
+flex-direction:row wrap;
+ ${props => {
+        if (props.style) {
+            return `
+            color: ${props.style.color};
+            width: ${props.style.width};
+            padding:${props.style.padding};
+            font-size:${props.style.fontSize};
+                `
+        }
+    }}
+`
+
+
+
+
+/*
+
+
+
+
+
+
+*/

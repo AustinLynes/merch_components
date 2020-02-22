@@ -31,6 +31,13 @@ const Item = (props) => {
                 e.preventDefault();
                 toggle(e.target.id);
             }}>
+                <INPUT
+                id={id + 'in'}
+                name='itemName'
+                onChange={handleChanges}
+                style={style && style.nameStyle}
+                value={payload.itemName}
+            />
             <IMAGE
                 id={id}
                 style={style && style.imageStyle}
@@ -58,13 +65,7 @@ const Item = (props) => {
                     value={payload.saleCost}
                 />
             )}
-            <INPUT
-                id={id + 'in'}
-                name='itemName'
-                onChange={handleChanges}
-                style={style && style.nameStyle}
-                value={payload.itemName}
-            />
+            
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
         </ITEM>
     )
