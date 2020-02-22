@@ -65,7 +65,7 @@ border:1px solid lightgrey;
 width:50%;
 ${props => {
         if (props.isCost) return `
-            color:green;
+            color:limegreen;
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.style) return `
