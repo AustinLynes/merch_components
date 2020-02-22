@@ -14,6 +14,7 @@ width:25%;
 max-width:50%;
 border-radius:10px;
 margin:75px 2px 0;
+padding:5px;
 ${props => {
         if (props.style) return `
             position:${props.style.position};
