@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON } from './style'
 import { INPUT } from '../global/style';
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -46,7 +46,7 @@ const Item = (props) => {
             scale={scale + 0.2}
             alt='shirt'
             src={imageSrc}
-            />):(<FontAwesomeIcon icon={faPlus}/>)
+            />):(<PLUS_ICON icon={faPlus}/>)
             }
             <INPUT
                 name='itemCost'

@@ -39,7 +39,7 @@ ${props => {
          `
     }}
 `
-const PLUS_ICON = styled(FontAwesomeIcon)`
+export const PLUS_ICON = styled(FontAwesomeIcon)`
 background:dodgerblue;
 padding:1rem;
 width:50px;
