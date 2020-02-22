@@ -125,6 +125,8 @@ ${props => {
 `
 // plus icon needs to be turned into its own card.. 
 export const PLACEHOLDER = styled.div`
+    display:flex;
+    flex-direction:column;
     align-items:center;
     border:1px solid lightgrey;
     border-radius:10px;
