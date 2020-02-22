@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON } from './style'
 import { INPUT } from '../global/style';
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
@@ -9,6 +9,11 @@ const Item = (props) => {
     const { style, item, ...rest } = props;
     const { id, onSale, itemName, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
     const [payload, setPayload] = useState({ id, itemName, saleCost, itemCost });
+    const [editSwitches, setEditSwitches] = useState([0, 0, 0])
+
+    const switch0_ref = useRef(null)
+    const switch1_ref = useRef(null)
+    const switch2_ref = useRef(null)
 
     const toggle = (id) => {
         toggleOnSale(id);
@@ -20,9 +25,18 @@ const Item = (props) => {
         updateItem(e.target.id, payload);
         return item;
     }
+
+    const handleSwitches = () => {
+        const refs = [switch0_ref, switch1_ref, switch2_ref];
+        refs.map( ref=>{
+            console.log(ref)
+        })
+    }
     // abstract scale to a parent var... then.. apply scale to the carosel 
     // navigation needs background color.. then customize buttons 
     // 
+
+    handleSwitches()
     return (
         <WRAPPER
             style={style && style.wrapperStyle}
@@ -32,23 +46,24 @@ const Item = (props) => {
                 e.preventDefault();
                 toggle(e.target.id);
             }}>
-            <INPUT
-                id={id + 'in'}
-                name='itemName'
-                onChange={handleChanges}
-                style={style && style.nameStyle}
-                value={payload.itemName}
-            />
-            {imageSrc ? 
-           ( <IMAGE
-            id={id}
-            style={style && style.imageStyle}
-            scale={scale + 0.2}
-            alt='shirt'
-            src={imageSrc}
-            />):(<PLUS_ICON icon={faPlus}/>)
+
+            <INPUT_WRAPPER ref={el => switch0_ref = el}>
+                <INPUT id={id + 'in'} name='itemName' onChange={handleChanges} style={style && style.nameStyle} value={payload.itemName} />
+
+            </INPUT_WRAPPER>
+
+            {imageSrc ?
+                (<IMAGE
+                    id={id}
+                    style={style && style.imageStyle}
+                    scale={scale + 0.2}
+                    alt='shirt'
+                    src={imageSrc}
+                />) : (<PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />)
             }
+
             <INPUT
+                ref={el => switch1_ref = el}
                 name='itemCost'
                 style={style && style.costStyle}
                 id={id + 'ic'}
@@ -58,8 +73,10 @@ const Item = (props) => {
                 value={payload.itemCost}
                 isCost={true}
             />
+
             {onSale && (
                 <INPUT
+                    ref={el => switch2_ref = el}
                     id={id + 'sc'}
                     style={style && style.saleCostStyle}
                     type='number'

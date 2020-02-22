@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WRAPPER = styled.div`
-flex-grow:1;
 display:flex;
-height: 300px;
+height: 642px;
 border:2px solid black;
 flex-flow:row wrap;
-
 ${props => {
         if (props.style) return `
             position:${props.style.position};
@@ -26,7 +24,8 @@ ${props => {
 `
 
 export const IMAGE = styled.img`
-max-width:100%;
+max-width:90%;
+height:500px;
 object-fit:contain;
 margin:0 auto;
 ${props => {
