@@ -82,6 +82,8 @@ const Item = (props) => {
                     value={payload.itemCost}
                     isCost={true}
                 />
+                <EDIT_ICON icon={faPencilAlt} />
+
             </INPUT_WRAPPER>
 
             {onSale && (
@@ -95,6 +97,7 @@ const Item = (props) => {
                         onChange={handleChanges}
                         value={payload.saleCost}
                     />
+                    <EDIT_ICON icon={faPencilAlt} />
                 </INPUT_WRAPPER>
             )}
 
