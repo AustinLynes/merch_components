@@ -22,7 +22,9 @@ ${props => {
     `
     }}
 `
+export const INPUT_WRAPPER = styled.div`
 
+`
 export const IMAGE = styled.img`
 max-width:90%;
 height:500px;

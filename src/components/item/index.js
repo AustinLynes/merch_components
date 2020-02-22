@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER } from './style'
 import { INPUT } from '../global/style';
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
