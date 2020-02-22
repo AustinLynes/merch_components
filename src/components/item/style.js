@@ -31,7 +31,6 @@ ${props => {
 
 export const IMAGE = styled.img`
 max-width:100%;
-height:500px;
 object-fit:contain;
 margin:0 auto;
 ${props => {
