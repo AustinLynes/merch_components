@@ -23,6 +23,7 @@ ${props => {
     `
     }}
 `
+
 export const INPUT_WRAPPER = styled.div`
 width:100%;
 border:none;
@@ -55,6 +56,8 @@ background:transparent;
 font-size:1.2rem;
 color: black;
 text-align:center;
+border:none;
+height:fit-content;
 ${props => {
         if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
