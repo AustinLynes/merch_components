@@ -71,6 +71,10 @@ ${props => {
             color:limegreen;
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
+        if (props.isDescp) return `
+            color:limegreen;
+            text-decoration: ${props => props.onSale ? "line-through" : "none"};
+        `
         if (props.style) return `
             position:${props.style.position};
             bottom:${props.style.bottomPos};

@@ -77,8 +77,8 @@ const Item = (props) => {
                     id={id + 'ic'}
                     onChange={handleChanges}
                     value={payload.itemDescription}
-                    isCost={true}
-                />
+                    isDescp={true}
+                    />
                 <EDIT_ICON icon={faPencilAlt} />
 
             </INPUT_WRAPPER>
@@ -91,7 +91,8 @@ const Item = (props) => {
                     type='number'
                     onChange={handleChanges}
                     value={payload.itemCost}
-                />
+                    isCost={true}
+                    />
                 <EDIT_ICON icon={faPencilAlt} />
 
             </INPUT_WRAPPER>
