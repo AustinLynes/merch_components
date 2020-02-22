@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WRAPPER = styled.div`
+position:relative;
 display:flex;
 height: 642px;
 border:2px solid black;
@@ -149,7 +150,6 @@ ${props => {
     }}
 `
 export const CLOSE_BUTTON = styled(FontAwesomeIcon)`
-z-index:10;
 position:absolute;
 top: 5px;
 right:5px;
