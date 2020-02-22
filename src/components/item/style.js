@@ -24,7 +24,6 @@ ${props => {
 `
 export const INPUT_WRAPPER = styled.div`
 width:100%;
-background:white;
 border:none;
 border-radius:10px;
 border:1px solid lightgrey;
