@@ -62,7 +62,8 @@ color: black;
 text-align:end;
 border-radius:10px;
 border:1px solid lightgrey;
-width:50%;
+width:fit-content;
+padding:5px;
 ${props => {
         if (props.isCost) return `
             color:limegreen;
