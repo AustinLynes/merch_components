@@ -29,8 +29,6 @@ export const INPUT_WRAPPER = styled.div`
 width:70%;
 border:none;
 background:transparent;
-border-radius:10px;
-border:1px solid lightgrey;
 height:fit-content;
 ${props => {
         if (props.style) return `
@@ -54,11 +52,13 @@ ${props => {
     }}
 `
 export const INPUT = styled.input`
+
 background:transparent;
 font-size:1.2rem;
 color: black;
 text-align:center;
-border:none;
+border-radius:10px;
+border:1px solid lightgrey;
 ${props => {
         if (props.isCost) return `
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
