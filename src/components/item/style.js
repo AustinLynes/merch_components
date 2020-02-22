@@ -73,7 +73,6 @@ ${props => {
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.isDescp) return `
-            width:95%;
             font-size:18px;
 
         `
