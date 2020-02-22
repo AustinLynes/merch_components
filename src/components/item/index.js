@@ -70,6 +70,18 @@ const Item = (props) => {
                         <p style={{width:'100%', textAlign:'center'}}>click to edit</p>
                     </PLACEHOLDER>)
             }
+             <INPUT_WRAPPER ref={switch1_ref}>
+                <INPUT
+                    name='itemDescription'
+                    style={style && style.descriptionStyle}
+                    id={id + 'ic'}
+                    onChange={handleChanges}
+                    value={payload.itemDescription}
+                    isCost={true}
+                />
+                <EDIT_ICON icon={faPencilAlt} />
+
+            </INPUT_WRAPPER>
             <INPUT_WRAPPER ref={switch1_ref}>
                 <INPUT
                     name='itemCost'
