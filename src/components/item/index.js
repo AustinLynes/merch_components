@@ -70,29 +70,32 @@ const Item = (props) => {
                         <p>click to edit</p>
                     </PLACEHOLDER>)
             }
-
-            <INPUT
-                ref={switch1_ref}
-                name='itemCost'
-                style={style && style.costStyle}
-                id={id + 'ic'}
-                onSale={onSale}
-                type='number'
-                onChange={handleChanges}
-                value={payload.itemCost}
-                isCost={true}
-            />
+            <INPUT_WRAPPER ref={switch1_ref}>
+                <INPUT
+                    ref={switch1_ref}
+                    name='itemCost'
+                    style={style && style.costStyle}
+                    id={id + 'ic'}
+                    onSale={onSale}
+                    type='number'
+                    onChange={handleChanges}
+                    value={payload.itemCost}
+                    isCost={true}
+                />
+            </INPUT_WRAPPER>
 
             {onSale && (
-                <INPUT
-                    ref={switch2_ref}
-                    id={id + 'sc'}
-                    style={style && style.saleCostStyle}
-                    type='number'
-                    name='saleCost'
-                    onChange={handleChanges}
-                    value={payload.saleCost}
-                />
+                <INPUT_WRAPPER ref={switch2_ref}>
+                    <INPUT
+                        ref={switch2_ref}
+                        id={id + 'sc'}
+                        style={style && style.saleCostStyle}
+                        type='number'
+                        name='saleCost'
+                        onChange={handleChanges}
+                        value={payload.saleCost}
+                    />
+                </INPUT_WRAPPER>
             )}
 
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
