@@ -72,7 +72,7 @@ ${props => {
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.isDescp) return `
-            color:limegreen;
+            width:80%;
             text-decoration: ${props => props.onSale ? "line-through" : "none"};
         `
         if (props.style) return `
