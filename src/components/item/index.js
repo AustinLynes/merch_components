@@ -42,7 +42,13 @@ const Item = (props) => {
     useEffect(() => {
         handleSwitch()
     }, [])
-    return item && item ? (
+    if(item === null) return (
+        <PLACEHOLDER>
+            <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
+            <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
+        </PLACEHOLDER>
+    )
+   return (
         <WRAPPER
             style={style && style.wrapperStyle}
             scale={scale}
@@ -114,11 +120,6 @@ const Item = (props) => {
 
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
         </WRAPPER>
-    ) : (
-            <PLACEHOLDER>
-                <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
-            </PLACEHOLDER>
-        )
+    )
 }
 export default Item;
