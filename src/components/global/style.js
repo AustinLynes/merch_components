@@ -28,6 +28,7 @@ export const BUTTON = styled.button`
 `
 
 export const ICON = styled(FontAwesomeIcon)`
+        box-sizing:'content-box';
         padding:1rem;
         text-align:center;
         color:orange;
