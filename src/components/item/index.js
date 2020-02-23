@@ -16,7 +16,7 @@ const Item = (props) => {
         { console.log('imma turtle') }
         return (
             <WRAPPER style={style && style.wrapperStyle} id={item && item.id}>
-                
+                  { console.log('0') }
                 <INPUT_WRAPPER>
                     <INPUT
                         id={item && item.id + '_item'}
