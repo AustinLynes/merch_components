@@ -7,6 +7,7 @@ const Item = (props) => {
     const { style, item, onChangeCallback, ...rest } = props;
 
     const OnChangeCallback = (e) => {
+        e.preventDefault();
         onChangeCallback && onChangeCallback(e);
     }
 

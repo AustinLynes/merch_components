@@ -14,6 +14,7 @@ border:2px solid black;
 width:24%;
 max-width:50%;
 &:active{
+    width:24% + 2px;
     box-shadow:6px 6px 5px rgba(0,0,0,.3);
 }
 ${props => {
