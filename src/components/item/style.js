@@ -241,7 +241,7 @@ ${props => {
 
 export const SALE_FLAG = styled.div`
 position:absolute;
-top: -50px;
+top: -40px;
 left: 50% - 100px;
 font-size:1.4rem;
 padding:5px;
