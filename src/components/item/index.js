@@ -4,16 +4,19 @@ import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
-    const { style, item, onChangeCallback, ...rest } = props;
+    const { style, item, onChangeCallback, onClickCallback, ...rest } = props;
 
     const OnChangeCallback = (e) => {
         e.preventDefault();
         onChangeCallback && onChangeCallback(e);
     }
-
+    const OnClickCallback = (e) => {
+        e.preventDefault();
+        onClickCallback && onClickCallback(e);
+    }
     if (!item) {
         return (
-            <PLACEHOLDER item_is_null={true} >
+            <PLACEHOLDER onClick={OnClickCallback} item_is_null={true} >
                 <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
                 <p style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
             </PLACEHOLDER>
