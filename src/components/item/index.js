@@ -9,7 +9,7 @@ const Item = (props) => {
     const OnChangeCallback = (e) => {
         onChangeCallback && onChangeCallback(e);
     }
-    
+
     if (!item) {
         return (
             <PLACEHOLDER item_is_null={true} >
@@ -36,7 +36,7 @@ const Item = (props) => {
                             id={item && item.id + '_img'}
                             style={style && style.imageStyle}
                             alt='shirt'
-                            src={imageSrc}
+                            src={item && item.imageSrc}
                         />
                     ) : (
                         <PLACEHOLDER>
