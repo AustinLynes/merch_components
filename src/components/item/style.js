@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WRAPPER = styled.div`
+flex-grow:1;
 margin-top:75px;
 position:relative;
 display:flex;
@@ -10,7 +11,7 @@ justify-content:center;
 height: 642px;
 max-height: 642px;
 border:2px solid black;
-width:23%;
+width:24%;
 max-width:50%;
 ${props => {
         if(props.onSale)return`
