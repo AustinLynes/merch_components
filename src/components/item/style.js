@@ -39,7 +39,7 @@ border:none;
 background:transparent;
 height:fit-content;
 border-radius:10px;
-&:active{
+&:focus{
     border:1px solid dodgerblue;
 }
 ${props => {
