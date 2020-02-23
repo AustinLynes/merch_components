@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Item = (props) => {
     const { style, item, onChangeCallback, ...rest } = props;
 
-    const OnChangeCallback = () => {
-        onChangeCallback && onChangeCallback();
+    const OnChangeCallback = (e) => {
+        onChangeCallback && onChangeCallback(e);
     }
     
     if (!item) {
