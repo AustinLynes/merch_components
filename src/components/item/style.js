@@ -12,7 +12,6 @@ max-height: 642px;
 border:2px solid black;
 width:23%;
 max-width:50%;
-border-radius:10px;
 ${props => {
         if (props.style) return `
             position:${props.style.position};

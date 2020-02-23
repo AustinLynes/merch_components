@@ -7,10 +7,11 @@ const Item = (props) => {
     const { style, item, ...rest } = props;
 
     if (!item) {
-        return (<PLACEHOLDER item_is_null={true} >
-            <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-            <p style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
-        </PLACEHOLDER>
+        return (
+            <PLACEHOLDER item_is_null={true} >
+                <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
+                <p style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
+            </PLACEHOLDER>
         )
     } else {
         return (
@@ -25,16 +26,19 @@ const Item = (props) => {
                 </INPUT_WRAPPER>
 
                 {item && item.imageSrc ?
-                    (<IMAGE
-                        id={item && item.id + '_img'} 
-                        style={style && style.imageStyle}
-                        alt='shirt'
-                        src={imageSrc}
-                    /> ) : (
+                    (
+                        <IMAGE
+                            id={item && item.id + '_img'}
+                            style={style && style.imageStyle}
+                            alt='shirt'
+                            src={imageSrc}
+                        />
+                    ) : (
                         <PLACEHOLDER>
                             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
                             <p style={{ width: '100%', textAlign: 'center' }}>tap to edit</p>
-                        </PLACEHOLDER>)
+                        </PLACEHOLDER>
+                    )
                 }
                 <INPUT_WRAPPER >
                     <INPUT
