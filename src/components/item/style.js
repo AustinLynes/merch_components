@@ -150,8 +150,7 @@ export const PLACEHOLDER = styled.div`
         if (props.item_is_null) return `
             width:20%;
             margin:20px;
-            margin-top:85px;
-            margin-bottom:60px;
+            margin-top:100px;
             height:460px;
         `
         if (props.style) return `
