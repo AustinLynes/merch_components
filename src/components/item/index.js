@@ -24,6 +24,7 @@ const Item = (props) => {
                     <INPUT
                         id={item && item.id + '_item'}
                         name='itemName'
+                        onChange={OnChangeCallback}
                         style={style && style.nameStyle}
                         value={item && item.itemName} />
                     <EDIT_ICON icon={faPencilAlt} />
