@@ -14,6 +14,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const Reset = createGlobalStyle`
    *{
+       box-sizing:border-box;
        user-select:none;
    }
    *:focus{
