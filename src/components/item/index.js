@@ -42,7 +42,7 @@ const Item = (props) => {
     useEffect(() => {
         handleSwitch()
     }, [])
-    item && item ? (
+    return item && item ? (
         <WRAPPER
             style={style && style.wrapperStyle}
             scale={scale}
