@@ -5,7 +5,6 @@ box-sizing:border-box;
 width:100%;
 height:75px;
 background:yellow;
-padding:1rem;
 ${props=>{
     if(props.style) return `
         width:${props.style.width};
