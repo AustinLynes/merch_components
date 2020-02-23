@@ -164,7 +164,6 @@ export const PLACEHOLDER = styled.div`
             height:460px;
             border:1px solid dodgerblue;
             &:active{
-                width:25%;
                 opacity:.7;
                 box-shadow:6px 6px 5px rgba(0,0,0,.3);
             }
