@@ -135,6 +135,11 @@ max-width:90%;
 height:460px;
 object-fit:contain;
 margin:0 auto;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
 ${props => {
         if (props.style) return `
             max-width:${props.style.maxWidth};
