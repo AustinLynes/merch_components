@@ -45,13 +45,13 @@ const Item = (props) => {
         handleSwitch()
     }, [])
     if (!item) return (
-        <PLACEHOLDER>
+        <PLACEHOLDER item_is_null={true} >
             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-            <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
+            <p style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
         </PLACEHOLDER>
     )
     else {
-        {console.log('imma turtle')}
+        { console.log('imma turtle') }
         return (
             <WRAPPER
                 style={style && style.wrapperStyle}
@@ -77,7 +77,7 @@ const Item = (props) => {
                     />) : (
                         <PLACEHOLDER>
                             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                            <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
+                            <p style={{ width: '100%', textAlign: 'center' }}>tap to edit</p>
                         </PLACEHOLDER>)
                 }
                 <INPUT_WRAPPER ref={switch1_ref}>
