@@ -163,6 +163,11 @@ export const PLACEHOLDER = styled.div`
             margin-top:110px;
             height:460px;
             border:1px solid dodgerblue;
+            &:active{
+                width:25%;
+                opacity:.7;
+                box-shadow:6px 6px 5px rgba(0,0,0,.3);
+            }
         `
         if (props.style) return `
              position:${props.style.position};
