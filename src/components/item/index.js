@@ -15,7 +15,7 @@ const Item = (props) => {
         )
     } else {
         return (
-            <WRAPPER style={style && style.wrapperStyle} id={item && item.id}>
+            <WRAPPER style={style && style.wrapperStyle} onSale={item && item.onSale} id={item && item.id}>
                 <INPUT_WRAPPER>
                     <INPUT
                         id={item && item.id + '_item'}

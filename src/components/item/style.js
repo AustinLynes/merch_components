@@ -13,6 +13,9 @@ border:2px solid black;
 width:23%;
 max-width:50%;
 ${props => {
+        if(props.onSale)return`
+            border:3px solid dodgerblue;
+        `
         if (props.style) return `
             position:${props.style.position};
             display:${props.style.display};
