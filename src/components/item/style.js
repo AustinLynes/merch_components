@@ -14,7 +14,7 @@ border:2px solid black;
 width:24%;
 max-width:50%;
 ${props => {
-        if(props.onSale)return`
+        if (props.onSale) return `
             border:3px solid dodgerblue;
         `
         if (props.style) return `
@@ -39,7 +39,9 @@ border:none;
 background:transparent;
 height:fit-content;
 border-radius:10px;
-border:1px solid lightgrey;
+&:active{
+    border:1px solid dodgerblue;
+}
 ${props => {
         if (props.style) return `
              position:${props.style.position};
