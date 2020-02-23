@@ -13,6 +13,9 @@ max-height: 642px;
 border:2px solid black;
 width:24%;
 max-width:50%;
+&:active{
+    box-shadow:6px 6px 5px rgba(0,0,0,.3);
+}
 ${props => {
         if (props.onSale) return `
             border:3px solid dodgerblue;
