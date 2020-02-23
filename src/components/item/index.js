@@ -13,7 +13,6 @@ const Item = (props) => {
         </PLACEHOLDER>
         )
     } else {
-        { console.log('imma turtle') }
         return (
             <WRAPPER style={style && style.wrapperStyle} id={item && item.id}>
                 <INPUT_WRAPPER>
@@ -31,7 +30,7 @@ const Item = (props) => {
                         style={style && style.imageStyle}
                         alt='shirt'
                         src={imageSrc}
-                    />) : (
+                    /> ) : (
                         <PLACEHOLDER>
                             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
                             <p style={{ width: '100%', textAlign: 'center' }}>tap to edit</p>
