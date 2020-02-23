@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BANNER = styled.div`
 box-sizing:border-box;
 width:100%;
-height:125px;
+height:75px;
 background:yellow;
 padding:1rem;
 ${props=>{
