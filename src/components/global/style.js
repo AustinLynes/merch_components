@@ -28,25 +28,11 @@ export const BUTTON = styled.button`
 `
 
 export const ICON = styled(FontAwesomeIcon)`
-        width:30px;
-        height:30px;
         padding:1rem;
         text-align:center;
-        font-size:2rem;
-        color:dodgerblue;
+        color:orange;
         border-radius:50%;
-        border:1px solid dodgerblue;
-
         ${props => {
-        if (props.isCarousel) return `
-                    position:absolute;
-                    top:50%;
-                    ${props => props.right ? `right: 20px;` : `left: 20px;`}
-                `
-        if (props.isCart) return `
-            border:none;
-            font-size:
-        `
         if (props.style) return `
                         position:${props.style.position};
                         bottom:${props.style.bottomPos};
