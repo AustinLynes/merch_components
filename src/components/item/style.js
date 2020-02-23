@@ -10,7 +10,7 @@ justify-content:center;
 height: 642px;
 max-height: 642px;
 border:2px solid black;
-width:25%;
+width:23%;
 max-width:50%;
 border-radius:10px;
 ${props => {
