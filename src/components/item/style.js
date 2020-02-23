@@ -152,6 +152,7 @@ export const PLACEHOLDER = styled.div`
             margin:20px;
             margin-top:110px;
             height:460px;
+            border:1px solid dodgerblue;
         `
         if (props.style) return `
              position:${props.style.position};
