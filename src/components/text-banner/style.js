@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const BANNER = styled.div`
+box-sizing:border-box;
 width:100%;
 height:125px;
 background:yellow;
