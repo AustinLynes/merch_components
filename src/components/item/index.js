@@ -4,8 +4,12 @@ import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
-    const { style, item, ...rest } = props;
+    const { style, item, onChangeCallback, ...rest } = props;
 
+    const OnChangeCallback = () => {
+        onChangeCallback && onChangeCallback();
+    }
+    
     if (!item) {
         return (
             <PLACEHOLDER item_is_null={true} >
@@ -46,6 +50,7 @@ const Item = (props) => {
                         style={style && style.descriptionStyle}
                         id={item && item.id + '_description'}
                         value={item && item.itemDescription}
+                        onChange={OnChangeCallback}
                         isDescp={true}
                     />
                     <EDIT_ICON icon={faPencilAlt} />
@@ -59,6 +64,7 @@ const Item = (props) => {
                         onSale={item && item.onSale}
                         value={item && item.itemCost}
                         type='number'
+                        onChange={OnChangeCallback}
                         isCost={true}
                     />
                     <EDIT_ICON icon={faPencilAlt} />
@@ -72,6 +78,7 @@ const Item = (props) => {
                             name='saleCost'
                             style={style && style.saleCostStyle}
                             value={item && item.saleCost}
+                            onChange={OnChangeCallback}
                             type='number'
                         />
                         <EDIT_ICON icon={faPencilAlt} />
