@@ -42,7 +42,7 @@ const Item = (props) => {
     useEffect(() => {
         handleSwitch()
     }, [])
-    return (
+    item && item ? (
         <WRAPPER
             style={style && style.wrapperStyle}
             scale={scale}
@@ -67,7 +67,7 @@ const Item = (props) => {
                 />) : (
                     <PLACEHOLDER>
                         <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                        <p style={{ width: '100%', textAlign: 'center' }}>click to edit</p>
+                        <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
                     </PLACEHOLDER>)
             }
             <INPUT_WRAPPER ref={switch1_ref}>
@@ -78,7 +78,7 @@ const Item = (props) => {
                     onChange={handleChanges}
                     value={payload.itemDescription}
                     isDescp={true}
-                    />
+                />
                 <EDIT_ICON icon={faPencilAlt} />
 
             </INPUT_WRAPPER>
@@ -92,7 +92,7 @@ const Item = (props) => {
                     onChange={handleChanges}
                     value={payload.itemCost}
                     isCost={true}
-                    />
+                />
                 <EDIT_ICON icon={faPencilAlt} />
 
             </INPUT_WRAPPER>
@@ -114,6 +114,11 @@ const Item = (props) => {
 
             <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
         </WRAPPER>
-    )
+    ) : (
+            <PLACEHOLDER>
+                <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
+                <p style={{ width: '100%', textAlign: 'center' }}>add an item edit</p>
+            </PLACEHOLDER>
+        )
 }
 export default Item;
