@@ -66,7 +66,7 @@ const Item = (props) => {
                 {item && item.onSale && (
                     <INPUT_WRAPPER>
                         <INPUT
-                            id={id + '_sale_cost'}
+                            id={item && item.id + '_sale_cost'}
                             name='saleCost'
                             style={style && style.saleCostStyle}
                             value={item && item.saleCost}
