@@ -9,7 +9,12 @@ import Header from './components/header' // [ X ] isDynamic
 import Footer from './components/footer'// [ X ] isDynamic
 import TextBanner from './components/text-banner'
 import LinkBar from './components/link-bar'
+import reset from 'styled-reset-advanced'
+import { createGlobalStyle } from 'styled-components'
 
+const Reset = createGlobalStyle`
+    ${reset}
+`
 
 
 export {
@@ -23,5 +28,6 @@ export {
     Header,
     Footer,
     TextBanner,
-    LinkBar
+    LinkBar,
+    Reset
 };
