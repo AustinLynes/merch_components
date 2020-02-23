@@ -149,8 +149,8 @@ export const PLACEHOLDER = styled.div`
     ${props => {
         if (props.item_is_null) return `
             width:20%;
-            margin:25px;
-            height:642px;
+            margin:20px;
+            height:622px;
         `
         if (props.style) return `
              position:${props.style.position};
