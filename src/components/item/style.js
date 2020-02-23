@@ -249,6 +249,7 @@ top: -40px;
 left: 50% - 100px;
 font-size:1.4rem;
 padding:5px;
+width:25%;
 text-align:center;
 -webkit-text-fill-color: white; 
 -webkit-text-stroke-width: 1px;
