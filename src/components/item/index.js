@@ -7,7 +7,9 @@ const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
     const { id, onSale, itemName, itemDescription, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
-    const [payload, setPayload] = useState({ id, itemDescription, itemName, saleCost, itemCost });
+    if (item) {
+        const [payload, setPayload] = useState({ id, itemDescription, itemName, saleCost, itemCost });
+    }
     const [editSwitches, setEditSwitches] = useState([0, 0, 0])
 
     const switch0_ref = useRef(null)
