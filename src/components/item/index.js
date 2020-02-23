@@ -51,7 +51,7 @@ const Item = (props) => {
         </PLACEHOLDER>
     )
     else {
-
+        {console.log('imma turtle')}
         return (
             <WRAPPER
                 style={style && style.wrapperStyle}
