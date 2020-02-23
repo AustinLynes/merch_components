@@ -7,7 +7,7 @@ const Item = (props) => {
     // GSAP 
     const { style, item, ...rest } = props;
     if (item) {
-        const { id, onSale, itemName, itemDescription, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem, scale } = item
+        const { id, onSale, itemName, itemDescription, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem } = item
         const [payload, setPayload] = useState({ id, itemDescription, itemName, saleCost, itemCost });
     }
     const [editSwitches, setEditSwitches] = useState([0, 0, 0])
@@ -55,7 +55,6 @@ const Item = (props) => {
         return (
             <WRAPPER
                 style={style && style.wrapperStyle}
-                scale={scale}
                 id={id}
                 onContextMenu={e => {
                     e.preventDefault();
@@ -71,7 +70,6 @@ const Item = (props) => {
                     (<IMAGE
                         id={id}
                         style={style && style.imageStyle}
-                        scale={scale + 0.2}
                         alt='shirt'
                         src={imageSrc}
                     />) : (
