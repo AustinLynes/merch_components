@@ -242,7 +242,7 @@ ${props => {
 export const SALE_FLAG = styled.div`
 position:absolute;
 top: -50px;
-left: 50%;
+left: 50% - 100px;
 font-size:1.4rem;
 padding:5px;
 text-align:center;
