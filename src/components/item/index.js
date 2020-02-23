@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT, PLACEHOLDER } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT, PLACEHOLDER,SALE_FLAG } from './style'
 import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -85,7 +85,7 @@ const Item = (props) => {
                         <EDIT_ICON icon={faPencilAlt} />
                     </INPUT_WRAPPER>
                 )}
-
+                <SALE_FLAG onSale={item && item.onSale} >SALE</SALE_FLAG>
                 <CLOSE_BUTTON style={style && style.closeButtonStyle} id={item && item.id + '_close_btn'} icon={faTimes} />
             </WRAPPER>
         )
