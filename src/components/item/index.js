@@ -4,71 +4,31 @@ import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
-    // GSAP 
     const { style, item, ...rest } = props;
-    if (item) {
-        const { id, onSale, itemName, itemDescription, itemCost, imageSrc, toggleOnSale, saleCost, submitCallback, updateItem, deleteItem } = item
-        const [payload, setPayload] = useState({ id, itemDescription, itemName, saleCost, itemCost });
-    }
-    const [editSwitches, setEditSwitches] = useState([0, 0, 0])
 
-    const switch0_ref = useRef(null)
-    const switch1_ref = useRef(null)
-    const switch2_ref = useRef(null)
-
-    const toggle = (id) => {
-        toggleOnSale(id);
-    }
-    //-> SET ANIM 
-    // GSAP so
-    const handleChanges = (e) => {
-        setPayload({ ...payload, [e.target.name]: e.target.value });
-        updateItem(e.target.id, payload);
-        return item;
-    }
-
-    const handleSwitch = (e) => {
-        const refs = [switch0_ref, switch1_ref, switch2_ref];
-        refs.map((ref, i) => {
-
-            console.log('******* ', ref);
-            //    ref.children.map(child=>{
-            //        console.log(child)
-            //    })
-        })
-    }
-    // abstract scale to a parent var... then.. apply scale to the carosel 
-    // navigation needs background color.. then customize buttons 
-    // 
-
-    useEffect(() => {
-        handleSwitch()
-    }, [])
-    if (!item) return (
-        <PLACEHOLDER item_is_null={true} >
+    if (!item) {
+        return (<PLACEHOLDER item_is_null={true} >
             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
             <p style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
         </PLACEHOLDER>
-    )
-    else {
+        )
+    } else {
         { console.log('imma turtle') }
         return (
-            <WRAPPER
-                style={style && style.wrapperStyle}
-                id={id}
-                onContextMenu={e => {
-                    e.preventDefault();
-                    toggle(e.target.id);
-                }}>
-
-                <INPUT_WRAPPER ref={switch0_ref}>
-                    <INPUT id={id + 'in'} name='itemName' onChange={handleChanges} style={style && style.nameStyle} value={payload.itemName} />
+            <WRAPPER style={style && style.wrapperStyle} id={item && item.id}>
+                
+                <INPUT_WRAPPER>
+                    <INPUT
+                        id={item && item.id + '_item'}
+                        name='itemName'
+                        style={style && style.nameStyle}
+                        value={item && item.itemName} />
                     <EDIT_ICON icon={faPencilAlt} />
                 </INPUT_WRAPPER>
 
-                {imageSrc ?
+                {item && item.imageSrc ?
                     (<IMAGE
-                        id={id}
+                        id={item && item.id + '_img'} 
                         style={style && style.imageStyle}
                         alt='shirt'
                         src={imageSrc}
@@ -78,49 +38,45 @@ const Item = (props) => {
                             <p style={{ width: '100%', textAlign: 'center' }}>tap to edit</p>
                         </PLACEHOLDER>)
                 }
-                <INPUT_WRAPPER ref={switch1_ref}>
+                <INPUT_WRAPPER >
                     <INPUT
                         name='itemDescription'
                         style={style && style.descriptionStyle}
-                        id={id + 'ic'}
-                        onChange={handleChanges}
-                        value={payload.itemDescription}
+                        id={item && item.id + '_description'}
+                        value={item && item.itemDescription}
                         isDescp={true}
                     />
                     <EDIT_ICON icon={faPencilAlt} />
 
                 </INPUT_WRAPPER>
-                <INPUT_WRAPPER ref={switch1_ref}>
+                <INPUT_WRAPPER >
                     <INPUT
                         name='itemCost'
                         style={style && style.costStyle}
-                        id={id + 'ic'}
-                        onSale={onSale}
+                        id={item && item.id + '_cost'}
+                        onSale={item && item.onSale}
+                        value={item && item.itemCost}
                         type='number'
-                        onChange={handleChanges}
-                        value={payload.itemCost}
                         isCost={true}
                     />
                     <EDIT_ICON icon={faPencilAlt} />
 
                 </INPUT_WRAPPER>
 
-                {onSale && (
-                    <INPUT_WRAPPER ref={switch2_ref}>
+                {item && item.onSale && (
+                    <INPUT_WRAPPER>
                         <INPUT
-                            ref={switch2_ref}
-                            id={id + 'sc'}
-                            style={style && style.saleCostStyle}
-                            type='number'
+                            id={id + '_sale_cost'}
                             name='saleCost'
-                            onChange={handleChanges}
-                            value={payload.saleCost}
+                            style={style && style.saleCostStyle}
+                            value={item && item.saleCost}
+                            type='number'
                         />
                         <EDIT_ICON icon={faPencilAlt} />
                     </INPUT_WRAPPER>
                 )}
 
-                <CLOSE_BUTTON style={style && style.closeButtonStyle} id={id} icon={faTimes} />
+                <CLOSE_BUTTON style={style && style.closeButtonStyle} id={item && item.id + '_close_btn'} icon={faTimes} />
             </WRAPPER>
         )
     }
