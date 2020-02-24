@@ -14,6 +14,11 @@ export const IMAGE = styled.img`
 `
 
 export const IMAGE_PLACEHOLDER = styled.div`
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:center;
+        align-content:center;
+        align-items:center;
         border:1px solid black;
         width:100%;
         height:${props => {
@@ -31,6 +36,7 @@ text-align:center;
 background:dodgerblue;
 color:white;
 border-radius:50%;
+font-size:2.5rem;
 ${props => {
 if (props.style) return `
                 position:${props.style.position};
