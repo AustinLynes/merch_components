@@ -29,6 +29,7 @@ const Carosel = (props) => {
                  <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
                     <PLACEHOLDER>
                          <ICON style={style && style.plusIconStyle} isPlus={true} icon={faPlus} />
+                         <p style={{width:'100%', textAlign:'center'}}>Tap to add photos</p>
                     </PLACEHOLDER>
                 <ICON style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
             </PLACEHOLDER_CAROSEL>

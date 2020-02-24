@@ -70,7 +70,7 @@ export const ICON = styled(FontAwesomeIcon)`
                 if (props.isPlus) return `
                         background:dodgerblue;
                         color:white;
-
+                        align-self:center;
                 `
                 if (props.style) return `
                         position:${props.style.position};
