@@ -1,5 +1,5 @@
 import React from 'react'
-import { IMAGE, IMAGE_PLACEHOLDE,ICON } from './style'
+import { IMAGE, IMAGE_PLACEHOLDER,ICON } from './style'
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 const Image = (props) => {
 
