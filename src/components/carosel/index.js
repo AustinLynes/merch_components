@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { ICON } from '../global/style';
-import { CAROSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER } from './Style';
+import { CAROSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
