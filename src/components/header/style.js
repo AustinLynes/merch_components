@@ -148,6 +148,7 @@ export const ICON = styled(FontAwesomeIcon)`
         text-align:center;
         color:dodgerblue;
         font-size:2rem;
+        width:80%;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
