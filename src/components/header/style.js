@@ -149,8 +149,8 @@ height:fit-content;
 export const ICON = styled(FontAwesomeIcon)`
         text-align:center;
         color:dodgerblue;
-        font-size:2rem;
-        width:100%;
+        font-size:5rem;
+        width:100px;
         border:1px solid white;
         ${props => {
         if (props.style) return `
