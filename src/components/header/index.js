@@ -7,13 +7,14 @@ const Header = (props) => {
 
     const { style, title, logoSrc, cartCount, handleChangeCallback, ...rest } = props;
 
-    const HandleChangeCallback = ()=>{
-        return handleChangeCallback && handleChangeCallback();
+    const HandleChangeCallback = (e)=>{
+        e.preventDefault();
+        return handleChangeCallback && handleChangeCallback(e);
     } 
     return (
         <HEADER style={style && style.wrapperStyle}>
             <LOGO style={style && style.logoStyle} src={logoSrc} />
-            <TITLE style={style && style.titleStyle} placeholder={'Add a Title'} value={title && title} />
+            <TITLE style={style && style.titleStyle} placeholder={'Add a Title'} value={title && title} onChange={HandleChangeCallback}/>
             <SEARCH_BAR style={style && style.searchBarStyle}>
                 <QUERY style={style && style.queryStyle} />
                 <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} />
