@@ -6,6 +6,7 @@ export const HEADER = styled.div`
     display:flex;
     flex-flow:row wrap;
     justify-content:space-between;
+    padding:0 10px;
     align-items:center;
     width:100%;
     height:200px;
