@@ -62,13 +62,19 @@ export const IMAGE = styled.img`
 
 
 export const ICON = styled(FontAwesomeIcon)`
-        padding:1rem;
+        width:75px;
+        height:75px;
         text-align:center;
         color:dodgerblue;
         border:1px solid dodgerblue;
         border-radius:50%;
         ${props => {
-        if (props.style) return `
+                if (props.isPlus) return `
+                        background:dodgerblue;
+                        color:white;
+
+                `
+                if (props.style) return `
                         position:${props.style.position};
                         bottom:${props.style.bottomPos};
                         top:${props.style.topPos};
@@ -86,7 +92,7 @@ export const ICON = styled(FontAwesomeIcon)`
                         background:${props.style.backgroundColor};
                         margin:${props.style.margin};
                           `
-    }}
+        }}
 `
 export const PLACEHOLDER = styled.div`
         width:70%;

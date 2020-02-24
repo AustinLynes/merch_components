@@ -17,18 +17,20 @@ const Carosel = (props) => {
     }
     if (images && images) {
         return (
-            <CAROSEL style={style && style.carousel}>
-                <ICON style={style && style.leftIcon} isCarousel={true} icon={faAngleLeft} onClick={decrement} />
+            <CAROSEL style={style && style.wrapperStyle}>
+                <ICON style={style && style.leftIconStyle} isCarousel={true} icon={faAngleLeft} onClick={decrement} />
                 {images.map((image, i) => (i === index && <IMAGE style={style && style.image} src={image} />))}
-                <ICON style={style && style.rightIcon} isCarousel={true} right icon={faAngleRight} onClick={increment} />
+                <ICON style={style && style.rightIconStyle} isCarousel={true} right icon={faAngleRight} onClick={increment} />
             </CAROSEL>
         )
     }else{
         return (
-            <PLACEHOLDER_CAROSEL>
-                 <ICON style={style && style.leftIcon} isCarousel={true} icon={faAngleLeft} onClick={decrement} />
-                    <PLACEHOLDER />
-                <ICON style={style && style.rightIcon} isCarousel={true} right icon={faAngleRight} onClick={increment} />
+            <PLACEHOLDER_CAROSEL style={style && style.placeholder_wrapperStyle}>
+                 <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
+                    <PLACEHOLDER>
+                         <ICON style={style && style.plusIconStyle} isPlus={true} icon={faPlus} />
+                    </PLACEHOLDER>
+                <ICON style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
             </PLACEHOLDER_CAROSEL>
         )
     }
