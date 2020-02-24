@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const BUTTON = styled.button`
     /* this is the default styling of the button */
-    padding:1rem;
     border:none;
     width:20%;
     border-radius:10px;
     height:90px;
     margin-top:75px;
+    font-size:1.8rem;
     background:#000;
     color:white;
     /* any overriding styles will be displayed here  */
