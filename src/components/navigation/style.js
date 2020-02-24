@@ -7,7 +7,7 @@ export const NAVIGATION = styled.div`
     margin:0;
     width:100%;
     max-height:75px;
-    background:#333;
+    background:#000;
     ${props =>{
         if(props.style) return`
             position:${props.style.position};
