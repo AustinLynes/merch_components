@@ -7,7 +7,6 @@ export const HEADER = styled.div`
     flex-flow:row wrap;
     justify-content:space-between;
     width:100%;
-    padding:1rem;
     height:200px;
     max-height:200px;
     background:#303030;
