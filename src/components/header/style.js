@@ -134,6 +134,7 @@ flex-flow:row wrap;
 justify-content:center;
 align-items:center;
 border:1px solid white;
+height:fit-content;
  ${props => {
         if (props.style) {
             return `
@@ -146,13 +147,11 @@ border:1px solid white;
     }}
 `
 export const ICON = styled(FontAwesomeIcon)`
-        padding:1rem;
         text-align:center;
         color:dodgerblue;
         font-size:2rem;
-        width:80%;
-border:1px solid white;
-
+        width:100%;
+        border:1px solid white;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
