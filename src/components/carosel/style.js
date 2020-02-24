@@ -24,6 +24,7 @@ export const PLACEHOLDER_CAROSEL = styled.div`
         position:relative;
         display:flex;
         flex-flow:row wrap;
+        border:1px solid dodgerblue;
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};
