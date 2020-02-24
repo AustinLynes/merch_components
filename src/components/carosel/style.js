@@ -19,7 +19,6 @@ export const CAROSEL = styled.div`
 `
 
 export const PLACEHOLDER_CAROSEL = styled.div`
-        position:relative;
         display:flex;
         flex-flow:row wrap;
         justify-content:space-between;
