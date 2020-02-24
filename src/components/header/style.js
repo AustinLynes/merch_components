@@ -70,6 +70,7 @@ display:flex;
 flex-flow:row wrap;
 align-items:center;
 border-radius:10px;
+border:none;
 background:white;
 ${props => {
         if (props.style) {
