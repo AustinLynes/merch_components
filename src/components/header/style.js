@@ -133,7 +133,6 @@ width: 100px;
 flex-flow:row wrap;
 justify-content:center;
 align-items:center;
-border:1px solid white;
 height:fit-content;
  ${props => {
         if (props.style) {
@@ -151,7 +150,6 @@ export const ICON = styled(FontAwesomeIcon)`
         color:dodgerblue;
         font-size:5rem;
         width:100px;
-        border:1px solid white;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
@@ -177,8 +175,6 @@ export const CART_COUNT = styled.p`
     color:white;
     font-size:1.4rem;
     width:100%;
-    border:1px solid white;
-
     ${props => {
         if (props.style) {
             return `
