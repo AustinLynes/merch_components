@@ -100,6 +100,7 @@ export const PLACEHOLDER = styled.div`
         display:flex;
         flex-flow:row wrap;
         align-items:center;
+        justify-content:center;
         border-radius:10px;
         ${props => {
                 if (props.style) return `
