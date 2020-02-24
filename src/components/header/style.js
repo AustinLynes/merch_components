@@ -132,6 +132,7 @@ display:flex;
 flex-direction:row wrap;
 justify-content:center;
 align-items:center;
+border:1px solid white;
  ${props => {
         if (props.style) {
             return `
@@ -149,6 +150,8 @@ export const ICON = styled(FontAwesomeIcon)`
         color:dodgerblue;
         font-size:2rem;
         width:80%;
+border:1px solid white;
+
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
@@ -175,6 +178,8 @@ export const CART_COUNT = styled.p`
     padding: 1rem;
     font-size:1.4rem;
     width:100%;
+border:1px solid white;
+
     ${props => {
         if (props.style) {
             return `
