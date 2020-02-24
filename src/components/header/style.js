@@ -173,6 +173,7 @@ export const CART_COUNT = styled.p`
     padding: 1rem;
     font-size:1.4rem;
     width:100%;
+    color:white;
     ${props => {
         if (props.style) {
             return `
