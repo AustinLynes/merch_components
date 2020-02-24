@@ -43,7 +43,7 @@ ${props => {
  
 `
 export const TITLE = styled.input`
-width:20%;
+width:700px;
 color:white;
 margin:0;
 background:transparent;
