@@ -175,10 +175,9 @@ export const ICON = styled(FontAwesomeIcon)`
 `
 export const CART_COUNT = styled.p`
     color:white;
-    padding: 1rem;
     font-size:1.4rem;
     width:100%;
-border:1px solid white;
+    border:1px solid white;
 
     ${props => {
         if (props.style) {
