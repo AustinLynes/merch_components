@@ -129,6 +129,7 @@ ${props => {
 
 export const CART = styled.div`
 display:flex;
+width: 100px;
 flex-direction:row wrap;
 justify-content:center;
 align-items:center;
