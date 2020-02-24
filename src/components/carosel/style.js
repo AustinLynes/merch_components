@@ -60,10 +60,7 @@ export const IMAGE = styled.img`
 
 
 export const ICON = styled(FontAwesomeIcon)`
-        height:50px;
-        width:75px;
-        font-size:1.4rem;
-        padding:0;
+        padding:1rem 2rem;
 
         text-align:center;
         color:dodgerblue;
