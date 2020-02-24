@@ -48,8 +48,8 @@ color:white;
 margin:0;
 background:transparent;
 border:none;
-border-bottom:1px solid white;
 font-size:3rem;
+text-align:center;
 ${props => {
         if (props.style) {
             return `
