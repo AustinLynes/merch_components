@@ -4,7 +4,7 @@ export const BANNER = styled.div`
 box-sizing:border-box;
 width:100%;
 height:75px;
-background:yellow;
+background:linear-gradient(#fdf771, #e6de0a);
 padding:1rem;
 ${props=>{
     if(props.style) return `
