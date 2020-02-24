@@ -110,7 +110,6 @@ ${props => {
 export const SEARCH_BUTTON = styled(FontAwesomeIcon)`
 color: grey;
 width:5%;
-padding:10px;
 font-size:1.4rem;
 ${props => {
         if (props.style) {
