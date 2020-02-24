@@ -28,7 +28,7 @@ export const HEADER = styled.div`
 `
 export const LOGO = styled.img`
 width:375px;
-height:200px;
+height:150px;
 object-fit:contain;
 ${props => {
         if (props.style) {
