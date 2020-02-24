@@ -130,7 +130,7 @@ ${props => {
 export const CART = styled.div`
 display:flex;
 width: 100px;
-flex-direction:row wrap;
+flex-flow:row wrap;
 justify-content:center;
 align-items:center;
 border:1px solid white;
