@@ -99,8 +99,9 @@ export const PLACEHOLDER = styled.div`
         border:1px solid lightgrey;
         display:flex;
         flex-flow:row wrap;
-        align-items:center;
         justify-content:center;
+        align-content:center;
+        align-items:center;
         border-radius:10px;
         ${props => {
                 if (props.style) return `
