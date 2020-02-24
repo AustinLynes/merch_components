@@ -19,12 +19,12 @@ export const CAROSEL = styled.div`
 `
 
 export const PLACEHOLDER_CAROSEL = styled.div`
+        height:600px;
+        width:100%;
         display:flex;
         flex-flow:row wrap;
         justify-content:space-between;
         align-items:center;
-        height:600px;
-        width:100%;
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};
@@ -97,6 +97,9 @@ export const PLACEHOLDER = styled.div`
         margin:20px;
         height:500px;
         border:1px solid lightgrey;
+        display:flex;
+        flex-flow:row wrap;
+        align-items:center;
         border-radius:10px;
         ${props => {
                 if (props.style) return `
