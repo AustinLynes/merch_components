@@ -26,7 +26,6 @@ export const PLACEHOLDER_CAROSEL = styled.div`
         align-items:center;
         height:600px;
         width:100%;
-        border:1px solid dodgerblue;
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};
@@ -62,10 +61,10 @@ export const IMAGE = styled.img`
 
 
 export const ICON = styled(FontAwesomeIcon)`
-        height:75px;
-        width:75px;
+        height:50px;
+        width:50px;
+        padding:0;
         text-align:center;
-        padding:1rem;
         color:dodgerblue;
         border:1px solid dodgerblue;
         border-radius:50%;
