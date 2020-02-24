@@ -125,25 +125,13 @@ ${props => {
    
  `
 
-export const CART_COUNT = styled.p`
-    padding: 1rem;
-    font-size:1.4rem;
-    width:100%;
-    ${props => {
-        if (props.style) {
-            return `
-            color: ${props.style.color};
-            width: ${props.style.width};
-            padding:${props.style.padding};
-            font-size:${props.style.fontSize};
-                `
-        }
-    }}
- `
+
 
 export const CART = styled.div`
 display:flex;
 flex-direction:row wrap;
+justify-content:center;
+align-items:center;
  ${props => {
         if (props.style) {
             return `
@@ -158,8 +146,8 @@ flex-direction:row wrap;
 export const ICON = styled(FontAwesomeIcon)`
         padding:1rem;
         text-align:center;
-        color:orange;
-        border-radius:50%;
+        color:dodgerblue;
+        font-size:2rem;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
@@ -181,3 +169,18 @@ export const ICON = styled(FontAwesomeIcon)`
                           `
     }}
 `
+export const CART_COUNT = styled.p`
+    padding: 1rem;
+    font-size:1.4rem;
+    width:100%;
+    ${props => {
+        if (props.style) {
+            return `
+            color: ${props.style.color};
+            width: ${props.style.width};
+            padding:${props.style.padding};
+            font-size:${props.style.fontSize};
+                `
+        }
+    }}
+ `
