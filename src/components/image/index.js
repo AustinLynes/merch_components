@@ -1,6 +1,5 @@
 import React from 'react'
-import { IMAGE, IMAGE_PLACEHOLDER } from './style'
-import { ICON } from '../carosel/style'
+import { IMAGE, IMAGE_PLACEHOLDE,ICON } from './style'
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 const Image = (props) => {
 
@@ -15,6 +14,7 @@ const Image = (props) => {
         return (
             <IMAGE_PLACEHOLDER size={size}>
                 <ICON icon={faImage} />
+                <p style={{width:'100%', textAlign:'center'}}>Tap to add a photo</p>
             </IMAGE_PLACEHOLDER>
         )
     }
