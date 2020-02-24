@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CAROSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
-import { faAngleLeft, faAngleRight, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg-icons';
 
 
 const Carosel = (props) => {
@@ -28,7 +28,7 @@ const Carosel = (props) => {
             <PLACEHOLDER_CAROSEL style={style && style.placeholder_wrapperStyle}>
                  <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
                     <PLACEHOLDER>
-                         <ICON style={style && style.plusIconStyle} isPlus={true} icon={faPlus} />
+                         <ICON style={style && style.plusIconStyle} isPlus={true} icon={faImages} />
                          <p style={{width:'100%', textAlign:'center'}}>Tap to add photos</p>
                     </PLACEHOLDER>
                 <ICON style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
