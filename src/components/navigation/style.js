@@ -6,10 +6,11 @@ export const NAVIGATION = styled.div`
     padding:10px 0;
     margin:0;
     width:100%;
+    height:75px;
     max-height:75px;
     background:#000;
-    ${props =>{
-        if(props.style) return`
+    ${props => {
+        if (props.style) return `
             position:${props.style.position};
             bottom:${props.style.bottomPos};
             top:${props.style.topPos};
