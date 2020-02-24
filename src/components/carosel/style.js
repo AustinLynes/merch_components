@@ -20,6 +20,7 @@ export const CAROSEL = styled.div`
 export const PLACEHOLDER_CAROSEL = styled.div`
         flex-grow:1;
         height:600px;
+        width:100%;
         position:relative;
         display:flex;
         flex-flow:row wrap;
