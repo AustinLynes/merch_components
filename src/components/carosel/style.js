@@ -18,12 +18,13 @@ export const CAROSEL = styled.div`
 `
 
 export const PLACEHOLDER_CAROSEL = styled.div`
-        flex-grow:1;
-        height:600px;
-        width:100%;
         position:relative;
         display:flex;
         flex-flow:row wrap;
+        justify-content:space-between;
+        align-items:center;
+        height:600px;
+        width:100%;
         border:1px solid dodgerblue;
         ${props => {
                 if (props.style) return `
