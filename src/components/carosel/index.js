@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CAROSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 const Carosel = (props) => {
