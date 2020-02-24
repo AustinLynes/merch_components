@@ -65,6 +65,7 @@ export const ICON = styled(FontAwesomeIcon)`
         width:75px;
         height:75px;
         text-align:center;
+        padding:1rem;
         color:dodgerblue;
         border:1px solid dodgerblue;
         border-radius:50%;
