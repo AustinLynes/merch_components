@@ -44,9 +44,8 @@ border:none;
 background:transparent;
 height:fit-content;
 border-radius:10px;
-&:focus{
-    border:1px solid dodgerblue;
-}
+border:1px solid dodgerblue;
+
 ${props => {
         if (props.style) return `
              position:${props.style.position};
