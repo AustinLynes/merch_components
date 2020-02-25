@@ -80,6 +80,8 @@ padding:5px;
 border:none;
 font-size:16px;
 border:1px solid dodgerblue;
+margin-top:5px;
+
 ${props => {
         if (props.style) return `
             position:${props.style.position};
@@ -110,6 +112,7 @@ padding:5px;
 border:none;
 font-size:16px;
 margin:0;
+margin-top:5px;
 ${props => {
         if (props.isCost) return `
             color:limegreen;
