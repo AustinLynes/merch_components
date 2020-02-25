@@ -27,6 +27,10 @@ const Item = (props) => {
         e.preventDefault();
         onClickCallback && onClickCallback(e);
     }
+
+    const toggleInput = (_target) => {
+        setInputs({ ...inputs, _target: { editable: !inputs._target.editable } });
+    }
     if (!item) {
         return (
             <PLACEHOLDER onClick={OnClickCallback} item_is_null={true} >
@@ -47,8 +51,8 @@ const Item = (props) => {
                             style={style && style.nameStyle}
                             value={item && item.itemName}
                         /> : <p>{item && item.itemName}</p>
-                        }
-                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({...inputs, itemName: { editable: !inputs.itemName.editable } }) }} />
+                    }
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { toggleInput('itemName') }} />
                 </INPUT_WRAPPER>
 
                 {item && item.imageSrc ?
