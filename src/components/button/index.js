@@ -9,16 +9,16 @@ const Button = (props) => {
         onChangeCallback && onChangeCallback();
     }
     const OnClickCallback = (e)=>{
+        alert(edit)
         e.preventDefault();
         setEdit(!edit);
-        alert(edit)
         onClickCallback && onClickCallback();
     }
 
     if(!edit){
         return <BUTTON style={style && style.wrapperStyle} name={name} onClick={OnClickCallback}>{name}</BUTTON>
     }else{
-        return <INPUT style={style && style.inputStyle} onChange={OnChangeCallback}/>
+        return <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name}/>
     }
 }
 
