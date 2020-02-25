@@ -17,7 +17,7 @@ const Item = (props) => {
         itemName: { editable: false },
         itemDescription: { editable: false },
         itemCost: { editable: false },
-        itemSaleCost: { editable: false }
+        saleCost: { editable: false }
     })
     const OnChangeCallback = (e) => {
         e.preventDefault();
@@ -28,9 +28,6 @@ const Item = (props) => {
         onClickCallback && onClickCallback(e);
     }
 
-    const toggleInput = (_target) => {
-        setInputs({ ...inputs, _target: { editable: !inputs[_target].editable } });
-    }
     if (!item) {
         return (
             <PLACEHOLDER onClick={OnClickCallback} item_is_null={true} >
@@ -52,7 +49,7 @@ const Item = (props) => {
                             value={item && item.itemName}
                         /> : <p>{item && item.itemName}</p>
                     }
-                    <EDIT_ICON icon={faPencilAlt} onClick={() => { toggleInput('itemName') }} />
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemName: { editable: !inputs.itemName.editable } }) }} />
                 </INPUT_WRAPPER>
 
                 {item && item.imageSrc ?
@@ -71,34 +68,42 @@ const Item = (props) => {
                     )
                 }
                 <INPUT_WRAPPER >
-                    <INPUT
-                        name='itemDescription'
-                        style={style && style.descriptionStyle}
-                        id={item && item.id + '_description'}
-                        value={item && item.itemDescription}
-                        onChange={OnChangeCallback}
-                        isDescp={true}
-                    />
-                    <EDIT_ICON icon={faPencilAlt} />
+                    {inputs.itemDescription.editable ?
+                        <INPUT
+                            name='itemDescription'
+                            style={style && style.descriptionStyle}
+                            id={item && item.id + '_description'}
+                            value={item && item.itemDescription}
+                            onChange={OnChangeCallback}
+                            isDescp={true}
+                        /> : <p>{item && item.itemDescription}</p>
+                    }
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemDescription: { editable: !inputs.itemDescription.editable } }) }} />
 
                 </INPUT_WRAPPER>
                 <INPUT_WRAPPER >
-                    <INPUT
-                        name='itemCost'
-                        style={style && style.costStyle}
-                        id={item && item.id + '_cost'}
-                        onSale={item && item.onSale}
-                        value={item && item.itemCost}
-                        type='number'
-                        onChange={OnChangeCallback}
-                        isCost={true}
-                    />
-                    <EDIT_ICON icon={faPencilAlt} />
+                    {
+                        inputs.itemCost.editable ?
+                            <INPUT
+                                name='itemCost'
+                                style={style && style.costStyle}
+                                id={item && item.id + '_cost'}
+                                onSale={item && item.onSale}
+                                value={item && item.itemCost}
+                                type='number'
+                                onChange={OnChangeCallback}
+                                isCost={true}
+                            />
+                            : <p>{item && item.itemCost}</p>
+                    }
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemCost: { editable: !inputs.itemCost.editable } }) }}/>
 
                 </INPUT_WRAPPER>
 
                 {item && item.onSale && (
                     <INPUT_WRAPPER>
+                      {
+                        inputs.saleCost.editable ?
                         <INPUT
                             id={item && item.id + '_sale_cost'}
                             name='saleCost'
@@ -107,7 +112,9 @@ const Item = (props) => {
                             onChange={OnChangeCallback}
                             type='number'
                         />
-                        <EDIT_ICON icon={faPencilAlt} />
+                        : <p>{item && item.saleCost}</p>
+                    }
+                        <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, saleCost: { editable: !inputs.saleCost.editable } }) }}/>
                     </INPUT_WRAPPER>
                 )}
                 {item && item.onSale && (<SALE_FLAG >SALE</SALE_FLAG>)}
