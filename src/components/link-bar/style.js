@@ -91,9 +91,9 @@ export const LINKCARD = styled.div`
   background:white;
   display:flex;
   flex-flow:row wrap;
- justify-content:center;
-    height:353;
-    width:347;
+    justify-content:center;
+    height:353px;
+    width:347px;
   ${props => {
         if (props.style) {
 
