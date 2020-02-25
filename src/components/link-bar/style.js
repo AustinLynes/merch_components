@@ -92,6 +92,8 @@ export const LINKCARD = styled.div`
   display:flex;
   flex-flow:row wrap;
     justify-content:center;
+    align-content:center;
+    align-items:center;
     height:353px;
     width:347px;
   ${props => {
