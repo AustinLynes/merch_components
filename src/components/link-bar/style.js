@@ -6,7 +6,7 @@ export const LINKBAR = styled.div`
     width:100%;
     display:flex;
     flex-flow:row wrap;
-    justify-content:space-between;
+    justify-content:center;
     background:#333;
     padding:2rem;
     height:600px;
