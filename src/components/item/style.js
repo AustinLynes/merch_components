@@ -84,12 +84,12 @@ ${props => {
         `
         if (props.isDescp) return `
             font-size:18px;
-            font-weight:light;
+            font-weight:100;
 
         `
         if (props.isName) return `
             font-size:18px;
-            font-weight:semi-bold;
+            font-weight:600;
 
         `
         if (props.style) return `
