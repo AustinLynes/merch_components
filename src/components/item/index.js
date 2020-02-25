@@ -38,7 +38,8 @@ const Item = (props) => {
                             onChange={OnChangeCallback}
                             style={style && style.nameStyle}
                             value={item && item.itemName}
-                        /> : <p>{item && item.itemName}</p>}
+                        /> : <p>{item && item.itemName}</p>
+                        }
                     <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemName: { editable: !editable } }) }} />
                 </INPUT_WRAPPER>
 
