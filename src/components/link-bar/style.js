@@ -8,7 +8,6 @@ export const LINKBAR = styled.div`
     flex-flow:row wrap;
     justify-content:center;
     background:#333;
-    padding:2rem;
     height:600px;
     align-content:center;
     align-items:center;
