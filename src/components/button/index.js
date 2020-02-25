@@ -11,6 +11,7 @@ const Button = (props) => {
     const OnClickCallback = (e)=>{
         e.preventDefault();
         setEdit(!edit);
+        alert(edit)
         onClickCallback && onClickCallback();
     }
 
