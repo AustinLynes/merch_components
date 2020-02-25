@@ -5,7 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
     const { style, item, onChangeCallback, onClickCallback, ...rest } = props;
-
+    const [inputs, setInputs] = useState({
+        itemName: { editable: false },
+        itemDescription: { editable: false },
+        itemCost: { editable: false },
+        itemSaleCost: { editable: false }
+    })
     const OnChangeCallback = (e) => {
         e.preventDefault();
         onChangeCallback && onChangeCallback(e);
@@ -25,14 +30,16 @@ const Item = (props) => {
         return (
             <WRAPPER style={style && style.wrapperStyle} onSale={item && item.onSale} id={item && item.id}>
                 <INPUT_WRAPPER>
-                    <INPUT
-                        id={item && item.id + '_item'}
-                        name='itemName'
-                        isName={true}
-                        onChange={OnChangeCallback}
-                        style={style && style.nameStyle}
-                        value={item && item.itemName} />
-                    <EDIT_ICON icon={faPencilAlt} />
+                    {inputs.itemName.editable ?
+                        <INPUT
+                            id={item && item.id + '_item'}
+                            name='itemName'
+                            isName={true}
+                            onChange={OnChangeCallback}
+                            style={style && style.nameStyle}
+                            value={item && item.itemName}
+                        /> : <p>{item && item.itemName}</p>}
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemName: { editable: !editable } }) }} />
                 </INPUT_WRAPPER>
 
                 {item && item.imageSrc ?
