@@ -39,6 +39,11 @@ ${props => {
 `
 
 export const INPUT_WRAPPER = styled.div`
+display:flex;
+flex-flow:row wrap;
+align-content:center;
+justify-content:center;
+align-items:center;
 width:80%;
 border:none;
 background:transparent;
@@ -104,7 +109,6 @@ width:50%;
 padding:5px;
 border:none;
 font-size:16px;
-border:1px solid dodgerblue;
 ${props => {
         if (props.isCost) return `
             color:limegreen;
