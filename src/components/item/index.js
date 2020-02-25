@@ -3,6 +3,14 @@ import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPU
 import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+///////// DO NOT MOVE ON UNTIL YOU CHEK CHANGES FOR ITEM IS EDITABLE FLAG FOR INDIVIDUAL ITEMS
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
 const Item = (props) => {
     const { style, item, onChangeCallback, onClickCallback, ...rest } = props;
     const [inputs, setInputs] = useState({
@@ -54,7 +62,7 @@ const Item = (props) => {
                     ) : (
                         <PLACEHOLDER>
                             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                            <p style={{ width: '100%', textAlign: 'center' }}>tap to edit</p>
+                            <p style={{ width: '100%', textAlign: 'center' }}>Tap to Edit</p>
                         </PLACEHOLDER>
                     )
                 }
