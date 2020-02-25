@@ -48,7 +48,7 @@ const Item = (props) => {
                             value={item && item.itemName}
                         /> : <p>{item && item.itemName}</p>
                         }
-                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({...inputs, itemName: { editable: !editable } }) }} />
+                    <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({...inputs, itemName: { editable: !inputs.itemName.editable } }) }} />
                 </INPUT_WRAPPER>
 
                 {item && item.imageSrc ?
