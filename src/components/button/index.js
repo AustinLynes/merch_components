@@ -19,10 +19,10 @@ const Button = (props) => {
         <BUTTON_WRAPPER>
             {
                 !edit ?
-                    <BUTTON style={style && style.wrapperStyle} name={name} onClick={OnClickCallback}>{name}</BUTTON>
+                    <BUTTON style={style && style.wrapperStyle} name={name} >{name}</BUTTON>
                     : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />
             }
-            <EDIT_ICON icon={faPencilAlt}/>
+            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
         </BUTTON_WRAPPER>
     )
 }
