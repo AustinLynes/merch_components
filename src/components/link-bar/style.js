@@ -96,6 +96,7 @@ export const LINKCARD = styled.div`
     align-items:center;
     height:353px;
     width:347px;
+    margin:0 10px;
   ${props => {
         if (props.style) {
 
