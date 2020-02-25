@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT, PLACEHOLDER, SALE_FLAG } from './style'
+import { WRAPPER, CLOSE_BUTTON, IMAGE, PLUS_ICON, INPUT_WRAPPER, EDIT_ICON, INPUT, PLACEHOLDER, SALE_FLAG, TEXT } from './style'
 import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-///////// DO NOT MOVE ON UNTIL YOU CHEK CHANGES FOR ITEM IS EDITABLE FLAG FOR INDIVIDUAL ITEMS
-//////////////////////////////////////////////////////////////////////////////////////////////
-
 
 const Item = (props) => {
     const { style, item, onChangeCallback, onClickCallback, ...rest } = props;
@@ -43,11 +35,10 @@ const Item = (props) => {
                         <INPUT
                             id={item && item.id + '_item'}
                             name='itemName'
-                            isName={true}
                             onChange={OnChangeCallback}
                             style={style && style.nameStyle}
                             value={item && item.itemName}
-                        /> : <p>{item && item.itemName}</p>
+                        /> : <TEXT isName={true}>{item && item.itemName}</TEXT>
                     }
                     <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemName: { editable: !inputs.itemName.editable } }) }} />
                 </INPUT_WRAPPER>
@@ -75,8 +66,7 @@ const Item = (props) => {
                             id={item && item.id + '_description'}
                             value={item && item.itemDescription}
                             onChange={OnChangeCallback}
-                            isDescp={true}
-                        /> : <p>{item && item.itemDescription}</p>
+                        /> : <TEXT isDescp={true}>{item && item.itemDescription}</TEXT>
                     }
                     <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemDescription: { editable: !inputs.itemDescription.editable } }) }} />
 
@@ -92,9 +82,9 @@ const Item = (props) => {
                                 value={item && item.itemCost}
                                 type='number'
                                 onChange={OnChangeCallback}
-                                isCost={true}
+                               
                             />
-                            : <p>{item && item.itemCost}</p>
+                            : <TEXT isCost={true}>{item && item.itemCost}</TEXT>
                     }
                     <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, itemCost: { editable: !inputs.itemCost.editable } }) }}/>
 
@@ -112,7 +102,7 @@ const Item = (props) => {
                             onChange={OnChangeCallback}
                             type='number'
                         />
-                        : <p>{item && item.saleCost}</p>
+                        : <TEXT>{item && item.saleCost}</TEXT>
                     }
                         <EDIT_ICON icon={faPencilAlt} onClick={() => { setInputs({ ...inputs, saleCost: { editable: !inputs.saleCost.editable } }) }}/>
                     </INPUT_WRAPPER>
