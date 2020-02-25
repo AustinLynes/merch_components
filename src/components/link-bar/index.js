@@ -28,12 +28,12 @@ const LinkBar = (props) => {
                 }
                 <PLACEHOLDER /*onClick={OnClickCallback}*/ item_is_null={true} >
                     <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                    <p style={{ width: '100%', textAlign: 'center' }}>Add an link</p>
+                    <p style={{ width: '100%', color: 'white', textAlign: 'center' }}>Add an link</p>
                 </PLACEHOLDER>
             </LINKBAR>
 
         )
-    } 
+    }
 }
 
 export default LinkBar

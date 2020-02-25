@@ -116,19 +116,12 @@ export const PLACEHOLDER = styled.div`
     border:1px solid lightgrey;
     border-radius:10px;
     width:60%;
-    height:460px;
+    height:353px;
     padding:1rem;
     ${props => {
         if (props.item_is_null) return `
             width:15%;
-            margin:20px;
-            margin-top:110px;
-            height:460px;
-            border:1px solid dodgerblue;
-            &:active{
-                opacity:.7;
-                box-shadow:6px 6px 5px rgba(0,0,0,.3);
-            }
+        
         `
         if (props.style) return `
              position:${props.style.position};
