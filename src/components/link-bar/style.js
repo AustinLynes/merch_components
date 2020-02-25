@@ -20,7 +20,7 @@ export const LINKBAR = styled.div`
 export const ICON = styled(FontAwesomeIcon)`
         text-align:center;
         color:black;
-        font-size:5rem;
+        font-size:10rem;
         border-radius:50%;
         width:100%; 
         padding:1rem;
