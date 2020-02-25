@@ -96,7 +96,7 @@ ${props => {
          `
     }}
 `
-export const TEXT = styled.input`
+export const TEXT = styled.p`
 background:transparent;
 color: black;
 text-align:center;
