@@ -44,7 +44,6 @@ border:none;
 background:transparent;
 height:fit-content;
 border-radius:10px;
-border:1px solid dodgerblue;
 
 ${props => {
         if (props.style) return `
@@ -75,7 +74,7 @@ width:50%;
 padding:5px;
 border:none;
 font-size:16px;
-
+border:1px solid dodgerblue;
 ${props => {
         if (props.isCost) return `
             color:limegreen;
