@@ -53,6 +53,7 @@ export const LINK = styled.p`
     height:100%;
     z-index:10; */
     padding:1rem;
+    width:100%;
     color:black;
   ${props => {
         if (props.style) {
@@ -81,7 +82,7 @@ export const PREVIEW = styled.img`
 `
 
 export const LINKCARD = styled.div`
-    padding:1rem;
+  padding:1rem;
   width:30%;
   background:lightgray;
   display:flex;
