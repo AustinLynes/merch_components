@@ -29,7 +29,7 @@ const Item = (props) => {
     }
 
     const toggleInput = (_target) => {
-        setInputs({ ...inputs, _target: { editable: !inputs._target.editable } });
+        setInputs({ ...inputs, _target: { editable: !inputs[_target].editable } });
     }
     if (!item) {
         return (
