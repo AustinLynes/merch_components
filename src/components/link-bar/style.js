@@ -9,6 +9,7 @@ export const LINKBAR = styled.div`
     justify-content:space-between;
     background:#333;
     padding:2rem;
+    height:600px;
     ${props => {
         if (props.style) {
 
@@ -54,7 +55,11 @@ export const LINK = styled.p`
     z-index:10; */
     padding:1rem;
     width:100%;
-    color:black;
+    color: black;   
+    font-size:2rem;
+    -webkit-text-fill-color:white; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
   ${props => {
         if (props.style) {
 
@@ -82,12 +87,13 @@ export const PREVIEW = styled.img`
 `
 
 export const LINKCARD = styled.div`
-  padding:1rem;
-  width:30%;
-  background:lightgray;
+  /* padding:1rem; */
+  background:white;
   display:flex;
   flex-flow:row wrap;
  justify-content:center;
+    height:353;
+    width:347;
   ${props => {
         if (props.style) {
 
