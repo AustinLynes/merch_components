@@ -53,7 +53,6 @@ export const LINK = styled.p`
     width:100%;
     height:100%;
     z-index:10; */
-    padding:1rem;
     width:100%;
     color: black;   
     font-size:2rem;
@@ -88,6 +87,7 @@ export const PREVIEW = styled.img`
 
 export const LINKCARD = styled.div`
   /* padding:1rem; */
+  border-radius:10px;
   background:white;
   display:flex;
   flex-flow:row wrap;
