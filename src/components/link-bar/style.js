@@ -16,6 +16,34 @@ export const LINKBAR = styled.div`
     }}
 `
 
+export const ICON = styled(FontAwesomeIcon)`
+        padding:1rem;
+        text-align:center;
+        color:black;
+        font-size:3rem;
+        border-radius:50%;
+        ${props => {
+        if (props.style) return `
+                        position:${props.style.position};
+                        bottom:${props.style.bottomPos};
+                        top:${props.style.topPos};
+                        right:${props.style.rightPos};
+                        left:${props.style.leftPos};
+                        padding:${props.style.padding};
+                        width:${props.style.width};
+                        font-size:${props.style.fontSize};
+                        color: black;  // this is black as a fallback... 
+                        -webkit-text-fill-color: ${props.style.textFillColor}; 
+                        -webkit-text-stroke-width: ${props.style.strokeWidth};
+                        -webkit-text-stroke-color: ${props.style.strokeColor};
+                        text-align:${props.style.textAlign};
+                        border:${props.style.border};
+                        background:${props.style.backgroundColor};
+                        margin:${props.style.margin};
+                          `
+    }}
+`
+
 export const LINK = styled.p`
     /* position:absolute;
     top:0;

@@ -2,8 +2,7 @@ import React from 'react'
 
 import { LINKBAR, LINK, LINKCARD, PREVIEW } from './style.js'
 
-import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { ICON } from '../global/style.js'
+import { faFacebook, faGithub, faTwitter, faLinkedinIn,ICON } from '@fortawesome/free-brands-svg-icons'
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
