@@ -25,6 +25,7 @@ export const ICON = styled(FontAwesomeIcon)`
         border-radius:50%;
         width:100%; 
         padding:1rem;
+        margin-top:1rem;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
