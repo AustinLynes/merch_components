@@ -6,13 +6,13 @@ const Button = (props) => {
 
     const OnChangeCallback = (e)=>{
         e.preventDefault();
-        onChangeCallback && onChangeCallback();
+        onChangeCallback && onChangeCallback(e);
     }
     const OnClickCallback = (e)=>{
         alert(edit)
         e.preventDefault();
         setEdit(!edit);
-        onClickCallback && onClickCallback();
+        onClickCallback && onClickCallback(e);
     }
 
     if(!edit){
