@@ -69,6 +69,7 @@ export const INPUT = styled.input`
     font-size:1.8rem;
     background:#000;
     color:white;
+    text-align:center;
     border:0.5px solid dodgerblue;
 
 ${props => {
