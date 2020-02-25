@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import { BUTTON,INPUT } from './style.js'
 const Button = (props) => {
-    const { style, name, onClickCallback, onChangeCallback, ...rest } = props
-    const [edit, setEdit] = useState(false);
+    const { style, name, onClickCallback, onChangeCallback, edit, ...rest } = props
 
     const OnChangeCallback = (e)=>{
         e.preventDefault();
         onChangeCallback && onChangeCallback(e);
     }
-    const OnClickCallback = (e)=>{
-        alert(edit)
+   
+    const OnClickCallback = (e) => {
         e.preventDefault();
-        setEdit(!edit);
         onClickCallback && onClickCallback(e);
     }
 
