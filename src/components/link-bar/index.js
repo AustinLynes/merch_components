@@ -3,6 +3,7 @@ import React from 'react'
 import { LINKBAR, LINK, LINKCARD, PLACEHOLDER, PLUS_ICON, ICON } from './style.js'
 
 import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
