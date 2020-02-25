@@ -10,6 +10,8 @@ export const LINKBAR = styled.div`
     background:#333;
     padding:2rem;
     height:600px;
+    align-content:center;
+    align-items:center;
     ${props => {
         if (props.style) {
 
