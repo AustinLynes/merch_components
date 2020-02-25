@@ -28,6 +28,7 @@ const Item = (props) => {
                     <INPUT
                         id={item && item.id + '_item'}
                         name='itemName'
+                        isName={true}
                         onChange={OnChangeCallback}
                         style={style && style.nameStyle}
                         value={item && item.itemName} />
