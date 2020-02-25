@@ -95,6 +95,7 @@ ${props => {
 export const EDIT_ICON = styled(FontAwesomeIcon)`
 width:5%;
 color:lightgrey;
+margin:0 10px;
 ${props => {
         if (props.style) return `
              position:${props.style.position};
