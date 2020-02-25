@@ -7,7 +7,7 @@ export const LINKBAR = styled.div`
     display:flex;
     flex-flow:row wrap;
     justify-content:space-between;
-    background:green;
+    background:#333;
     padding:2rem;
     ${props => {
         if (props.style) {
@@ -17,12 +17,12 @@ export const LINKBAR = styled.div`
 `
 
 export const ICON = styled(FontAwesomeIcon)`
-        padding:1rem;
         text-align:center;
         color:black;
-        font-size:3rem;
+        font-size:5rem;
         border-radius:50%;
         width:100%; 
+        padding:1rem;
         ${props => {
         if (props.style) return `
                         position:${props.style.position};
@@ -86,9 +86,8 @@ export const LINKCARD = styled.div`
   width:30%;
   background:lightgray;
   display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-
+  flex-flow:row wrap;
+ justify-content:center;
   ${props => {
         if (props.style) {
 
