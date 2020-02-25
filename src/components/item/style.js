@@ -109,6 +109,7 @@ width:50%;
 padding:5px;
 border:none;
 font-size:16px;
+margin:0;
 ${props => {
         if (props.isCost) return `
             color:limegreen;
