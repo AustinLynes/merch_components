@@ -38,7 +38,7 @@ export const BUTTON = styled.button`
     /* this is the default styling of the button */
     border:none;
     flex-grow:1;
-    width:90%;
+    width:80%;
     height:100%;
     border-radius:10px;
     font-size:1.8rem;
@@ -61,14 +61,15 @@ export const BUTTON = styled.button`
 
 `
 export const INPUT = styled.input`
- border:none;
+    border:none;
     flex-grow:1;
-    width:90%;
+    width:80%;
     height:100%;
     border-radius:10px;
     font-size:1.8rem;
     background:#000;
     color:white;
+    border:0.5px solid dodgerblue;
 
 ${props => {
         if (props.style) return `
