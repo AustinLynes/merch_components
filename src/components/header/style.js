@@ -43,7 +43,8 @@ ${props => {
  
 `
 export const TITLE = styled.input`
-width:700px;
+width:80%;
+flex-grow:1;
 color:white;
 margin:0;
 background:transparent;
@@ -65,7 +66,7 @@ ${props => {
    
 `
 export const TITLE_WRAPPER = styled.div`
-width:50%;
+width:40%;
 margin:0;
 background:transparent;
 border:none;
