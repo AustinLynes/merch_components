@@ -50,7 +50,6 @@ background:transparent;
 border:none;
 font-size:3rem;
 text-align:center;
-border:1px solid white;
 margin:0;
 ${props => {
         if (props.style) {
