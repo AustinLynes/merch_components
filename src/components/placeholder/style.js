@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const TEXT = styled.p`
- width: '100%'; 
- color: 'black';
-  text-align: 'center'; 
+    width: '100%'; 
+    color: 'black';
+    text-align: 'center'; 
   ${props => {
         if (props.style) return `
             padding:${props.style.padding};
