@@ -33,7 +33,7 @@ const LinkBar = (props) => {
     } else {
         return (
             <LINKBAR>
-                <Placeholder type={'link'} />
+                <Placeholder type={'link'} style={{ width: '60%', height: '353px' }} />
             </LINKBAR>
         )
     }
