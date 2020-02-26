@@ -8,7 +8,7 @@ export const Placeholder = (props) => {
     return (
         <PLACEHOLDER /*onClick={OnClickCallback}*/ >
             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-            <p style={{ width: '100%', color: 'white', textAlign: 'center' }}>{`Add an ${type}`}</p>
+            <p style={{ width: '100%', color: 'black', textAlign: 'center' }}>{`Add an ${type}`}</p>
         </PLACEHOLDER>
     )
 }
