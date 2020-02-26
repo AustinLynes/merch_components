@@ -16,7 +16,7 @@ const Header = (props) => {
             <LOGO style={style && style.logoStyle} src={logoSrc} />
             <TITLE_WRAPPER>
                 {!edit ?
-                    <TITLE style={style && style.titleStyle} placeholder={'Add a Title'} value={title && title} onChange={OnChangeCallback} />
+                    <TITLE style={style && style.titleStyle} onChange={OnChangeCallback}>{title && title}</TITLE>
                     : <INPUT value={title} onChange={OnChangeCallback}/>
                 }
                 <EDIT_ICON icon={faPencilAlt} onClick={() => { setEdit(!edit) }} />
