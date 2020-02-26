@@ -7,11 +7,11 @@ const TextBanner = (props) => {
     const [edit, setEdit] = useState(false)
     const OnClickCallback = (e)=>{
         e.preventDefault();
+        setEdit(!edit);
         onClickCallback && onClickCallback(e);
     }
     const OnChangeCallback = (e)=>{
         e.preventDefault();
-        setEdit(!edit);
         onChangeCallback && onChangeCallback(e);
     }
     return (

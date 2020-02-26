@@ -45,7 +45,6 @@ ${props => {
 `
 export const MESSAGE = styled.h2`
 width:80%;
-margin:0 auto;
 color:black;
 border:none;
 ${props=>{
