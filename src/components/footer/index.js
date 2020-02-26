@@ -2,8 +2,18 @@ import React from 'react';
 import { FOOTER, BUTTON,LINK, LINK_WRAPPER } from './style';
 
 export const Navigation = (props) => {
-    const { buttons, ...rest } = props;
+    const { buttons, onClickCallback, onChangeCallback, ...rest } = props;
+    const [edit, setEdit] = useState(false)
+    const OnChangeCallback = (e) => {
+        e.preventDefault();
+        onChangeCallback && onChangeCallback(e);
+    }
 
+    const OnClickCallback = (e) => {
+        e.preventDefault();
+        setEdit(!edit);
+        onClickCallback && onClickCallback(e);
+    }
     return (
         <FOOTER>
             {
