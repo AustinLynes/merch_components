@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { FOOTER, BUTTON,LINK, LINK_WRAPPER, EDIT_ICON } from './style';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const Navigation = (props) => {
     const { style,  buttons, onClickCallback, onChangeCallback, ...rest } = props;
