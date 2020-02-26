@@ -1,7 +1,6 @@
 import React from 'react'
 import { NAVIGATION, BUTTON } from './style'
-import { LINK } from '../global/style';
-
+import { Link } from '../link'
 export const Navigation = (props) => {
     const { style, links, onChangeCallback, ...rest } = props
 
