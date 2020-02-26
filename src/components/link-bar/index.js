@@ -30,9 +30,11 @@ const LinkBar = (props) => {
             </LINKBAR>
 
         )
-    }else {
+    } else {
         return (
-            <Placeholder type={'link'} />
+            <LINKBAR>
+                <Placeholder type={'link'} />
+            </LINKBAR>
         )
     }
 }
