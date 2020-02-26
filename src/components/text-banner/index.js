@@ -1,11 +1,15 @@
-import React from 'react';
-import { BANNER, MESSAGE } from './style';
+import React, { useState } from 'react';
+import { BANNER, MESSAGE, INPUT } from './style';
 
 const TextBanner = (props) => {
-    const { message, ...rest } = props
+    const { style, message, size, ...rest } = props
+
     return (
-        <BANNER>
-            <MESSAGE>{message}</MESSAGE>
+
+        <BANNER style={style && style.wrapperStyle}>
+            {!edit ?
+                <MESSAGE style={style && style.wrapperStyle} >{message}</MESSAGE>
+                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />}
         </BANNER>
     )
 }
