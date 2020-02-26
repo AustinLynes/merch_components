@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { FOOTER, BUTTON,LINK, LINK_WRAPPER, EDIT_ICON } from './style';
+import { FOOTER, LINK_WRAPPER, EDIT_ICON, INPUT } from './style';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const Navigation = (props) => {
