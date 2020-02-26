@@ -51,6 +51,7 @@ background:transparent;
 border:none;
 font-size:3rem;
 text-align:center;
+border:1px solid white;
 ${props => {
         if (props.style) {
             return `
