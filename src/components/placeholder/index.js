@@ -1,5 +1,6 @@
 import React from 'react';
 import { PLACEHOLDER, PLUS_ICON } from './style'
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export const Placeholder = (props) => {
     const {style, type, ...rest} = props;
