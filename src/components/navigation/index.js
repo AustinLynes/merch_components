@@ -7,7 +7,7 @@ export const Navigation = (props) => {
     return (
         <NAVIGATION>
             {
-                links && links.map((link, i) => (<Link key={i + '_ln'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} />))
+                links && links.map((link, i) => (<Link key={i + '_ln'} onChangeCallback={onChangeCallback} style={link.style} name={link.name} />))
 
             }
         </NAVIGATION>
