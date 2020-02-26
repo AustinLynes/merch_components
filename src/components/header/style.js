@@ -42,7 +42,7 @@ ${props => {
     }}
  
 `
-export const TITLE = styled.input`
+export const TITLE = styled.messege`
 width:80%;
 flex-grow:1;
 color:white;
@@ -113,10 +113,10 @@ export const INPUT = styled.input`
     width:80%;
     height:100%;
     border-radius:10px;
-    font-size:1.8rem;
+    font-size:3rem;
     background:transparent;
-    color:black;
     text-align:center;
+    color:white;
     border:0.5px solid dodgerblue;
 
 ${props => {
