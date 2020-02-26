@@ -1,20 +1,26 @@
 // Logo
-import React from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_COUNT, CART, ICON  } from './style'
+import React, { useState } from 'react'
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_COUNT, CART, ICON, TITLE_WRAPPER, EDIT_ICON, INPUT } from './style'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
     const { style, title, logoSrc, cartCount, handleChangeCallback, ...rest } = props;
-
-    const HandleChangeCallback = (e)=>{
+    const [edit, setEdit] = useState(false)
+    const OnChangeCallback = (e) => {
         e.preventDefault();
         return handleChangeCallback && handleChangeCallback(e);
-    } 
+    }
     return (
         <HEADER style={style && style.wrapperStyle}>
             <LOGO style={style && style.logoStyle} src={logoSrc} />
-            <TITLE style={style && style.titleStyle} placeholder={'Add a Title'} value={title && title} onChange={HandleChangeCallback}/>
+            <TITLE_WRAPPER>
+                {!edit ?
+                    <TITLE style={style && style.titleStyle} placeholder={'Add a Title'} value={title && title} onChange={OnChangeCallback} />
+                    : <INPUT value={title} onChange={OnChangeCallback}/>
+                }
+                <EDIT_ICON onClick={() => { setEdit(!edit) }} />
+            </TITLE_WRAPPER>
             <SEARCH_BAR style={style && style.searchBarStyle}>
                 <QUERY style={style && style.queryStyle} />
                 <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} />
