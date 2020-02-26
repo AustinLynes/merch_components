@@ -60,7 +60,6 @@ export const LINK_WRAPPER = styled.div`
     align-content:center;
     width:20%;
     border-radius:10px;
-    margin-top:75px;
     font-size:1.8rem;
     background:#000;
     color:white;
