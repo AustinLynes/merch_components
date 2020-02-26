@@ -1,7 +1,5 @@
 import React from 'react';
-import { FOOTER, BUTTON }from './style';
-import { LINK }from '../global/style';
-import Button from '../button';
+import { FOOTER, BUTTON,LINK, LINK_WRAPPER } from './style';
 
 export const Navigation = (props) => {
     const { buttons, ...rest } = props;
@@ -9,7 +7,16 @@ export const Navigation = (props) => {
     return (
         <FOOTER>
             {
-                buttons && buttons.map(button => (<Button name={button.name}/>))
+                buttons && buttons.map(button => (
+                    <LINK_WRAPPER>
+                        {
+                            !edit ?
+                                <LINK style={style && style.wrapperStyle}>{button.name}</LINK>
+                                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={button.name} />
+                        }
+                        <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
+                    </LINK_WRAPPER>)
+                    )
             }
         </FOOTER>
     )
