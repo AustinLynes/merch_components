@@ -3,12 +3,13 @@ import { NAVIGATION, BUTTON } from './style'
 import { LINK } from '../global/style';
 
 export const Navigation = (props) => {
-    const { buttons, ...rest } = props
+    const { style, links, onChangeCallback, ...rest } = props
 
     return (
         <NAVIGATION>
             {
-                buttons && buttons.map(button => (<LINK key={button.id} >{button.name}</LINK>))
+                links && links.map((link, i) => (<Link key={i + '_ln'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} />))
+
             }
         </NAVIGATION>
     )
