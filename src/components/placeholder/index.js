@@ -1,5 +1,5 @@
 import React from 'react';
-import { PLACEHOLDER, PLUS_ICON } from './style'
+import { PLACEHOLDER, PLUS_ICON, TEXT } from './style'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export const Placeholder = (props) => {
@@ -8,8 +8,10 @@ export const Placeholder = (props) => {
     return (
         <PLACEHOLDER /*onClick={OnClickCallback}*/ style={style && style.placeholderStyle}>
             <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-            <p style={{ width: '100%', color: 'black', textAlign: 'center' }}>{`Add an ${type}`}</p>
+            <TEXT style={style && style.textStyle}>{`Add an ${type}`}</TEXT>
         </PLACEHOLDER>
     )
 }
+
+
 

@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+export const TEXT = styled.p`
+ width: '100%'; 
+ color: 'black';
+  text-align: 'center'; 
+  ${props => {
+        if (props.style) return `
+            padding:${props.style.padding};
+            width:${props.style.width};
+            font-size:${props.style.fontSize};
+            color: black;  // this is black as a fallback... 
+            -webkit-text-fill-color: ${props.style.textFillColor}; 
+            -webkit-text-stroke-width: ${props.style.strokeWidth};
+            -webkit-text-stroke-color: ${props.style.strokeColor};
+            text-align:${props.style.textAlign};
+            border:${props.style.border};
+            background:${props.style.backgroundColor};
+            margin:${props.style.margin};
+    `
+    }}
+`
 
 // plus icon needs to be turned into its own card.. 
 export const PLACEHOLDER = styled.div`
