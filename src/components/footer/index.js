@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { FOOTER, BUTTON,LINK, LINK_WRAPPER } from './style';
 
 export const Navigation = (props) => {
-    const { buttons, onClickCallback, onChangeCallback, ...rest } = props;
+    const { style,  buttons, onClickCallback, onChangeCallback, ...rest } = props;
     const [edit, setEdit] = useState(false)
     const OnChangeCallback = (e) => {
         e.preventDefault();
