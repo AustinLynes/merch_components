@@ -46,12 +46,12 @@ export const TITLE = styled.h2`
 width:80%;
 flex-grow:1;
 color:white;
-margin:0;
 background:transparent;
 border:none;
 font-size:3rem;
 text-align:center;
 border:1px solid white;
+margin:0;
 ${props => {
         if (props.style) {
             return `
