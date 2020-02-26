@@ -3,8 +3,7 @@ import { FOOTER, LINK, LINK_WRAPPER, EDIT_ICON, INPUT } from './style';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const Navigation = (props) => {
-    const { style, buttons, onClickCallback, onChangeCallback, ...rest } = props;
-    const [edit, setEdit] = useState(false)
+    const { style, buttons: links, onClickCallback, onChangeCallback, ...rest } = props;
 
     const OnChangeCallback = (e) => {
         e.preventDefault();
@@ -19,19 +18,26 @@ export const Navigation = (props) => {
     return (
         <FOOTER>
             {
-                buttons && buttons.map(button => (
-                    <LINK_WRAPPER>
-                        {
-                            !edit ?
-                                <LINK style={style && style.wrapperStyle}>{button.name}</LINK>
-                                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={button.name} />
-                        }
-                    </LINK_WRAPPER>)
-                )
+                links && links.map(link => (<Link style={link.style} name={link.name}/>))
             }
-            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
         </FOOTER>
     )
 }
 
+
+const Link = (props) => {
+    const { name,style,  ...rest } = props;
+    const [edit, setEdit] = useState(false);
+
+    return (
+        <LINK_WRAPPER>
+            {
+                !edit ?
+                    <LINK style={style && style.wrapperStyle}>{name}</LINK>
+                    : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />
+            }
+            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
+        </LINK_WRAPPER>
+    )
+}
 export default Navigation
