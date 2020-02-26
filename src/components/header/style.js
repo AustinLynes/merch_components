@@ -67,6 +67,11 @@ ${props => {
    
 `
 export const TITLE_WRAPPER = styled.div`
+display:flex;
+flex-flow:row wrap;
+justify-content:center;
+align-items:center;
+align-content:center;
 width:40%;
 margin:0;
 background:transparent;
