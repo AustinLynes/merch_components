@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FOOTER, BUTTON,LINK, LINK_WRAPPER } from './style';
 
 export const Navigation = (props) => {
