@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BANNER, MESSAGE, INPUT } from './style';
+import { BANNER, MESSAGE, INPUT, EDIT_ICON } from './style';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 const TextBanner = (props) => {
