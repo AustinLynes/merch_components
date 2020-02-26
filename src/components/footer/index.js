@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
-import { FOOTER,LINK, LINK_WRAPPER, EDIT_ICON, INPUT } from './style';
+import React, { useState } from 'react';
+import { FOOTER, LINK, LINK_WRAPPER, EDIT_ICON, INPUT } from './style';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 export const Navigation = (props) => {
-    const { style,  buttons, onClickCallback, onChangeCallback, ...rest } = props;
+    const { style, buttons, onClickCallback, onChangeCallback, ...rest } = props;
     const [edit, setEdit] = useState(false)
+
     const OnChangeCallback = (e) => {
         e.preventDefault();
         onChangeCallback && onChangeCallback(e);
@@ -25,10 +26,10 @@ export const Navigation = (props) => {
                                 <LINK style={style && style.wrapperStyle}>{button.name}</LINK>
                                 : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={button.name} />
                         }
-                        <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
                     </LINK_WRAPPER>)
-                    )
+                )
             }
+            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
         </FOOTER>
     )
 }
