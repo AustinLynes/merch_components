@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { FOOTER, BUTTON,LINK, LINK_WRAPPER } from './style';
+import { FOOTER, BUTTON,LINK, LINK_WRAPPER, EDIT_ICON } from './style';
 
 export const Navigation = (props) => {
     const { style,  buttons, onClickCallback, onChangeCallback, ...rest } = props;
