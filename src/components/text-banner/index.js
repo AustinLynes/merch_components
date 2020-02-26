@@ -11,6 +11,7 @@ const TextBanner = (props) => {
     }
     const OnChangeCallback = (e)=>{
         e.preventDefault();
+        setEdit(!edit);
         onChangeCallback && onChangeCallback(e);
     }
     return (
