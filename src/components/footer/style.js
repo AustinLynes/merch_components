@@ -111,7 +111,7 @@ export const INPUT = styled.input`
 background:transparent;
 color: black;
 text-align:center;
-width:50%;
+width:80%;
 padding:5px;
 border:none;
 font-size:1.8rem;
