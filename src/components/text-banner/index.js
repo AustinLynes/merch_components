@@ -19,7 +19,7 @@ const TextBanner = (props) => {
         <BANNER style={style && style.wrapperStyle}>
             {!edit ?
                 <MESSAGE style={style && style.wrapperStyle} >{message}</MESSAGE>
-                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />}
+                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={message} />}
             <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
             
         </BANNER>

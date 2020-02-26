@@ -2,21 +2,26 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BANNER = styled.div`
+display:flex;
+flex-flow:row wrap;
+justify-content:center;
+align-content:center;
+align-items:center;
 box-sizing:border-box;
 width:100%;
 height:75px;
 background:linear-gradient(#fdf771, #e6de0a);
 padding:1rem;
 margin:0;
-${props=>{
-    if(props.style) return `
+${props => {
+        if (props.style) return `
         width:${props.style.width};
         height:${props.style.height};
         background:${props.style.backgroundColor};
         color:${props.style.color};
         font-size:${props.style.fontSize};
     `
-}}
+    }}
 `
 export const EDIT_ICON = styled(FontAwesomeIcon)`
 width:5%;
@@ -49,15 +54,15 @@ color:black;
 height:100%;
 border:none;
 margin:0;
-${props=>{
-    if(props.style) return `
+${props => {
+        if (props.style) return `
         width:${props.style.width};
         height:${props.style.height};
         background:${props.style.backgroundColor};
         color:${props.style.color};
         font-size:${props.style.fontSize};
     `
-}}
+    }}
 `
 
 export const INPUT = styled.input`
