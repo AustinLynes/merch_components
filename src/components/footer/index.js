@@ -14,7 +14,7 @@ export const Navigation = (props) => {
     return (
         <FOOTER>
             {
-                links && links.map(link => (<Link onChangeCallback={OnChangeCallback} style={link.style} name={link.name} />))
+                links && links.map((link, i) => (<Link key={i + '_l'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} />))
             }
         </FOOTER>
     )
@@ -34,7 +34,7 @@ const Link = (props) => {
             {
                 !edit ?
                     <LINK style={style && style.wrapperStyle}>{name}</LINK>
-                    : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />
+                    : <INPUT style={style && style.inputStyle} onChange={onChangeCallback} value={name} />
             }
             <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
         </LINK_WRAPPER>
