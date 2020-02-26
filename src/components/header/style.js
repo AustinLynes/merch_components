@@ -42,7 +42,7 @@ ${props => {
     }}
  
 `
-export const TITLE = styled.messege`
+export const TITLE = styled.h2`
 width:80%;
 flex-grow:1;
 color:white;
