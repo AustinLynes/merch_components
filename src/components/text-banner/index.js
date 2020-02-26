@@ -3,8 +3,16 @@ import { BANNER, MESSAGE, INPUT, EDIT_ICON } from './style';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 const TextBanner = (props) => {
-    const { style, message, size, ...rest } = props
+    const { style, message, size,onChangeCallback, onClickCallback, ...rest } = props
     const [edit, setEdit] = useState(false)
+    const OnClickCallback = (e)=>{
+        e.preventDefault();
+        onClickCallback && onClickCallback(e);
+    }
+    const OnChangeCallback = (e)=>{
+        e.preventDefault();
+        onChangeCallback && onChangeCallback(e);
+    }
     return (
 
         <BANNER style={style && style.wrapperStyle}>
