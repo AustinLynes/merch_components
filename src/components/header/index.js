@@ -5,7 +5,7 @@ import { faSearch, faShoppingCart, faPencilAlt } from '@fortawesome/free-solid-s
 
 const Header = (props) => {
 
-    const { style, title, logoSrc, cartCount, handleChangeCallback, ...rest } = props;
+    const { style, title,query, logoSrc, cartCount, handleChangeCallback, ...rest } = props;
     const [edit, setEdit] = useState(false)
     const OnChangeCallback = (e) => {
         e.preventDefault();
@@ -23,7 +23,7 @@ const Header = (props) => {
             </TITLE_WRAPPER>
             <SEARCH_BAR style={style && style.searchBarStyle}>
                 <QUERY style={style && style.queryStyle} />
-                <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} />
+                <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} value={query} />
             </SEARCH_BAR>
             <CART style={style && style.cartStyle}>
                 <ICON style={style && style.cartIconStyle} icon={faShoppingCart} />
