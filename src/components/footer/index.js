@@ -1,6 +1,7 @@
 import React from 'react';
 import { FOOTER, BUTTON }from './style';
 import { LINK }from '../global/style';
+import Button from '../button';
 
 export const Navigation = (props) => {
     const { buttons, ...rest } = props;
@@ -8,7 +9,7 @@ export const Navigation = (props) => {
     return (
         <FOOTER>
             {
-                buttons && buttons.map(button => (<LINK>{button.name}</LINK>))
+                buttons && buttons.map(button => (<Button name={button.name}/>))
             }
         </FOOTER>
     )
