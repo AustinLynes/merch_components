@@ -64,7 +64,7 @@ ${props => {
     }}
    
 `
-export const TITLE_WRAPPER = styled.input`
+export const TITLE_WRAPPER = styled.div`
 width:50%;
 margin:0;
 background:transparent;
