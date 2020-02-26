@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { LINKBAR, LINK, LINKCARD, PLACEHOLDER, PLUS_ICON, ICON } from './style.js'
+import { LINKBAR, LINK, LINKCARD, ICON } from './style.js'
 
 import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { Placeholder } from '../placeholder/index.js';
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
@@ -26,12 +27,12 @@ const LinkBar = (props) => {
                         </LINKCARD>
                     ))
                 }
-                <PLACEHOLDER /*onClick={OnClickCallback}*/ item_is_null={true} >
-                    <PLUS_ICON style={style && style.plusIconSyle} icon={faPlus} />
-                    <p style={{ width: '100%', color: 'white', textAlign: 'center' }}>Add an link</p>
-                </PLACEHOLDER>
             </LINKBAR>
 
+        )
+    }else {
+        return (
+            <Placeholder type={'link'} />
         )
     }
 }
