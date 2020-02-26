@@ -46,7 +46,9 @@ ${props => {
 export const MESSAGE = styled.h2`
 width:80%;
 color:black;
+height:100%;
 border:none;
+margin:0;
 ${props=>{
     if(props.style) return `
         width:${props.style.width};
@@ -65,8 +67,8 @@ export const INPUT = styled.input`
     height:100%;
     border-radius:10px;
     font-size:1.8rem;
-    background:#000;
-    color:white;
+    background:transparent;
+    color:black;
     text-align:center;
     border:0.5px solid dodgerblue;
 
