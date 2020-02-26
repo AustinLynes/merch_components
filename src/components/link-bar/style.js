@@ -9,6 +9,7 @@ export const LINKBAR = styled.div`
     justify-content:center;
     background:#333;
     height:600px;
+    max-height:600px;
     align-content:center;
     align-items:center;
     ${props => {
