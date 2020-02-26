@@ -22,8 +22,8 @@ const Header = (props) => {
                 <EDIT_ICON icon={faPencilAlt} onClick={() => { setEdit(!edit) }} />
             </TITLE_WRAPPER>
             <SEARCH_BAR style={style && style.searchBarStyle}>
-                <QUERY style={style && style.queryStyle} />
-                <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} value={query} />
+                <QUERY style={style && style.queryStyle} value={query}/>
+                <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch}  />
             </SEARCH_BAR>
             <CART style={style && style.cartStyle}>
                 <ICON style={style && style.cartIconStyle} icon={faShoppingCart} />
