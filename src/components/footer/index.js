@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FOOTER} from './style';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from '../link'
 
 export const Footer = (props) => {
