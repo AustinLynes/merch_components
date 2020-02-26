@@ -42,7 +42,7 @@ ${props => {
     }}
  
 `
-export const TITLE = styled.h2`
+export const TITLE = styled.p`
 width:80%;
 flex-grow:1;
 color:white;
