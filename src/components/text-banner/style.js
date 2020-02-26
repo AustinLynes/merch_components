@@ -6,6 +6,7 @@ width:100%;
 height:75px;
 background:linear-gradient(#fdf771, #e6de0a);
 padding:1rem;
+margin:0;
 ${props=>{
     if(props.style) return `
         width:${props.style.width};
