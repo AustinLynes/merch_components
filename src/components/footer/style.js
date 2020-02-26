@@ -115,10 +115,10 @@ width:50%;
 padding:5px;
 border:none;
 font-size:1.8rem;
-font-size:16px;
 border:1px solid dodgerblue;
 margin-top:5px;
 color:white;
+height:50px;
 ${props => {
         if (props.style) return `
             position:${props.style.position};
