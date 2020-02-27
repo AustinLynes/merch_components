@@ -6,7 +6,7 @@ export const CAROSEL = styled.div`
         height:600px;
         position:relative;
         display:flex;
-        flex-flow:row;
+        flex-flow:row wrap;
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};

@@ -37,7 +37,9 @@ export const LINK = styled.button`
     font-size:1.8rem;
     background:#000;
     color:white;
-   
+    @media (max-width:500px) {
+        padding-top:20px;
+    }
     ${props => {
         if (props.style) {
             return `
