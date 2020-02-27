@@ -10,7 +10,7 @@ export const FOOTER = styled.div`
     height:90px;
     background:#000;
     @media (max-width:500px) {
-        height:fit-content;
+      height:200px;
     }
     ${props => {
         if (props.style) return `
