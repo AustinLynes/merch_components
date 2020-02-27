@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const NAVIGATION = styled.div`
     display:flex;
     justify-content:space-evenly;
+    flex-flow:row wrap;
     margin:0;
     width:100%;
     height:75px;
