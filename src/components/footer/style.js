@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const FOOTER = styled.div`
     display:flex;
+    flex-flow:row wrap;
     justify-content:space-evenly;
     margin:0;
     width:100%;
@@ -65,7 +66,6 @@ export const LINK_WRAPPER = styled.div`
     background:#000;
     color:white;
     @media (max-width:500px) {
-        flex-flow:column;
         width:100%;
     }
     /* any overriding styles will be displayed here  */
