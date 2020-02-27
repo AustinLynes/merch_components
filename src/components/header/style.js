@@ -14,6 +14,7 @@ export const HEADER = styled.div`
     background:#303030;
     @media (max-width:500px) {
         flex-flow:column;
+        height:fit-content;
     }
     ${props => {
         if (props.style) {
@@ -35,6 +36,9 @@ export const LOGO = styled.img`
 width:21%;
 height:150px;
 object-fit:contain;
+@media (max-width:500px) {
+    width:100%; 
+    }
 ${props => {
         if (props.style) {
             return `
@@ -77,6 +81,9 @@ width:33%;
 margin:0;
 background:transparent;
 border:none;
+@media (max-width:500px) {
+    width:100%; 
+    }
 ${props => {
         if (props.style) {
             return `
@@ -157,6 +164,9 @@ align-items:center;
 border-radius:10px;
 border:none;
 background:white;
+@media (max-width:500px) {
+    width:100%; 
+    }
 ${props => {
         if (props.style) {
             return `
