@@ -14,7 +14,8 @@ export const HEADER = styled.div`
     background:#303030;
     @media (max-width:500px) {
         flex-flow:column;
-        height:fit-content;
+        height:500px;
+        padding:10px;
     }
     ${props => {
         if (props.style) {
