@@ -19,6 +19,8 @@ export const BUTTON_WRAPPER = styled.div`
     color:white;
     @media (max-width:500px) {
     width:100%;
+    margin-top:0;
+
     }
     /* any overriding styles will be displayed here  */
     ${props => {
