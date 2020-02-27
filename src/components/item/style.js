@@ -12,7 +12,6 @@ height: 642px;
 max-height: 642px;
 border:2px solid black;
 width:24%;
-max-width:50%;
 @media (max-width:500px) {
     width:100%;
 }
