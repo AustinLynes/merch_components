@@ -8,7 +8,6 @@ export const FOOTER = styled.div`
     margin:0;
     width:100%;
     height:90px;
-    max-height:90px;
     background:#000;
     ${props => {
         if (props.style) return `
