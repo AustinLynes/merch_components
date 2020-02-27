@@ -65,6 +65,7 @@ export const LINK_WRAPPER = styled.div`
     background:#000;
     color:white;
     @media (max-width:500px) {
+        flex-flow:column;
         width:100%;
     }
     /* any overriding styles will be displayed here  */
