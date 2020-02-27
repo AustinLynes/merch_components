@@ -14,7 +14,7 @@ border:2px solid black;
 width:24%;
 max-width:50%;
 @media (max-width:500px) {
-    width:80%;
+    width:100%;
 }
 /* &:active{
     width:25%;
