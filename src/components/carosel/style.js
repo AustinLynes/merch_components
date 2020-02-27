@@ -97,7 +97,7 @@ export const ICON = styled(FontAwesomeIcon)`
         }}
 `
 export const PLACEHOLDER = styled.div`
-        width:70%;
+        width:60%;
         margin:20px;
         height:500px;
         border:1px solid lightgrey;
