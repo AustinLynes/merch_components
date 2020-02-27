@@ -25,6 +25,10 @@ export const PLACEHOLDER_CAROSEL = styled.div`
         flex-flow:row wrap;
         justify-content:space-between;
         align-items:center;
+        @media (max-width:500px) {
+        justify-content:center;
+                
+        }
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};
