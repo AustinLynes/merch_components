@@ -217,6 +217,9 @@ export const PLACEHOLDER = styled.div`
                 opacity:.7;
                 box-shadow:6px 6px 5px rgba(0,0,0,.3);
             }
+            @media (max-width:500px) {
+                width:60%;
+            }
         `
         if (props.style) return `
              position:${props.style.position};
