@@ -9,6 +9,9 @@ export const FOOTER = styled.div`
     width:100%;
     height:90px;
     background:#000;
+    @media (max-width:500px) {
+        height:fit-content;
+    }
     ${props => {
         if (props.style) return `
             position:${props.style.position};
