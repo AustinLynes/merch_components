@@ -8,6 +8,9 @@ export const NAVIGATION = styled.div`
     width:100%;
     height:75px;
     background:#000;
+    @media (max-width:500px) {
+      height:200px;
+    }
     ${props => {
         if (props.style) return `
             position:${props.style.position};
