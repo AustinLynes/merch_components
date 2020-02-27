@@ -13,6 +13,9 @@ max-height: 642px;
 border:2px solid black;
 width:24%;
 max-width:50%;
+@media (max-width:500px) {
+    width:80%;
+}
 /* &:active{
     width:25%;
     opacity:.7;
