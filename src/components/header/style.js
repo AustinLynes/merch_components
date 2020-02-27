@@ -10,7 +10,6 @@ export const HEADER = styled.div`
     align-items:center;
     width:100%;
     height:200px;
-    max-height:200px;
     background:#303030;
     @media (max-width:500px) {
         flex-flow:column;
