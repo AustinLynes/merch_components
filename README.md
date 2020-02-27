@@ -1,10 +1,24 @@
 # merch_components
-Labs Lib for merch store default components
+Welcome to merch components a component library for building web-stores<br/> 
+## simplistic use for a simplistic app.. <br/>
+**Components** <br/>
+***
+[Basic Usage](#usage)<br/>
+[Container](#container)<br/>
+[Header](#header)<br/>
+[Item](#item)<br/>
+[Navigation](#navigation)<br/>
+[Carousel](#carousel)<br/>
+[Image](#image)<br/>
+[Button](#button)<br/>
+[Button Group](#button-group)<br/>
+[Link Bar](#link-bar)<br/>
+[Placeholder](#placeholder)<br/>
+[Footer](#footer)<br/>
 
-simplistic use for a simplistic app..
-all you have to do is pass in your data shape to an Component like Item and it will create the item dynamicly
-also you can pass in callbacks to toggle the state of the actual card. 
+<a name='usage'></a>
 
+***
 ```js
 import React, { useState } from 'react';
 import logo from './logo.svg';
@@ -15,12 +29,26 @@ import {data} from './__mock/data'  // ?? or..
 function App() {
   const [items, setItems] = useState(data);
   
-
-
+  const styleOverrides = {
+    wrapperStyle:{
+      width:'100%',
+      {...}
+    },
+    {...}
+  }
+  handleClick = (e) =>{
+    // e.preventDefault() is called by default inside the components...
+    clickLogic(...)
+  }
+  handleChange = (e) =>{
+    // e.preventDefault() is called by default inside the components...
+    changeLogic(...)
+  }
   return (
     <div className="App">
       <Container>
-        {items && items.map((item, i)=>(<Item item={item} />))}
+        {/* as you can see all you have to do is pass in the data shape style and cbs */}
+        {items && items.map((item, i)=>(<Item item={item} style={styleOverrides} onClickCallback={handleClick} onChangeCallback={handleChange}/>))}
       </Container>
     </div>
   );
@@ -28,8 +56,13 @@ function App() {
 
 export default App;
 ```
-**Container**
-*** 
+
+<a name='container'></a>
+
+# **Container**
+  The Container is used mostly for wrapping multiple components.. <br/> 
+  there are exceptions.. <br/>
+  the `<Button/>` component for instance would be wrapped inside a `<ButtonGroup/>`.. 
 ```js
 {...}
 import{ Container }from 'merch_components';
@@ -41,10 +74,16 @@ const Component = () => {
   )
 }
 ```
-
-
-**Header**
 ***
+**CSS AVALABLE TO OVERRIDE**<br/>
+   none... sorry.. 
+***
+<a name='header'></a>
+
+# **Header**
+the `<Header/>` is a static component that doesn't move <br/>
+it takes in a title, a path to a logo and any style overrides. <br/>
+it comes stock with, a search bar and a cart component.
 ```js
 {...}
 import{Header}from 'merch_components';
@@ -56,8 +95,26 @@ const Component = () => {
   )
 }
 ```
-**Item**
-***  
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+<a name='item'></a>
+
+# **Item**
+the `<Item/>` is by far the most complex pre built component. it acceptes an object `{}` for an item <br/>
+that will build an item based on the information you pass in. for instance an item thats on sale <br/>
+will have a sale flag on the top of it while an item that does not. simply doesnt.. <br/> 
+all items accept an image inside the object. if the image isnt found however if one isn't found then<br/> 
+the placeholder will show in the place of any image.. all text areas on the item are able to be swapped with<br/>
+an input to take in user input and change the item on the fly from the 'builder'<br/>
+the `onClickCallback` and `onChangeCallback` respectivly utalize their in built `onChange` and `onClick` events.. just have <br/>
+to pass in the method you want to do.
   ```json
   { 
     "id" : 0,
@@ -66,14 +123,12 @@ const Component = () => {
     "imageSrc": "src/to/item-image",
     "saleCost": 0.00,
     "onSale":   false,
-    "toggleOnSale": "()=>{}",
-    "submitCallback",
-    "updateItem", 
-    "deleteItem"
+    "onClickCallback",
+    "onChangeCallback",
   }
    ```
-    ^^^ the object structure for the item itself
-    vvv how to use an Item 
+`^^^` the object structure for the item itself <br/>
+`vvv` how to use an Item 
 ```js
 import {Container, Item}from 'merch_components';
 
@@ -84,18 +139,36 @@ const Component = ()=>{
     ...someStyles
     }
   
-  
+  handleClick = (e) =>{
+    // add something ?? delete something.. your choice.. your app
+    setData({...})
+  }
+  handleChange = (e) =>{
+    // update something ?? 
+    setData({...})
+  }
   return (
     <Container>
-      <Item item={data} style={style}/>
+      <Item item={data} style={style} onClickCallback={handleClick} onChangeCallback={handleChange}/>
     </Container>
   )
 }
 ```
-**Navigation**
-*** 
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+
+<a name='navigation'></a>
+
+# **Navigation**
 ```json
-{ "buttons": "[]" }
+{ "links": "[]" }
  ```
  
  ```js
@@ -109,31 +182,89 @@ const Component = () => {
   )
 }
 ```
+where buttons is an array of button objects with { id, name, url }
 
-
-### where buttons is an array of button objects with { id, name, url }
-
-**Carosel**
 ***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+
+<a name='carousel'></a>
+
+# **Carousel**
+
 ```json
   { 
     "images": "[]" 
   }
 ```
-### where images is an array of images.. will cycle    
+
+```javascript
+  import { Container, Carousel } from 'merch_components'
+
+  const imgs = [...img, ...img, ...img]
+  
+  const App = () => {
+    return (
+      <Container>
+        <Carousel images={...imgs}/>
+      </Container>
+    )
+
+  }
+```
+where images is an array of images.. will cycle    
+
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+
+<a name='image'></a>
 
 
-**Image** 
+# **Image** 
 ```json
 {
    "size": "[medium, small, none]",
    "src": "src to image", 
 }
 ``` 
-### will result in 3 different sized images aspect ratio scaled accordingly
 
-**Button** 
-*** 
+```javascript
+  import { Container, Carousel } from 'merch_components'
+
+  const path = '../'
+  
+  const App = () => {
+    return (
+        <Image size={'medium'} src={path} />
+    )
+
+  }
+```
+
+ will result in 3 different sized images aspect ratio scaled accordingly
+
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+   none... sorry.. 
+***
+
+<a name='button'></a>
+
+# **Button** 
+
 ```js
 {...}
 import{Button, ButtonGroup}from 'merch_components';
@@ -162,8 +293,10 @@ const Component = () => {
   color -> color<br/>
 ***
 
-**ButtonGroup**
-***
+<a name='button-group'></a>
+
+
+# **Button Group**
 ```js
 {...}
 import{Button, ButtonGroup}from 'merch_components';
@@ -178,9 +311,65 @@ const Component = () => {
   )
 }
 ```
-
-**Footer**
 ***
+**CSS AVALABLE TO OVERRIDE**<br/>
+   none... sorry.. 
+***
+
+
+<a name='link-bar'></a>
+
+
+# **Link Bar**
+```js
+{...}
+import{Linkbar}from 'merch_components';
+const links = ['facebook', 'twitter']
+const Component = () => {
+  {...}
+  return (
+    <Linkbar links={...links} />
+  )
+}
+```
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+
+<a name='placeholder'></a>
+
+
+# **Placeholder**
+```js
+{...}
+import{ Placeholder }from 'merch_components';
+const Component = () => {
+  {...}
+  return (
+    <Placeholder type={'item'} />
+  )
+}
+```
+***
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
+***
+
+
+<a name='footer'></a>
+
+# **Footer**
 ```json
 { "buttons": "[]" }
  ```
@@ -196,12 +385,11 @@ const Component = () => {
 }
 ```
 ***
-**--/UPDATE LOG/-->**
-| Notes                              | completed |
-|------------------------------------|-----------|
-| updateItem->updateItemCallback     | [NO]      |
-| toggleOnSale->toggleOnSaleCallback | [NO]      |
-| deleteItem->deleteItemCallback     | [NO]      |
-| spelling on Carousel on vers++     | [NO]      |
-
+**CSS AVALABLE TO OVERRIDE**<br/>
+  padding, -> padding<br/>
+  border, -> border<br/>
+  width, -> width<br/>
+  border-radius, -> borderRadius<br/>
+  background-color, -> backgroundColor<br/>
+  color -> color<br/>
 ***
