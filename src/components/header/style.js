@@ -29,7 +29,7 @@ export const HEADER = styled.div`
    
 `
 export const LOGO = styled.img`
-width:375px;
+width:21%;
 height:150px;
 object-fit:contain;
 ${props => {
@@ -44,7 +44,6 @@ ${props => {
 `
 export const TITLE = styled.p`
 width:80%;
-flex-grow:1;
 color:white;
 background:transparent;
 border:none;
@@ -71,7 +70,7 @@ flex-flow:row wrap;
 justify-content:center;
 align-items:center;
 align-content:center;
-width:40%;
+width:33%;
 margin:0;
 background:transparent;
 border:none;
@@ -147,7 +146,7 @@ ${props => {
 `
 
 export const SEARCH_BAR = styled.div`
-width:413px;
+width:21.5%;
 height:69px;
 display:flex;
 flex-flow:row wrap;
@@ -211,7 +210,7 @@ ${props => {
 
 export const CART = styled.div`
 display:flex;
-width: 100px;
+width: 6.25%;
 margin-top:40px;
 flex-flow:row wrap;
 justify-content:center;
