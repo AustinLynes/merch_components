@@ -12,7 +12,7 @@ const Item = (props) => {
     }
     const OnClickCallback = (e) => {
         e.preventDefault();
-        setEditable(!edieditable)
+        setEditable(!editable)
         onClickCallback && onClickCallback(e);
     }
 
