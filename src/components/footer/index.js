@@ -22,6 +22,7 @@ export const Footer = (props) => {
         setEditables(editables.map((editable, i) => {
             editable.edit = true;
         }))
+        console.log(`*******  ${editables}`)
     }
     return (
         <FOOTER>
