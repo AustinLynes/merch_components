@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FOOTER, EDIT_ICON  } from './style';
+import { FOOTER, EDIT_ICON } from './style';
 import { Link } from '../link'
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -19,9 +19,9 @@ export const Footer = (props) => {
         console.log(`*******  ${editables}`)
     }, [])
     const OnClickCallback = (e) => {
-        setEditables(editables.map((editable, i) => {
+        setEditables([...editables.map((editable, i) => {
             editable.edit = true;
-        }))
+        })])
         console.log(`*******  ${editables}`)
     }
     return (
