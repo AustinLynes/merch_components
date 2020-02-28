@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LINK, LINK_WRAPPER,INPUT } from '../footer/style';
+import { LINK, LINK_WRAPPER, INPUT } from '../footer/style';
 
 export const Link = (props) => {
     const { name, style, onChangeCallback, onClickCallback, edit, ...rest } = props;
@@ -11,7 +11,7 @@ export const Link = (props) => {
     return (
         <LINK_WRAPPER>
             {
-                edit && !edit ?
+                !edit ?
                     <LINK style={style && style.wrapperStyle}>{name}</LINK>
                     : <INPUT style={style && style.inputStyle} onChange={onChangeCallback} value={name} />
             }

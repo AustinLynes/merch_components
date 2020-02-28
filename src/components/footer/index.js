@@ -19,7 +19,7 @@ export const Footer = (props) => {
         console.log(`*******  ${editables}`)
     }, [])
     const OnClickCallback = (e) => {
-        const editables_flipped_val = editables.map((e, i)=>{
+        const editables_flipped_val = editables.map((e, i) => {
             e.edit = !e.edit;
         })
         setEditables(editables_flipped_val)
@@ -29,7 +29,7 @@ export const Footer = (props) => {
         <FOOTER>
             <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
             {
-                links && links.map((link, i) => (<Link key={i + '_lf'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} edit={editables.length > 0 && editables[i].edit} />))
+                links && links.map((link, i) => (<Link key={i + '_lf'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} edit={editables.filter((ed) => ed.id !== `${i}_lf `)[0].edit} />))
             }
         </FOOTER>
     )
