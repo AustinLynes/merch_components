@@ -14,12 +14,15 @@ export const Footer = (props) => {
     }
     useEffect(() => {
         setEditables(links && links.map((link, i) => {
-            return { ...link, edit: false }
+            return { id: link.id, edit: false }
         }))
         console.log(`*******  ${editables}`)
     }, [])
     const OnClickCallback = (e) => {
-        
+        const editables_flipped_val = editables.map((e, i)=>{
+            e.edit = !e.edit;
+        })
+        setEditables(editables_flipped_val)
         console.log(`*******  ${JSON.stringify(editables)}`)
     }
     return (
