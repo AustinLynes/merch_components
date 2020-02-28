@@ -39,7 +39,7 @@ const Item = (props) => {
                     }
                 </INPUT_WRAPPER>
 
-                {editable && item.imageSrc ?
+                {item && item.imageSrc ?
                     (
                         <IMAGE
                             id={item && item.id + '_img'}
