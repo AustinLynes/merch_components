@@ -19,12 +19,11 @@ export const Footer = (props) => {
         console.log(`*******  ${editables}`)
     }, [])
     const OnClickCallback = (e) => {
+        console.log(`*******  ${JSON.stringify(editables)}`)
         const editables_flipped_val = editables.map((e, i) => {
-            e.id = e.id;
             e.edit = !e.edit;
         })
         setEditables(editables_flipped_val)
-        console.log(`*******  ${JSON.stringify(editables)}`)
     }
     return (
         <FOOTER>
