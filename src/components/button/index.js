@@ -17,12 +17,12 @@ const Button = (props) => {
 
     return (
         <BUTTON_WRAPPER>
+            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
             {
                 !edit ?
                     <BUTTON style={style && style.wrapperStyle} name={name} >{name}</BUTTON>
                     : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={name} />
             }
-            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
         </BUTTON_WRAPPER>
     )
 }
