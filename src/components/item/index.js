@@ -4,15 +4,15 @@ import { faTimes, faPlus, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Item = (props) => {
-    const { style, item, onChangeCallback, onClickCallback, edit, ...rest } = props;
-    const [editable, setEditable] = useState(edit);
+    const { style, item, onChangeCallback, onClickCallback, ...rest } = props;
+    const [editable, setEditable] = useState(false);
     const OnChangeCallback = (e) => {
         e.preventDefault();
         onChangeCallback && onChangeCallback(e);
     }
     const OnClickCallback = (e) => {
         e.preventDefault();
-        setEditable(!editable)
+
         onClickCallback && onClickCallback(e);
     }
 
@@ -26,7 +26,7 @@ const Item = (props) => {
     } else {
         return (
             <WRAPPER style={style && style.wrapperStyle} onSale={item && item.onSale} id={item && item.id}>
-                <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
+                <EDIT_ICON icon={faPencilAlt} onClick={() => setEditable(!editable)} />
                 <INPUT_WRAPPER>
                     {editable ?
                         <INPUT
