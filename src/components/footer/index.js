@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FOOTER } from './style';
+import { FOOTER, EDIT_ICON  } from './style';
 import { Link } from '../link'
 
 export const Footer = (props) => {
