@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NAVIGATION, BUTTON } from './style'
 import { EDIT_ICON } from '../footer/style'
 import { Link } from '../link'
