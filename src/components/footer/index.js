@@ -21,6 +21,7 @@ export const Footer = (props) => {
     const OnClickCallback = (e) => {
         const editables_flipped_val = editables.map((e, i) => {
             e.id = e.id;
+            
             e.edit = !e.edit;
         })
         setEditables(editables_flipped_val)
