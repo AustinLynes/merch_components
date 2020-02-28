@@ -11,7 +11,7 @@ export const Link = (props) => {
     return (
         <LINK_WRAPPER>
             {
-                !edit ?
+                edit && !edit ?
                     <LINK style={style && style.wrapperStyle}>{name}</LINK>
                     : <INPUT style={style && style.inputStyle} onChange={onChangeCallback} value={name} />
             }
