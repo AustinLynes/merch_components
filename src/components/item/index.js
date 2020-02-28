@@ -38,7 +38,7 @@ const Item = (props) => {
                         /> : <TEXT isName={true}>{item && item.itemName}</TEXT>
                     }
                 </INPUT_WRAPPER>
-
+ 
                 {item && item.imageSrc ?
                     (
                         <IMAGE
