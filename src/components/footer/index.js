@@ -30,7 +30,7 @@ export const Footer = (props) => {
         <FOOTER>
             <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
             {
-                links && links.map((link, i) => (<Link key={i + '_lf'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} edit={editables.filter((ed) => ed.id !== `${i}_lf `).edit} />))
+                links && links.map((link, i) => (<Link key={i + '_lf'} onChangeCallback={OnChangeCallback} style={link.style} name={link.name} edit={editables.filter((ed) => ed.id !== i).edit} />))
             }
         </FOOTER>
     )
