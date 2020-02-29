@@ -12,7 +12,7 @@ export const Footer = (props) => {
     return (
         <FOOTER>
             {
-                links && links.map((link, i) => (<Link key={i + '_lf'} onClickCallback={OnClickCallback} style={link.style} name={link.name} edit={edit} />))
+                links && links.map((link, i) => (<Link key={i + '_lf'} onClickCallback={OnClickCallback} style={link.style} name={link.name} />))
             }
         </FOOTER>
     )

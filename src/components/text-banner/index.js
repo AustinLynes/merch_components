@@ -6,7 +6,6 @@ const TextBanner = (props) => {
 
     const OnClickCallback = (e) => {
         e.preventDefault();
-        setEdit(!edit);
         onClickCallback && onClickCallback(e);
     }
 
