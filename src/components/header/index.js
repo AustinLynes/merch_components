@@ -1,25 +1,17 @@
 // Logo
-import React, { useState } from 'react'
-import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_COUNT, CART, ICON, TITLE_WRAPPER, EDIT_ICON, INPUT } from './style'
-import { faSearch, faShoppingCart, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_COUNT, CART, ICON, TITLE_WRAPPER } from './style'
+import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
-    const { style, title, query, logoSrc, cartCount, handleChangeCallback, ...rest } = props;
-    const [edit, setEdit] = useState(false)
-    const OnChangeCallback = (e) => {
-        e.preventDefault();
-        return handleChangeCallback && handleChangeCallback(e);
-    }
+    const { style, title, query, logoSrc, cartCount, ...rest } = props;
+
     return (
         <HEADER style={style && style.wrapperStyle}>
             <LOGO style={style && style.logoStyle} src={logoSrc} />
             <TITLE_WRAPPER>
-                <EDIT_ICON icon={faPencilAlt} onClick={() => { setEdit(!edit) }} />
-                {!edit ?
-                    <TITLE style={style && style.titleStyle} onChange={OnChangeCallback}>{title && title}</TITLE>
-                    : <INPUT value={title} onChange={OnChangeCallback} />
-                }
+                <TITLE style={style && style.titleStyle}>{title && title}</TITLE>
             </TITLE_WRAPPER>
             <SEARCH_BAR style={style && style.searchBarStyle}>
                 <QUERY style={style && style.queryStyle} value={query} />

@@ -5,7 +5,6 @@ const Image = (props) => {
 
     const { src, size, ...rest } = props
 
-
     if (src && src) {
         return (
             <IMAGE size={size} src={src} />

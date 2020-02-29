@@ -15,11 +15,6 @@ width:24%;
 @media (max-width:500px) {
     width:100%;
 }
-/* &:active{
-    width:25%;
-    opacity:.7;
-    box-shadow:6px 6px 5px rgba(0,0,0,.3);
-} */
 ${props => {
         if (props.onSale) return `
             border:3px solid dodgerblue;
@@ -40,71 +35,6 @@ ${props => {
     }}
 `
 
-export const INPUT_WRAPPER = styled.div`
-display:flex;
-flex-flow:row wrap;
-align-content:center;
-justify-content:center;
-align-items:center;
-width:80%;
-border:none;
-background:transparent;
-height:fit-content;
-border-radius:10px;
-
-${props => {
-        if (props.style) return `
-             position:${props.style.position};
-            bottom:${props.style.bottomPos};
-            top:${props.style.topPos};
-            right:${props.style.rightPos};
-            left:${props.style.leftPos};
-            padding:${props.style.padding};
-            width:${props.style.width};
-            font-size:${props.style.fontSize};
-            color: black;  // this is black as a fallback... 
-            -webkit-text-fill-color: ${props.style.textFillColor}; 
-            -webkit-text-stroke-width: ${props.style.strokeWidth};
-            -webkit-text-stroke-color: ${props.style.strokeColor};
-            text-align:${props.style.textAlign};
-            border:${props.style.border};
-            background:${props.style.backgroundColor};
-            margin:${props.style.margin};
-    `
-    }}
-`
-export const INPUT = styled.input`
-background:transparent;
-color: black;
-text-align:center;
-width:50%;
-padding:5px;
-border:none;
-font-size:16px;
-border:1px solid dodgerblue;
-margin-top:5px;
-
-${props => {
-        if (props.style) return `
-            position:${props.style.position};
-            bottom:${props.style.bottomPos};
-            top:${props.style.topPos};
-            right:${props.style.rightPos};
-            left:${props.style.leftPos};
-            padding:${props.style.padding};
-            width:${props.style.width};
-            font-size:${props.style.fontSize};
-            color: black;  // this is black as a fallback... 
-            -webkit-text-fill-color: ${props.style.textFillColor}; 
-            -webkit-text-stroke-width: ${props.style.strokeWidth};
-            -webkit-text-stroke-color: ${props.style.strokeColor};
-            text-align:${props.style.textAlign};
-            border:${props.style.border};
-            background:${props.style.backgroundColor};
-            margin:${props.style.margin};
-         `
-    }}
-`
 export const TEXT = styled.p`
 background:transparent;
 color: black;
@@ -148,30 +78,6 @@ ${props => {
             background:${props.style.backgroundColor};
             margin:${props.style.margin};
          `
-    }}
-`
-
-export const EDIT_ICON = styled(FontAwesomeIcon)`
-color:lightgrey;
-${props => {
-        if (props.style) return `
-             position:${props.style.position};
-            bottom:${props.style.bottomPos};
-            top:${props.style.topPos};
-            right:${props.style.rightPos};
-            left:${props.style.leftPos};
-            padding:${props.style.padding};
-            width:${props.style.width};
-            font-size:${props.style.fontSize};
-            color: black;  // this is black as a fallback... 
-            -webkit-text-fill-color: ${props.style.textFillColor}; 
-            -webkit-text-stroke-width: ${props.style.strokeWidth};
-            -webkit-text-stroke-color: ${props.style.strokeColor};
-            text-align:${props.style.textAlign};
-            border:${props.style.border};
-            background:${props.style.backgroundColor};
-            margin:${props.style.margin};
-    `
     }}
 `
 

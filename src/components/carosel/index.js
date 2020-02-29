@@ -23,14 +23,14 @@ const Carosel = (props) => {
                 <ICON style={style && style.rightIconStyle} isCarousel={true} right icon={faAngleRight} onClick={increment} />
             </CAROSEL>
         )
-    }else{
+    } else {
         return (
             <PLACEHOLDER_CAROSEL style={style && style.placeholder_wrapperStyle}>
-                 <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
-                    <PLACEHOLDER>
-                         <ICON style={style && style.plusIconStyle} isPlus={true} icon={faImages} />
-                         <p style={{width:'100%', textAlign:'center'}}>Tap to add photos</p>
-                    </PLACEHOLDER>
+                <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
+                <PLACEHOLDER>
+                    <ICON style={style && style.plusIconStyle} isPlus={true} icon={faImages} />
+                    <p style={{ width: '100%', textAlign: 'center' }}>Tap to add photos</p>
+                </PLACEHOLDER>
                 <ICON style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
             </PLACEHOLDER_CAROSEL>
         )

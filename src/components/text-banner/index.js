@@ -1,27 +1,18 @@
-import React, { useState } from 'react';
-import { BANNER, MESSAGE, INPUT, EDIT_ICON } from './style';
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { BANNER, MESSAGE } from './style';
 
 const TextBanner = (props) => {
-    const { style, message, size, onChangeCallback, onClickCallback, ...rest } = props
-    const [edit, setEdit] = useState(false)
+    const { style, message, size, onClickCallback, ...rest } = props
+
     const OnClickCallback = (e) => {
         e.preventDefault();
         setEdit(!edit);
         onClickCallback && onClickCallback(e);
     }
-    const OnChangeCallback = (e) => {
-        e.preventDefault();
-        onChangeCallback && onChangeCallback(e);
-    }
+
     return (
-
-        <BANNER style={style && style.wrapperStyle}>
-            <EDIT_ICON icon={faPencilAlt} onClick={OnClickCallback} />
-            {!edit ?
-                <MESSAGE style={style && style.wrapperStyle} >{message}</MESSAGE>
-                : <INPUT style={style && style.inputStyle} onChange={OnChangeCallback} value={message} />}
-
+        <BANNER onClick={OnClickCallback} style={style && style.wrapperStyle}>
+            <MESSAGE style={style && style.textStyle} >{message}</MESSAGE>
         </BANNER>
     )
 }

@@ -1,9 +1,6 @@
 import React from 'react'
-
 import { LINKBAR, LINK, LINKCARD, ICON } from './style.js'
-
 import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Placeholder } from '../placeholder/index.js';
 
 const LinkBar = (props) => {
