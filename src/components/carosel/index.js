@@ -1,40 +1,45 @@
 import React, { useState } from 'react';
-import { CAROSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
+import { CAROSEL as CAROUSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
 import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg-icons';
 
-
-const Carosel = (props) => {
+export const increment = (_count, _repeatVal) => {
+    return _count >= _repeatVal - 1 ? _count = 0 : _count += 1
+}
+export const decrement = (_count, _repeatVal) => {
+    return _count <= 0 ? _count = _repeatVal : _count -= 1
+}
+const Carousel = (props) => {
     const { images, style, ...rest } = props;
-    const [index, setIndex] = useState(0);
+    const [cur_img, setCurrentImage] = useState(0);
 
-    const increment = () => {
-        var i = index;
-        index >= images.length - 1 ? setIndex(0) : setIndex(i += 1);
+    const handleClick = (val) => {
+        setCurrentImage(val === 'increment' ? increment(cur_img) : decrement(cur_img))
     }
-    const decrement = () => {
-        var i = index;
-        index <= 0 ? setIndex(images.length - 1) : setIndex(i -= 1);
-    }
-    if (images && images) {
+
+    if (images && images.length > 0) {
         return (
-            <CAROSEL style={style && style.wrapperStyle}>
-                <ICON style={style && style.leftIconStyle} isCarousel={true} icon={faAngleLeft} onClick={decrement} />
-                {images.map((image, i) => (i === index && <IMAGE style={style && style.image} src={image} />))}
-                <ICON style={style && style.rightIconStyle} isCarousel={true} right icon={faAngleRight} onClick={increment} />
-            </CAROSEL>
+            <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
+                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick(decrement(cur_img, images))} />
+                {
+                    images.map((image, i) => (
+                        i === cur_img && <IMAGE id={i} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
+                    )
+                }
+                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick(increment(cur_img, images))} />
+            </CAROUSEL>
         )
     } else {
         return (
-            <PLACEHOLDER_CAROSEL style={style && style.placeholder_wrapperStyle}>
-                <ICON style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
-                <PLACEHOLDER>
-                    <ICON style={style && style.plusIconStyle} isPlus={true} icon={faImages} />
+            <PLACEHOLDER_CAROSEL data-testid='wrapper' style={style && style.placeholder_wrapperStyle}>
+                <ICON data-testid={'icon'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
+                <PLACEHOLDER data-testid='placeholder'>
+                    <ICON data-testid={'icon plus'} style={style && style.plusIconStyle} isplus="true" icon={faImages} />
                     <p style={{ width: '100%', textAlign: 'center' }}>Tap to add photos</p>
                 </PLACEHOLDER>
-                <ICON style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
+                <ICON data-testid={'icon'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
             </PLACEHOLDER_CAROSEL>
         )
     }
 }
-export default Carosel
+export default Carousel
 {/* images ??  !!the array of images that want to be displayed inside the carosel */ }

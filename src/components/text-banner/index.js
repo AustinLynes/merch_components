@@ -10,8 +10,8 @@ const TextBanner = (props) => {
     }
 
     return (
-        <BANNER onClick={OnClickCallback} style={style && style.wrapperStyle}>
-            <MESSAGE style={style && style.textStyle} >{message}</MESSAGE>
+        <BANNER data-testid='wrapper' onClick={OnClickCallback} style={style && style.wrapperStyle}>
+            <MESSAGE data-testid='text' style={style && style.textStyle} >{message}</MESSAGE>
         </BANNER>
     )
 }

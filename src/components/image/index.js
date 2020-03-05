@@ -1,5 +1,5 @@
 import React from 'react'
-import { IMAGE, IMAGE_PLACEHOLDER,ICON } from './style'
+import { IMAGE, IMAGE_PLACEHOLDER, ICON } from './style'
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 const Image = (props) => {
 
@@ -7,13 +7,13 @@ const Image = (props) => {
 
     if (src && src) {
         return (
-            <IMAGE size={size} src={src} />
+            <IMAGE data-testid='image' size={size} src={src} />
         )
     } else {
         return (
-            <IMAGE_PLACEHOLDER size={size}>
-                <ICON icon={faImage} />
-                <p style={{width:'100%', textAlign:'center'}}>Tap to add a photo</p>
+            <IMAGE_PLACEHOLDER data-testid='placeholder' size={size}>
+                <ICON data-testid='icon' icon={faImage} />
+                <p data-testid='text' style={{ width: '100%', textAlign: 'center' }}>Tap to add a photo</p>
             </IMAGE_PLACEHOLDER>
         )
     }

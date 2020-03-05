@@ -8,11 +8,11 @@ const LinkBar = (props) => {
 
     if (links && links) {
         return (
-            <LINKBAR>
+            <LINKBAR data-testid='wrapper'>
                 {
                     links && links.map((link, i) => (
-                        <LINKCARD key={i}>
-                            <ICON style={style && style.iconStyle} icon={
+                        <LINKCARD data-testid='link-cards' key={i}>
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={
                                 link.name === 'facebook' ? faFacebook
                                     : link.name === 'github' ? faGithub
                                         : link.name === 'twitter' ? faTwitter
@@ -20,7 +20,7 @@ const LinkBar = (props) => {
                                                 : link.name === 'instagram' ? faInstagram
                                                     : null
                             } />
-                            <LINK>{link.name}</LINK>
+                            <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))
                 }
@@ -29,7 +29,7 @@ const LinkBar = (props) => {
         )
     } else {
         return (
-            <LINKBAR>
+            <LINKBAR data-testid='wrapper'>
                 <Placeholder type={'link'} style={{ placeholderStyle: { width: '30%', height: '353px' }, textStyle: { color: 'white' } }} />
             </LINKBAR>
         )

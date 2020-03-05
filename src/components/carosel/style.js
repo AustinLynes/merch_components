@@ -71,7 +71,7 @@ export const ICON = styled(FontAwesomeIcon)`
         border:1px solid dodgerblue;
         border-radius:50%;
         ${props => {
-                if (props.isPlus) return `
+                if (props.isplus) return `
                         background:dodgerblue;
                         color:white;
                         align-self:center;

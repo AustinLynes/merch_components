@@ -10,9 +10,9 @@ export const Footer = (props) => {
         onClickCallback && onClickCallback();
     }
     return (
-        <FOOTER>
+        <FOOTER data-testid='wrapper'>
             {
-                links && links.map((link, i) => (<Link key={i + '_lf'} onClickCallback={OnClickCallback} style={link.style} name={link.name} />))
+                links && links.map((link, i) => (<Link data-testid='link' key={i + '_lf'} onClickCallback={OnClickCallback} style={link.style} name={link.name} />))
             }
         </FOOTER>
     )

@@ -10,7 +10,7 @@ export const Navigation = (props) => {
         onClickCallback && onClickCallback(e);
     }
     return (
-        <NAVIGATION>
+        <NAVIGATION data-testid='wrapper'>
             {
                 links && links.map((link, i) => (<Link key={i + '_ln'} onClickCallback={OnClickCallback} style={link.style} name={link.name} />))
             }

@@ -8,18 +8,18 @@ const Header = (props) => {
     const { style, title, query, logoSrc, cartCount, ...rest } = props;
 
     return (
-        <HEADER style={style && style.wrapperStyle}>
-            <LOGO style={style && style.logoStyle} src={logoSrc} />
-            <TITLE_WRAPPER>
-                <TITLE style={style && style.titleStyle}>{title && title}</TITLE>
+        <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
+            <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
+            <TITLE_WRAPPER data-testid='title-wrapper'>
+                <TITLE data-testid='title-text' style={style && style.titleStyle}>{title && title}</TITLE>
             </TITLE_WRAPPER>
-            <SEARCH_BAR style={style && style.searchBarStyle}>
-                <QUERY style={style && style.queryStyle} value={query} />
-                <SEARCH_BUTTON style={style && style.searchIconStyle} icon={faSearch} />
+            <SEARCH_BAR  data-testid='searchbar-wrapper' style={style && style.searchBarStyle}>
+                <QUERY data-testid='query box' style={style && style.queryStyle} value={query} />
+                <SEARCH_BUTTON data-testid='search button' style={style && style.searchIconStyle} icon={faSearch} />
             </SEARCH_BAR>
-            <CART style={style && style.cartStyle}>
-                <ICON style={style && style.cartIconStyle} icon={faShoppingCart} />
-                <CART_COUNT style={style && style.cartCountStyle}>{`${cartCount || 0} items`}</CART_COUNT>
+            <CART data-testid='cart-icon-wrapper' style={style && style.cartStyle}>
+                <ICON data-testid='cart icon' style={style && style.cartIconStyle} icon={faShoppingCart} />
+                <CART_COUNT data-testid='cart count text' style={style && style.cartCountStyle}>{`${cartCount || 0} items`}</CART_COUNT>
             </CART>
         </HEADER>
     )

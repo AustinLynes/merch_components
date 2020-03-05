@@ -16,7 +16,7 @@ width:24%;
     width:100%;
 }
 ${props => {
-        if (props.onSale) return `
+        if (props.onsale) return `
             border:3px solid dodgerblue;
         `
         if (props.style) return `

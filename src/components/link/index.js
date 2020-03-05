@@ -8,5 +8,5 @@ export const Link = (props) => {
         e.preventDefault();
         onClickCallback && onClickCallback(e);
     }
-    return (<LINK onClick={OnClickCallback} style={style && style.wrapperStyle}>{name}</LINK>)
+    return (<LINK data-testid='link element' onClick={OnClickCallback} style={style && style.wrapperStyle}>{name}</LINK>)
 }
