@@ -8,13 +8,11 @@ position:relative;
 display:flex;
 flex-flow:row wrap;
 justify-content:center;
-height: 642px;
-max-height: 642px;
+height: 768px;
+max-height: 768px;
 border:2px solid black;
-width:24%;
-@media (max-width:500px) {
-    width:100%;
-}
+width:480px;
+
 ${props => {
         if (props.onsale) return `
             border:3px solid dodgerblue;
