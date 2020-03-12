@@ -11,7 +11,7 @@ justify-content:center;
 height: 768px;
 max-height: 768px;
 border:2px solid black;
-width:480px;
+width:360px;
 
 ${props => {
         if (props.onsale) return `
