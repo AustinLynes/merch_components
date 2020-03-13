@@ -28,6 +28,7 @@ const LinkBar = (props) => {
                 return icon = faInstagram;
                 break;
             default:
+                console.log('ERR :: NO LINK NAME FOUND.. I CAN\'T CREATE YOU AN ICON BOSS! ')
                 break;
         }
     }
