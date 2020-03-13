@@ -7,20 +7,22 @@ const LinkBar = (props) => {
     const { links, style, ...rest } = props;
 
     const findName = (link) => {
+        icon = null
         switch (link.name) {
             case link.name === 'facebook':
-                return faFacebook;
+                return  icon = faFacebook;
             case link.name === 'github':
-                return faGithub;
+                return  icon = faGithub;
             case link.name === 'twitter':
-                return faTwitter;
+                return  icon = faTwitter;
             case link.name === 'linkedin':
-                return faLinkedinIn;
+                return  icon = faLinkedinIn;
             case link.name === 'instagram':
-                return faInstagram;
+                return  icon = faInstagram;
             default:
-                return '';
+                return icon = null;
         }
+        return icon
     }
     if (links && links) {
         return (
