@@ -11,16 +11,16 @@ const LinkBar = (props) => {
         // alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
         var icon = null
         switch (link.name) {
-            case link.name === 'facebook':
+            case 'facebook':
                 console.log('i made it boss')
                 return icon = faFacebook;
-            case link.name === 'github':
+            case 'github':
                 return icon = faGithub;
-            case link.name === 'twitter':
+            case  'twitter':
                 return icon = faTwitter;
-            case link.name === 'linkedin':
+            case 'linkedin':
                 return icon = faLinkedinIn;
-            case link.name === 'instagram':
+            case 'instagram':
                 return icon = faInstagram;
             default:
                 console.log('ERR :: NO LINK NAME FOUND.. I CAN\'T CREATE YOU AN ICON BOSS! ')
