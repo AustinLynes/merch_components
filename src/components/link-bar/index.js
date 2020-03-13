@@ -7,6 +7,7 @@ const LinkBar = (props) => {
     const { links, style, ...rest } = props;
 
     const findName = (link) => {
+        alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
         icon = null
         switch (link.name) {
             case link.name === 'facebook':
@@ -30,7 +31,7 @@ const LinkBar = (props) => {
                 {
                     links && links.map((link, i) => (
                         <LINKCARD data-testid='link-cards' key={i}>
-                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => { findName(link.name) }} />
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => { findName(link) }} />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))
