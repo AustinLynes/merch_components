@@ -12,6 +12,7 @@ const LinkBar = (props) => {
         var icon = null
         switch (link.name) {
             case link.name === 'facebook':
+                console.log('i made it boss')
                 return icon = faFacebook;
                 break;
             case link.name === 'github':
