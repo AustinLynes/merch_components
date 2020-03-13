@@ -9,7 +9,7 @@ const LinkBar = (props) => {
 
     const findName = (link) => {
         alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
-        icon = null
+        var icon = null
         switch (link.name) {
             case link.name === 'facebook':
                 icon = faFacebook;
