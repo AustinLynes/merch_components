@@ -11,15 +11,15 @@ const LinkBar = (props) => {
         icon = null
         switch (link.name) {
             case link.name === 'facebook':
-                return  icon = faFacebook;
+                return icon = faFacebook;
             case link.name === 'github':
-                return  icon = faGithub;
+                return icon = faGithub;
             case link.name === 'twitter':
-                return  icon = faTwitter;
+                return icon = faTwitter;
             case link.name === 'linkedin':
-                return  icon = faLinkedinIn;
+                return icon = faLinkedinIn;
             case link.name === 'instagram':
-                return  icon = faInstagram;
+                return icon = faInstagram;
             default:
                 return icon = null;
         }
@@ -31,7 +31,7 @@ const LinkBar = (props) => {
                 {
                     links && links.map((link, i) => (
                         <LINKCARD data-testid='link-cards' key={i}>
-                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => { findName(link) }} />
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => (findName(link))} />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))

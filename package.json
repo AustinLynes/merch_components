@@ -8,7 +8,8 @@
     "patch": "npm version patch",
     "publish-pkg": "npm publish",
     "build": "webpack --mode production",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "patch-n-push":"npm version patch && npm publish"
   },
   "license": "MIT",
   "private": false,
