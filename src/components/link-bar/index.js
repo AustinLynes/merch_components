@@ -5,7 +5,7 @@ import { Placeholder } from '../placeholder/index.js';
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
-    const [_n] = null;
+    const _n = null;
 
     const findName = (link) => {
         alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
