@@ -14,23 +14,18 @@ const LinkBar = (props) => {
             case link.name === 'facebook':
                 console.log('i made it boss')
                 return icon = faFacebook;
-                break;
             case link.name === 'github':
                 return icon = faGithub;
-                break;
             case link.name === 'twitter':
                 return icon = faTwitter;
-                break;
             case link.name === 'linkedin':
                 return icon = faLinkedinIn;
-                break;
             case link.name === 'instagram':
                 return icon = faInstagram;
-                break;
             default:
                 console.log('ERR :: NO LINK NAME FOUND.. I CAN\'T CREATE YOU AN ICON BOSS! ')
-                break;
-        }
+                return icon;
+            }
     }
     if (links && links) {
         return (
