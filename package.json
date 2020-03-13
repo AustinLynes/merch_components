@@ -1,6 +1,6 @@
 {
   "name": "merch_components",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "default library for merchOS Labs project",
   "main": "./lib/index.js",
   "author": "Austin Lynes - Merch OS Labs Team -",
@@ -9,8 +9,8 @@
     "publish-pkg": "npm publish",
     "build": "webpack --mode production",
     "test": "jest --watch",
-    "patch-n-push":"npm version patch && npm publish",
-    "dev-start":"cd ../demo && yarn upgrade merch_components && yarn start"
+    "patch-n-push": "npm version patch && npm publish",
+    "dev-start": "cd ../demo && yarn upgrade merch_components && yarn start"
   },
   "license": "MIT",
   "private": false,
