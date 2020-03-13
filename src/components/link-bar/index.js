@@ -8,23 +8,23 @@ const LinkBar = (props) => {
     var _n = null;
 
     const findName = (link) => {
-        alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
+        // alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
         var icon = null
         switch (link.name) {
             case link.name === 'facebook':
-                icon = faFacebook;
+                return icon = faFacebook;
                 break;
             case link.name === 'github':
-                icon = faGithub;
+                return icon = faGithub;
                 break;
             case link.name === 'twitter':
-                icon = faTwitter;
+                return icon = faTwitter;
                 break;
             case link.name === 'linkedin':
-                icon = faLinkedinIn;
+                return icon = faLinkedinIn;
                 break;
             case link.name === 'instagram':
-                icon = faInstagram;
+                return icon = faInstagram;
                 break;
             default:
                 break;
