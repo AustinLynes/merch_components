@@ -9,7 +9,8 @@
     "publish-pkg": "npm publish",
     "build": "webpack --mode production",
     "test": "jest --watch",
-    "patch-n-push": "npm version patch && npm publish"
+    "patch-n-push":"npm version patch && npm publish",
+    "dev-start":"cd ../demo && yarn upgrade merch_components && yarn start"
   },
   "license": "MIT",
   "private": false,

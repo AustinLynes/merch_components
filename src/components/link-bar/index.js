@@ -5,25 +5,30 @@ import { Placeholder } from '../placeholder/index.js';
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
+    const [_n] = useState(null);
 
     const findName = (link) => {
         alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
         icon = null
         switch (link.name) {
             case link.name === 'facebook':
-                return icon = faFacebook;
+                icon = faFacebook;
+                break;
             case link.name === 'github':
-                return icon = faGithub;
+                icon = faGithub;
+                break;
             case link.name === 'twitter':
-                return icon = faTwitter;
+                icon = faTwitter;
+                break;
             case link.name === 'linkedin':
-                return icon = faLinkedinIn;
+                icon = faLinkedinIn;
+                break;
             case link.name === 'instagram':
-                return icon = faInstagram;
+                icon = faInstagram;
+                break;
             default:
-                return icon = null;
+                break;
         }
-        return icon
     }
     if (links && links) {
         return (
@@ -31,7 +36,8 @@ const LinkBar = (props) => {
                 {
                     links && links.map((link, i) => (
                         <LINKCARD data-testid='link-cards' key={i}>
-                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => (findName(link))} />
+                            {_n = findName(link)}
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={_n} />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))
