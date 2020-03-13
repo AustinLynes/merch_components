@@ -30,7 +30,7 @@ const LinkBar = (props) => {
                 {
                     links && links.map((link, i) => (
                         <LINKCARD data-testid='link-cards' key={i}>
-                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => { findName(link) }} />
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={() => { findName(link.name) }} />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))
