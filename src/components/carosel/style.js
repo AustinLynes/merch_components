@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const CAROSEL = styled.div`
-        flex-grow:1;
-        height:600px;
+        height:768px;
+        width:1200px;
         position:relative;
         display:flex;
         flex-flow:row wrap;
@@ -19,8 +19,8 @@ export const CAROSEL = styled.div`
 `
 
 export const PLACEHOLDER_CAROSEL = styled.div`
-        height:600px;
-        width:100%;
+        height:768px;
+        width:1200px;
         display:flex;
         flex-flow:row wrap;
         justify-content:space-between;

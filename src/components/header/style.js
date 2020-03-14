@@ -8,12 +8,12 @@ export const HEADER = styled.div`
     justify-content:space-between;
     padding:0 10px;
     align-items:center;
-    width:100%;
-    height:200px;
+    width:1200px;
+    height:360px;
     background:#303030;
     @media (max-width:500px) {
         flex-flow:column;
-        height:500px;
+        height:100vh;
         padding:10px;
     }
     ${props => {

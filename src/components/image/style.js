@@ -2,15 +2,8 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
-        width:100%;
-        object-fit:cover;
-        height:${props => {
-        if (props.size === 'small')
-                return '450px;'
-        if (props.size === 'medium')
-                return '600px;'
-        else return '750px'
-}};
+        width:1200px;
+        object-fit:cover; 
 `
 
 export const IMAGE_PLACEHOLDER = styled.div`
@@ -20,14 +13,6 @@ export const IMAGE_PLACEHOLDER = styled.div`
         align-content:center;
         align-items:center;
         border:1px solid black;
-        width:100%;
-        height:${props => {
-        if (props.size === 'small')
-                return '450px;'
-        if (props.size === 'medium')
-                return '600px;'
-        else return '750px'
-}};
 `
 
 export const ICON = styled(FontAwesomeIcon)`

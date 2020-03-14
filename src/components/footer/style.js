@@ -5,11 +5,12 @@ export const FOOTER = styled.div`
     flex-flow:row wrap;
     justify-content:space-evenly;
     margin:0;
-    width:100%;
-    height:90px;
+    width:1200px;
+    height:120px;
     background:#000;
     @media (max-width:500px) {
       height:fit-content;
+      width:100%;
       padding:10px 0;
     }
     ${props => {

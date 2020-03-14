@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const LINKBAR = styled.div`
     box-sizing:border-box;
-    width:100%;
+    width:1200px;
     display:flex;
     flex-flow:row wrap;
     justify-content:center;
     background:#333;
-    height:600px;
-    max-height:600px;
+    height:648px;
+    max-height:648px;
     align-content:center;
     align-items:center;
     ${props => {

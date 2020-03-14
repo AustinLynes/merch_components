@@ -7,15 +7,15 @@ export const BUTTON_WRAPPER = styled.div`
     justify-content:center;
     align-items:center;
     align-content:center;
-    width:20%;
+    width:360px;
     border-radius:10px;
-    height:90px;
+    height:120px;
     margin-top:75px;
     font-size:1.8rem;
     background:#000;
     color:white;
     @media (max-width:500px) {
-    width:100%;
+     width:100%;
     margin-top:10px;
 
     }

@@ -5,6 +5,8 @@ Welcome to merch components a component library for building web-stores<br/>
 
 BREAKPOINTS LG 1200 md 996 sm 768 xs 360
 COL         LG   12 md   9 sm   6 xs   3 
+             Q    1      1      2      4
+
 ***
 [Basic Usage](#usage)<br/>
 [Container](#container)<br/>

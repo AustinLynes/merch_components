@@ -17,6 +17,9 @@ ${props => {
         if (props.onsale) return `
             border:3px solid dodgerblue;
         `
+        if(props.isdouble) return `
+            width:768px; 
+        `
         if (props.style) return `
             position:${props.style.position};
             display:${props.style.display};

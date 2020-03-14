@@ -5,12 +5,10 @@ export const NAVIGATION = styled.div`
     justify-content:space-evenly;
     flex-flow:row wrap;
     margin:0;
-    width:100%;
-    height:75px;
+    width:1200px;
+    height:120px;
     background:#000;
-    @media (max-width:500px) {
-      height:200px;
-    }
+
     ${props => {
         if (props.style) return `
             position:${props.style.position};
