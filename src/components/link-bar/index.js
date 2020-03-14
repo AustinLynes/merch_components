@@ -34,7 +34,7 @@ const LinkBar = (props) => {
                         <LINKCARD data-testid='link-cards' key={i}>
                             {_n = findName(link)}
                             {console.log(_n)}
-                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={_n} />
+                            <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={_n.icon} />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>
                     ))
