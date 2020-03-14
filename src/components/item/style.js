@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WRAPPER = styled.div`
 flex-grow:1;
-margin-top:75px;
 position:relative;
 display:flex;
 flex-flow:row wrap;
