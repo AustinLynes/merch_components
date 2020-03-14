@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
-        width:1440px;
+        width:1200px;
         height:768px;
         object-fit:cover; 
 `
@@ -14,7 +14,7 @@ export const IMAGE_PLACEHOLDER = styled.div`
         align-content:center;
         align-items:center;
         border:1px solid black;
-        width:1440px;
+        width:1200px;
         height:768px;
 `
 

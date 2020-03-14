@@ -5,7 +5,7 @@ export const FOOTER = styled.div`
     flex-flow:row wrap;
     justify-content:space-evenly;
     margin:0;
-    width:1440px;
+    width:1200px;
     height:120px;
     background:#000;
     @media (max-width:500px) {
