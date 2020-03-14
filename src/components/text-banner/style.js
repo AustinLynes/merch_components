@@ -7,7 +7,7 @@ justify-content:center;
 align-content:center;
 align-items:center;
 box-sizing:border-box;
-width:1200px;
+width:1440px;
 height:120px;
 background:linear-gradient(#fdf771, #e6de0a);
 padding:1rem;

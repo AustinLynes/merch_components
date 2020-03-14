@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
-        width:1200px;
+        width:1440px;
+        height:768px;
         object-fit:cover; 
 `
 

@@ -8,7 +8,7 @@ export const HEADER = styled.div`
     justify-content:space-between;
     padding:0 10px;
     align-items:center;
-    width:1200px;
+    width:1440px;
     height:360px;
     background:#303030;
     @media (max-width:500px) {

@@ -5,7 +5,7 @@ export const NAVIGATION = styled.div`
     justify-content:space-evenly;
     flex-flow:row wrap;
     margin:0;
-    width:1200px;
+    width:1440px;
     height:120px;
     background:#000;
 

@@ -3,9 +3,9 @@ Welcome to merch components a component library for building web-stores<br/>
 ## simplistic use for a simplistic app.. <br/>
 **Components** <br/>
 
-BREAKPOINTS LG 1200 md 996 sm 768 xs 360
-COL         LG   12 md   9 sm   6 xs   3 
-             Q    1      1      2      4
+BREAKPOINTS LG 1440   md 996   sm 768   xs  360   xxs 120 
+COL         LG   12   md   9   sm   6   xs    3   xxs   1 
+                 1        1        2         4        12
 
 ***
 [Basic Usage](#usage)<br/>
