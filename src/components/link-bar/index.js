@@ -12,8 +12,6 @@ const LinkBar = (props) => {
                 {
                     links && links.map((link, i) => (
                         <LINKCARD data-testid='link-cards' key={i}>
-                            {_n = findName(link)}
-                            {console.log(_n)}
                             <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={
                                 link.name === 'facebook' ? faFacebook :
                                     link.name === 'github' ? faGitHub :
