@@ -5,12 +5,12 @@
   "main": "./lib/index.js",
   "author": "Austin Lynes - Merch OS Labs Team -",
   "scripts": {
-    "patch": "npm version patch",
-    "publish-pkg": "npm publish",
-    "build": "webpack --mode production",
     "test": "jest --watch",
-    "patch-n-push": "npm version patch && npm publish",
-    "dev-start": "cd ../demo && yarn upgrade merch_components && yarn start"
+    "patch": "npm version patch",
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "build": "webpack --mode production",
+    "test-react": "cd ../demo && yarn upgrade merch_components && yarn start"
   },
   "license": "MIT",
   "private": false,
