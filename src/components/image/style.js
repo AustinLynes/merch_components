@@ -14,6 +14,8 @@ export const IMAGE_PLACEHOLDER = styled.div`
         align-content:center;
         align-items:center;
         border:1px solid black;
+        width:1440px;
+        height:768px;
 `
 
 export const ICON = styled(FontAwesomeIcon)`

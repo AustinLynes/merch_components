@@ -8,8 +8,8 @@ position:relative;
 display:flex;
 flex-flow:row wrap;
 justify-content:center;
-height: 768px;
-max-height: 768px;
+height: 648px;
+max-height: 648px;
 border:2px solid black;
 width:360px;
 
