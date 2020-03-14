@@ -9,20 +9,22 @@ const LinkBar = (props) => {
 
     const findName = (link) => {
         // alert(`THIS IS A DEBUG MESSAGE... FINDING NAME ${link.name}`)
+        let _link;
         switch (link.name) {
             case 'facebook':
-                return faFacebook;
+                return _link = faFacebook;
             case 'github':
-                return faGithub;
+                return _link = faGithub;
             case 'twitter':
-                return faTwitter;
+                return _link = faTwitter;
             case 'linkedin':
-                return faLinkedinIn;
+                return _link = faLinkedinIn;
             case 'instagram':
-                return faInstagram;
+                return _link = faInstagram;
             default:
                 break;
         }
+        return _link;
     }
     if (links && links) {
         return (
