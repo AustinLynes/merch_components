@@ -46,7 +46,6 @@ const Item = (props) => {
                 )}
                 {item && item.onSale && (<SALE_FLAG data-testid='item-sale-flag'>SALE</SALE_FLAG>)}
 
-                <CLOSE_BUTTON data-testid='close-button' style={style && style.closeButtonStyle} id={item && item.id + '_close_btn'} icon={faTimes} />
             </WRAPPER>
         )
     }

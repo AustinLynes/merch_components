@@ -6,7 +6,7 @@ export const NAVIGATION = styled.div`
     flex-flow:row wrap;
     margin:0;
     width:1200px;
-    height:120px;
+    height:75px;
     background:#000;
 
     ${props => {
