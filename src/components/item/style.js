@@ -39,7 +39,7 @@ export const TEXT = styled.p`
 background:transparent;
 color: black;
 text-align:center;
-width:50%;
+width:900%;
 padding:5px;
 border:none;
 font-size:16px;
