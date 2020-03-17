@@ -6,10 +6,11 @@ position:relative;
 display:flex;
 flex-flow:row wrap;
 justify-content:center;
-height: 100%;
-max-height: 648px;
 border:2px solid black;
-width:100%;
+/* height: 100%; */
+height:648px;
+width:95%;
+margin:0 auto;
 
 ${props => {
         if (props.onsale) return `
