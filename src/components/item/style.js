@@ -8,7 +8,7 @@ flex-flow:row wrap;
 justify-content:center;
 border:2px solid black;
 /* height: 100%; */
-height:95%;
+height:648px;
 width:95%;
 margin:0 auto;
 
