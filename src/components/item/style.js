@@ -108,8 +108,8 @@ export const PLACEHOLDER = styled.div`
     align-content:center;
     border:1px solid lightgrey;
     border-radius:10px;
-    width:60%;
-    height:460px;
+    width:100%;
+    height:648px;
     padding:1rem;
     ${props => {
         if (props.item_is_null) return `
@@ -149,7 +149,7 @@ background:dodgerblue;
 padding:1rem;
 border-radius:50%;
 color:white;
-font-size:1.8rem;
+/* font-size:28px; */
 ${props => {
         if (props.style) return `
              position:${props.style.position};
