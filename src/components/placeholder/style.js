@@ -30,7 +30,7 @@ export const PLACEHOLDER = styled.div`
     align-content:center;
     border:1px solid lightgrey;
     border-radius:10px;
-    width:60%;
+    width:100%;
     height:460px;
     padding:1rem;
     ${props => {

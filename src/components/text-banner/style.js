@@ -7,7 +7,7 @@ justify-content:center;
 align-content:center;
 align-items:center;
 box-sizing:border-box;
-width:1200px;
+width:100%;
 height:75px;
 background:linear-gradient(#fdf771, #e6de0a);
 padding:1rem;
@@ -24,7 +24,7 @@ ${props => {
 `
 
 export const MESSAGE = styled.h2`
-width:80%;
+width:90%;
 color:black;
 flex-grow:1;
 height:100%;

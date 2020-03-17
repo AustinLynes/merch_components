@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const CAROSEL = styled.div`
         height:768px;
-        width:1200px;
+        width:100%;
         position:relative;
         display:flex;
         flex-flow:row wrap;
