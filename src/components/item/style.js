@@ -6,7 +6,7 @@ position:relative;
 display:flex;
 flex-flow:row wrap;
 justify-content:center;
-height: 648px;
+height: 100%;
 max-height: 648px;
 border:2px solid black;
 width:360px;
