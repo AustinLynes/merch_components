@@ -109,8 +109,8 @@ export const PLACEHOLDER = styled.div`
     align-content:center;
     border:1px solid lightgrey;
     border-radius:10px;
-    width:100%;
-    height:648px;
+    width:90%;
+    height:480px;
     padding:1rem;
     ${props => {
         if (props.item_is_null) return `
@@ -146,6 +146,7 @@ export const PLACEHOLDER = styled.div`
 
 
 export const PLUS_ICON = styled(FontAwesomeIcon)`
+box-sizing:border-box;
 background:dodgerblue;
 padding:1rem;
 border-radius:50%;
