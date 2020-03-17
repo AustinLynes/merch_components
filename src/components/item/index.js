@@ -34,7 +34,7 @@ const Item = (props) => {
                     ) : (
                         <PLACEHOLDER data-testid='placeholder'>
                             {/* <PLUS_ICON data-testid='plus-icon' style={style && style.plusIconSyle} icon={faPlus} /> */}
-                            <p data-testid='text' style={{ width: '100%', textAlign: 'center' }}>Tap to Edit</p>
+                            <p data-testid='text' style={{ width: '100%', textAlign: 'center', fontSize: '1.9rem' }}>Tap to Edit</p>
                         </PLACEHOLDER>
                     )
                 }
