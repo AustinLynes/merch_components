@@ -7,7 +7,7 @@ const Image = (props) => {
 
     if (src && src) {
         return (
-            <IMAGE data-testid='image' size={size} src={src} />
+            <IMAGE draggable={false} data-testid='image' size={size} src={src} />
         )
     } else {
         return (
