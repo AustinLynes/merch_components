@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
         width:100%;
-        height:700px;
+        /* height:700px; */
         max-height:100%;
-        object-fit:cover; 
+        object-fit:contain; 
 `
 
 export const IMAGE_PLACEHOLDER = styled.div`
