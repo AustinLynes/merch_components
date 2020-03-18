@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
-        width:100%;
+        width:auto;
+        height:auto;
         /* height:700px; */
-        max-height:100%;
+        max-height:750px;
         object-fit:contain; 
 `
 
