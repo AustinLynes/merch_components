@@ -860,7 +860,7 @@
   integrity sha512-v9kIhKwjeZThiWrLmj0y17CWoyddASLj9O2yvbZkbvw/N3rWOYy9zkV66ursAoVr0mV15bL8g0c4QZUE6cdDoQ==
   dependencies:
     exec-sh "^0.3.2"
-    minimist "^1.2.0"
+    minimist "^1.2.2"
 
 "@emotion/is-prop-valid@^0.8.3":
   version "0.8.6"
@@ -3915,7 +3915,7 @@ jsdom@^15.1.1:
   integrity sha512-fAl1W0/7T2G5vURSyxBzrJ1LSdQn6Tr5UX/xD4PXDx/PDgwygedfW6El/KIj3xJ7FU61TTYnc/l/B7P49Eqt6g==
   dependencies:
     abab "^2.0.0"
-    acorn "^7.1.0"
+    acorn "^7.1.1"
     acorn-globals "^4.3.2"
     array-equal "^1.0.0"
     cssom "^0.4.1"
