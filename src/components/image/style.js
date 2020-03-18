@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
         width:100%;
-        max-height:700px;
+        height:700px;
         max-height:700px;
         object-fit:cover; 
 `
