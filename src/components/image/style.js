@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const IMAGE = styled.img`
         width:100%;
-        object-fit:contain; 
+        /* object-fit:contain;  */
 `
 
 export const IMAGE_PLACEHOLDER = styled.div`
