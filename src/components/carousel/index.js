@@ -11,38 +11,17 @@ export const decrement = (_count, _repeatVal) => {
 const Carousel = (props) => {
     const { images, style, ...rest } = props;
     const [count, setCount] = useState(0);
-    const handleClick = (val) => {
-        // 2 
-        console.log(count)
-        console.log(images.length);
-        // - 1 < 0
-        if (count < 0) {
-            setCount(images.length - 1)
-            console.log('IM HERE BOSS!!!!!!!')
-
-            // 3 > 2
-        }
-        if (count > images.length) {
-            console.log(count)
-            setCount(0)
-        }
-
-        setCount(val === 'increment' ? count + 1 : count - 1)
-
-
-
-    }
 
     if (images && images.length > 0) {
         return (
             <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
-                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick()} />
+                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => increment(count, images.length)} />
                 {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
-                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick('increment')} />
+                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => decrement(count, 0)} />
             </CAROUSEL>
         )
     } else {
