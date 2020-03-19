@@ -4,26 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export const IMAGE = styled.img`
         width:100%;
         ${props => {
-if (props.style) return `
-                position:${props.style.position};
-                bottom:${props.style.bottomPos};
-                top:${props.style.topPos};
-                right:${props.style.rightPos};
-                left:${props.style.leftPos};
-                padding:${props.style.padding};
+                if (props.style) return `
                 width:${props.style.width};
                 height:${props.style.height};
-                font-size:${props.style.fontSize};
-                color: black;  // this is black as a fallback... 
-                -webkit-text-fill-color: ${props.style.textFillColor}; 
-                -webkit-text-stroke-width: ${props.style.strokeWidth};
-                -webkit-text-stroke-color: ${props.style.strokeColor};
-                text-align:${props.style.textAlign};
-                border:${props.style.border};
-                background:${props.style.backgroundColor};
-                margin:${props.style.margin};
                   `
-}}
+        }}
         /* object-fit:contain;  */
 `
 
@@ -46,7 +31,7 @@ color:white;
 border-radius:50%;
 font-size:2.5rem;
 ${props => {
-if (props.style) return `
+                if (props.style) return `
                 position:${props.style.position};
                 bottom:${props.style.bottomPos};
                 top:${props.style.topPos};
@@ -64,5 +49,5 @@ if (props.style) return `
                 background:${props.style.backgroundColor};
                 margin:${props.style.margin};
                   `
-}}
+        }}
 `

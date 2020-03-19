@@ -1,6 +1,7 @@
 import React from 'react'
 import { IMAGE, IMAGE_PLACEHOLDER, ICON } from './style'
 import { faImage } from '@fortawesome/free-solid-svg-icons';
+
 const Image = (props) => {
 
     const { src, size, style, ...rest } = props
@@ -17,5 +18,6 @@ const Image = (props) => {
             </IMAGE_PLACEHOLDER>
         )
     }
+
 }
 export default Image
