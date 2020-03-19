@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { CAROSEL as CAROUSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } from './Style';
 import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg-icons';
-                        //    3         3
+
+// at the time of calling this function.. check the current _count vs the _repeatVal.
+// if _count is > _repeatVal then i want count to be set to 0
+// else i want you to increase  _count by _count + 1  => += 1
+// then give me back the result of ^^^^^
 export const increment = (_count, _repeatVal) => {
 
     _count > _repeatVal - 1 ? _count = 0 : _count += 1
     console.log(_count);
     return _count 
 }
+// at the time of calling this function.. check the current _count vs the _repeatVal.
+// if _count is <= 0 then i want count to be set to _repeatVal
+// else i want you to decrease _count by _count - 1  => -= 1
+// then give me back the result of ^^^^^ 
 export const decrement = (_count, _repeatVal) => {
 
     _count <= 0 ? _count = _repeatVal : _count -= 1
-    console.log(_count);
     return _count 
 }
 
