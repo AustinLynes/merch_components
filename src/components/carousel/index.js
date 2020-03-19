@@ -22,7 +22,7 @@ const Carousel = (props) => {
                 <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick(decrement(cur_img, images))} />
                 {
                     images.map((image, i) => (
-                        i === cur_img && <IMAGE id={i} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
+                        i === cur_img && <IMAGE  draggable={false} id={`${i}_im`}data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
                 <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick(increment(cur_img, images))} />
