@@ -4,12 +4,12 @@ import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg
 
 export const increment = (_count, _repeatVal) => {
     _count >= _repeatVal - 1 ? _count = 0 : _count += 1
-    return _count
+    return _count += 1
 }
 export const decrement = (_count, _repeatVal) => {
 
     _count <= 0 ? _count = _repeatVal : _count -= 1
-    return _count
+    return _count -= 1
 }
 const Carousel = (props) => {
     const { images, style, ...rest } = props;
