@@ -15,13 +15,24 @@ const Carousel = (props) => {
     const handleClick = (val) => {
         // 2 
         console.log(count)
-        count < 0 ?  // << -- <<
-            setCount(images.length - 1) :
-            count > images.length ? // ->>> ->> 
-                setCount(0) :
-                setCount(val === 'increment' ? count + 1 : count - 1)
+        // - 1 < 0
+        if (count < 0) {
+            setCount(images.length - 1)
+            console.log(count)
 
-        // console.log(count)
+            // 3 > 2
+        } else if (count > images.length) {
+            setCount(0)
+            console.log(count)
+
+
+        }
+        else {
+            setCount(val === 'increment' ? count + 1 : count - 1)
+            console.log(count)
+
+        }
+ 
 
     }
 
