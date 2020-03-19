@@ -11,14 +11,14 @@ export const decrement = (_count, _repeatVal) => {
 const Carousel = (props) => {
     const { images, style, ...rest } = props;
     const [count, setCount] = useState(0);
-
     const handleClick = (val) => {
         // 2 
         console.log(count)
+        console.log(images.length);
         // - 1 < 0
         if (count < 0) {
-            console.log('IM HERE BOSS!!!!!!!', count)
             setCount(images.length - 1)
+            console.log('IM HERE BOSS!!!!!!!')
 
             // 3 > 2
         }
