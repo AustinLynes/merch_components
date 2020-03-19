@@ -13,11 +13,14 @@ const Carousel = (props) => {
     const [count, setCount] = useState(0);
 
     const handleClick = (val) => {
+        console.log(count)
         count <= 0 ?
             setCount(0) :
             count > images.length - 1 ?
                 setCount(images.length - 1) :
-                    setCount(val === 'increment' ? count + 1 : count - 1)
+                setCount(val === 'increment' ? count + 1 : count - 1)
+        console.log(count)
+
     }
 
     if (images && images.length > 0) {
