@@ -3,11 +3,11 @@ import { IMAGE, IMAGE_PLACEHOLDER, ICON } from './style'
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 const Image = (props) => {
 
-    const { src, size, ...rest } = props
+    const { src, size, style, ...rest } = props
 
     if (src && src) {
         return (
-            <IMAGE draggable={false} data-testid='image' size={size} src={src} />
+            <IMAGE draggable={false} data-testid='image' size={size} src={src} style={style} />
         )
     } else {
         return (
