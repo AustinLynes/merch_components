@@ -4,7 +4,7 @@ import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg
                         //    3         3
 export const increment = (_count, _repeatVal) => {
 
-    _count >= _repeatVal - 1 ? _count = 0 : _count += 1
+    _count > _repeatVal - 1 ? _count = 0 : _count += 1
     console.log(_count);
     return _count 
 }
