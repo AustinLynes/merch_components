@@ -17,19 +17,19 @@ const Carousel = (props) => {
         console.log(count)
         // - 1 < 0
         if (count < 0) {
-            setCount(images.length - 1)
             console.log(count)
+            setCount(images.length - 1)
 
             // 3 > 2
         } else if (count > images.length) {
-            setCount(0)
             console.log(count)
+            setCount(0)
 
 
         }
         else {
-            setCount(val === 'increment' ? count + 1 : count - 1)
             console.log(count)
+            setCount(val === 'increment' ? count + 1 : count - 1)
 
         }
  
@@ -39,13 +39,13 @@ const Carousel = (props) => {
     if (images && images.length > 0) {
         return (
             <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
-                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick('increment')} />
+                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick()} />
                 {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
-                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick()} />
+                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick('increment')} />
             </CAROUSEL>
         )
     } else {
