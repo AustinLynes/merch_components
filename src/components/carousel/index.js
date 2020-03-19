@@ -13,8 +13,8 @@ const Carousel = (props) => {
     const [cur_img, setCurrentImage] = useState(0);
 
     const handleClick = (val) => {
-        console.log(val);
-        setCurrentImage(val === 'increment' ? cur_img += 1 : cur_img -= 1)
+        console.log(val);                    
+        setCurrentImage(val === 'increment' ? cur_img + 1 : cur_img - 1)
     }
 
     if (images && images.length > 0) {
