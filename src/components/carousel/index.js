@@ -10,7 +10,7 @@ export const increment = (_count, _repeatVal) => {
 }
 export const decrement = (_count, _repeatVal) => {
 
-    _count < 0 ? _count = _repeatVal : _count -= 1
+    _count <= 0 ? _count = _repeatVal : _count -= 1
     console.log(_count);
     return _count 
 }
