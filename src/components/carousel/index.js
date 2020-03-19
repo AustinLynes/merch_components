@@ -10,11 +10,14 @@ export const decrement = (_count, _repeatVal) => {
 }
 const Carousel = (props) => {
     const { images, style, ...rest } = props;
-    const [cur_img, setCurrentImage] = useState(0);
+    const [count, setCount] = useState(0);
 
     const handleClick = (val) => {
-        console.log(val);                    
-        setCurrentImage(val === 'increment' ? cur_img + 1 : cur_img - 1)
+        count > image.length ?
+            setCount(0) :
+            count < 0 ?
+                setCount(images.length - 1) :
+                setCount(val === 'increment' ? count + 1 : count - 1)
     }
 
     if (images && images.length > 0) {
@@ -23,7 +26,7 @@ const Carousel = (props) => {
                 <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => handleClick('increment')} />
                 {
                     images.map((image, i) => (
-                        i === cur_img && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
+                        i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
                 <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => handleClick()} />
