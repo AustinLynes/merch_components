@@ -3,15 +3,17 @@ import { CAROSEL as CAROUSEL, IMAGE, PLACEHOLDER_CAROSEL, PLACEHOLDER, ICON } fr
 import { faAngleLeft, faAngleRight, faImages } from '@fortawesome/free-solid-svg-icons';
                         //    3         3
 export const increment = (_count, _repeatVal) => {
-                                          
+
     _count >= _repeatVal - 1 ? _count = 0 : _count += 1
+    console.log(_count);
     return _count 
 }
 export const decrement = (_count, _repeatVal) => {
 
-    _count <= 0 ? _count = _repeatVal : _count -= 1
+    _count < 0 ? _count = _repeatVal : _count -= 1
     return _count 
 }
+
 const Carousel = (props) => {
     const { images, style, ...rest } = props;
     const [count, setCount] = useState(0);
