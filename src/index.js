@@ -1,6 +1,6 @@
 import Item from "./components/item/";// [ X ] isDynamic
 import Container from './components/container'// [ NO ] isDynamic   CONTAINER IS A STATIC CONTAINER PLEASE OVERWITE with styled(Continer)
-import Carosel from './components/carosel'// [ X ] isDynamic
+import Carousel from './components/carousel'// [ X ] isDynamic
 import Navigation from './components/navigation'// [ X ] isDynamic
 import Image from './components/image'// [ NO ] isDynamic IMAGE IS A STATIC ITEM, PLEASE OVERRIDE WITH styled(Image)
 import Button from './components/button'  // [ X ] isDynamic
@@ -25,7 +25,7 @@ const Reset = createGlobalStyle`
 export {
     Item,
     Container,
-    Carosel,
+    Carousel,
     Navigation,
     Image,
     Button,

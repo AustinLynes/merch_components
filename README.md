@@ -11,7 +11,7 @@ LINKED COMS =><br/>
                [x] ITEM <br/> 
                [x] HEADER <br/> 
                [x] BANNER_TEXT <br/> 
-               [ ] IMAGE<br/> 
+               [x] IMAGE<br/> 
                [ ] CAROUSEL <br/> 
                [ ] BUTTON<br/> 
                [ ] LINK_BAR <br/> 
