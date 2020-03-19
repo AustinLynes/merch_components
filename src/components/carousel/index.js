@@ -18,13 +18,13 @@ const Carousel = (props) => {
     if (images && images.length > 0) {
         return (
             <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
-                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => increment(count, images.length)} />
+                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={() => setCount(increment(count, images.length))} />
                 {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
-                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => decrement(count, 0)} />
+                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={() => setCount(decrement(count, 0))} />
             </CAROUSEL>
         )
     } else {
