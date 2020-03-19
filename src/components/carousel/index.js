@@ -17,22 +17,19 @@ const Carousel = (props) => {
         console.log(count)
         // - 1 < 0
         if (count < 0) {
-            console.log(count)
-            setCount(images.length - 1)
+            console.log('IM HERE BOSS!!!!!!!', count)
+            setCount(image.length - 1)
 
             // 3 > 2
-        } else if (count > images.length) {
+        }
+        if (count > images.length) {
             console.log(count)
             setCount(0)
-
-
         }
-        else {
-            console.log(count)
-            setCount(val === 'increment' ? count + 1 : count - 1)
 
-        }
- 
+        setCount(val === 'increment' ? count + 1 : count - 1)
+
+
 
     }
 
