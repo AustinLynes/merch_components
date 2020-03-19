@@ -18,7 +18,7 @@ const Carousel = (props) => {
         // - 1 < 0
         if (count < 0) {
             console.log('IM HERE BOSS!!!!!!!', count)
-            setCount(image.length - 1)
+            setCount(images.length - 1)
 
             // 3 > 2
         }
