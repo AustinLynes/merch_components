@@ -20,8 +20,8 @@ export const CAROSEL = styled.div`
 `
 
 export const PLACEHOLDER_CAROSEL = styled.div`
-        height:768px;
-        width:1200px;
+        height:100%;
+        width:100px;
         display:flex;
         flex-flow:row wrap;
         justify-content:space-between;
@@ -125,4 +125,3 @@ export const PLACEHOLDER = styled.div`
         `
         }}
 `
-
