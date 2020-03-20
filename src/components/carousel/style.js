@@ -64,7 +64,7 @@ export const IMAGE = styled.img`
 `
 
 
-export const ICON = styled(FontAwesomeIcon)`
+export const ICON = styled.div`
         padding:2rem;
         font-size:2rem;
         text-align:center;
