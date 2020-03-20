@@ -7,6 +7,7 @@ export const CAROSEL = styled.div`
         position:relative;
         display:flex;
         flex-flow:row wrap;
+        align-items:center;
         ${props => {
                 if (props.style) return `
                 position:${props.style.position};
@@ -64,10 +65,10 @@ export const IMAGE = styled.img`
 
 
 export const ICON = styled(FontAwesomeIcon)`
-        padding:10px 15px;
+        padding:2rem;
         font-size:2rem;
         text-align:center;
-        color:dodgerblue;
+        background-color:dodgerblue;
         border:1px solid dodgerblue;
         border-radius:50%;
         ${props => {
