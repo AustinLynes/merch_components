@@ -1,6 +1,6 @@
 {
   "name": "merch_components",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "default library for merchOS Labs project",
   "main": "./lib/index.js",
   "author": "Austin Lynes - Merch OS Labs Team -",
