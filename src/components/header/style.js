@@ -49,7 +49,7 @@ ${props => {
     }}
  
 `
-export const TITLE = styled.p`
+export const TITLE = styled.input`
 width:80%;
 color:white;
 background:transparent;

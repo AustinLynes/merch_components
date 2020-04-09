@@ -21,7 +21,7 @@ export const CAROSEL = styled.div`
 
 export const PLACEHOLDER_CAROSEL = styled.div`
         height:100%;
-        width:100px;
+        width:100%;
         display:flex;
         flex-flow:row wrap;
         justify-content:space-between;

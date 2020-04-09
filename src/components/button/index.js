@@ -10,8 +10,8 @@ const Button = (props) => {
     }
 
     return (
-        <BUTTON_WRAPPER>
-            <BUTTON style={style && style.wrapperStyle} name={name} onClick={OnClickCallback}>{name}</BUTTON>
+        <BUTTON_WRAPPER style={style && style.wrapperStyle}>
+            <BUTTON  name={name} onClick={OnClickCallback}>{name}</BUTTON>
         </BUTTON_WRAPPER>
     )
 }

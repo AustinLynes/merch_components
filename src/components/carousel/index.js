@@ -31,24 +31,24 @@ const Carousel = (props) => {
     if (images && images.length > 0) {
         return (
             <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
-                <ICON data-testid={'icon decrement'} style={style && style.leftIconStyle} onClick={() => setCount(decrement(count, images.length - 1))} />
+                <ICON data-testid={'icon decrement'} draggable={false} style={style && style.leftIconStyle} onClick={() => setCount(decrement(count, images.length - 1))} />
                 {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
-                <ICON data-testid={'icon increment'} style={style && style.rightIconStyle} onClick={() => setCount(increment(count, images.length - 1))} />
+                <ICON data-testid={'icon increment'} draggable={false}  style={style && style.rightIconStyle} onClick={() => setCount(increment(count, images.length - 1))} />
             </CAROUSEL>
         )
     } else {
         return (
             <PLACEHOLDER_CAROSEL data-testid='wrapper' style={style && style.placeholder_wrapperStyle}>
-                <ICON data-testid={'icon'} style={style && style.leftIconStyle} icon={faAngleLeft} onClick={decrement} />
+                <ICON data-testid={'icon'} style={style && style.leftIconStyle} draggable={false} onClick={decrement} />
                 <PLACEHOLDER data-testid='placeholder'>
-                    <ICON data-testid={'icon plus'} style={style && style.plusIconStyle} isplus="true" icon={faImages} />
+                    <ICON style={style && style.plusIconStyle} isplus="true" icon={faImages} />
                     <p style={{ width: '100%', textAlign: 'center' }}>Tap to add photos</p>
                 </PLACEHOLDER>
-                <ICON data-testid={'icon'} style={style && style.rightIconStyle} icon={faAngleRight} onClick={increment} />
+                <ICON data-testid={'icon'} style={style && style.rightIconStyle} draggable={false} onClick={increment} />
             </PLACEHOLDER_CAROSEL>
         )
     }
