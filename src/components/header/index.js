@@ -1,5 +1,5 @@
 // Logo
-import React from 'react'
+import React, { useState } from 'react'
 import { HEADER, SEARCH_BAR, SEARCH_BUTTON, QUERY, LOGO, TITLE, CART_COUNT, CART, ICON, TITLE_WRAPPER } from './style'
 import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,7 +8,7 @@ const Header = (props) => {
     const { style, title, query, cartCount, ...rest } = props;
     const [logo, setLogo] = useState('');
     const setLogoSrc = (e) => {
-        alert(e.target.file)
+        setLogo(e.target.files[0])
     }
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
