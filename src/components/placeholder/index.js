@@ -10,7 +10,7 @@ export const Placeholder = (props) => {
     }
     return (
         <PLACEHOLDER data-testid='placeholder' onClick={OnClickCallback} style={style && style.placeholderStyle}>
-            <PLUS_ICON data-testid='plus-icon' style={style && style.plusIconSyle} icon={faPlus} />
+            <PLUS_ICON data-testid='plus-icon' style={style && style.plusIconSyle}  />
             <TEXT data-testid='text' style={style && style.textStyle}>{`Add an ${type}`}</TEXT>
         </PLACEHOLDER>
     )
