@@ -5,15 +5,18 @@ import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
-    const { style, title, query, logoSrc, cartCount, ...rest } = props;
-
+    const { style, title, query, cartCount, ...rest } = props;
+    const [logo, setLogo] = useState('');
+    const setLogoSrc = (e) => {
+        alert(e.target.file)
+    }
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
             {logoSrc
                 ?
                 <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
                 :
-                <input type='file' />
+                <input type='file' onChange={setLogoSrc} />
             }
 
 
