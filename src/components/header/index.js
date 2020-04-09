@@ -11,7 +11,7 @@ const Header = (props) => {
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
             <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
             <TITLE_WRAPPER data-testid='title-wrapper'>
-                <TITLE data-testid='title-text' style={style && style.titleStyle}>{title && title}</TITLE>
+                <TITLE data-testid='title-text' style={style && style.titleStyle} value={title && title}></TITLE>
             </TITLE_WRAPPER>
             <SEARCH_BAR draggable={false} data-testid='searchbar-wrapper' style={style && style.searchBarStyle}>
                 <QUERY data-testid='query box' style={style && style.queryStyle} value={query} />
