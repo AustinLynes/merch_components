@@ -9,7 +9,7 @@ const Header = (props) => {
     const [logo, setLogo] = useState(null);
     const setLogoSrc = (e) => {
         console.log(e.target.files[0])
-        setLogo(e.target.files[0])
+        setLogo(e.target.files[0].name)
         console.log(logo)
     }
     return (
