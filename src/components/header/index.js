@@ -9,6 +9,7 @@ const Header = (props) => {
     const [logo, setLogo] = useState(null);
     const setLogoSrc = (e) => {
         setLogo(e.target.files[0])
+        console.log(logo)
     }
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
@@ -16,7 +17,7 @@ const Header = (props) => {
                 ?
                 <LOGO data-testid='logo' style={style && style.logoStyle} src={logo} />
                 :
-                <input type='file' onChange={setLogoSrc} />
+                <input type='file' onChange={setLogoSrc} value={logo} />
             }
 
 
