@@ -14,7 +14,7 @@ const Header = (props) => {
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
             {logoSrc
                 ?
-                <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
+                <LOGO data-testid='logo' style={style && style.logoStyle} src={logo} />
                 :
                 <input type='file' onChange={setLogoSrc} />
             }
