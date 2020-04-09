@@ -9,14 +9,14 @@ const Header = (props) => {
     const [logo, setLogo] = useState(null);
     const setLogoSrc = (e) => {
         console.log(e.target.files[0])
-        setLogo(e.target.files[0].name)
+        window.setLocalStorage('logo', e.target.files[0].name)
         console.log(logo)
     }
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
             {logo != null
                 ?
-                <LOGO data-testid='logo' style={style && style.logoStyle} src={logo} />
+                <LOGO data-testid='logo' style={style && style.logoStyle} src={window.localStorage.getItem('logo')} />
                 :
                 <input type='file' onChange={setLogoSrc} value={logo} />
             }
