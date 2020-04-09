@@ -14,6 +14,7 @@ export const BUTTON_WRAPPER = styled.div`
     font-size:1.8rem;
     background:#000;
     color:white;
+    margin:0 auto;
     @media (max-width:500px) {
      width:100%;
     margin-top:10px;

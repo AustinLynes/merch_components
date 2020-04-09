@@ -13,7 +13,7 @@ const Item = (props) => {
     if (!item) {
         return (
             <PLACEHOLDER data-testid='placeholder' item_is_null={true} >
-                <PLUS_ICON data-testid='plus-icon' style={style && style.plusIconSyle} icon={faPlus} />
+                <PLUS_ICON data-testid='plus-icon' style={style && style.plusIconSyle} />
                 <p data-testid='text' style={{ width: '100%', textAlign: 'center' }}>Add an Item</p>
             </PLACEHOLDER>
         )
@@ -25,6 +25,7 @@ const Item = (props) => {
                 {item && item.imageSrc ?
                     (
                         <IMAGE
+                            draggable={false}
                             data-testid='item-image'
                             id={item && item.id + '_img'}
                             style={style && style.imageStyle}

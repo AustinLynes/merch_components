@@ -9,7 +9,14 @@ const Header = (props) => {
 
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
-            <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
+            {logoSrc
+                ?
+                <LOGO data-testid='logo' style={style && style.logoStyle} src={logoSrc} />
+                :
+                <input type='file' />
+            }
+
+
             <TITLE_WRAPPER data-testid='title-wrapper'>
                 <TITLE data-testid='title-text' style={style && style.titleStyle} value={title && title}></TITLE>
             </TITLE_WRAPPER>
