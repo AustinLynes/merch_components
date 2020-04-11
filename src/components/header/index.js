@@ -5,17 +5,17 @@ import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Header = (props) => {
 
-    const { style, title, logo, query, cartCount, ...rest } = props;
+    const { style, title, logo, query, cartCount, handleTitleChange, handleSearchChange,  ...rest } = props;
     return (
         <HEADER data-testid='header-wrapper' style={style && style.wrapperStyle}>
             {logo && < LOGO data-testid='logo' style={style && style.logoStyle} src={logo} />}
 
 
             <TITLE_WRAPPER data-testid='title-wrapper'>
-                <TITLE data-testid='title-text' draggable={false} style={style && style.titleStyle} value={title && title}></TITLE>
+                <TITLE data-testid='title-text' draggable={false} style={style && style.titleStyle} onChange={handleTitleChange} value={title}></TITLE>
             </TITLE_WRAPPER>
             <SEARCH_BAR data-testid='searchbar-wrapper' style={style && style.searchBarStyle}>
-                <QUERY draggable={false} data-testid='query box' style={style && style.queryStyle} value={query} />
+                <QUERY draggable={false} data-testid='query box' style={style && style.queryStyle} onChange={handleSearchChange} value={query} />
                 <SEARCH_BUTTON data-testid='search button' style={style && style.searchIconStyle} icon={faSearch} />
             </SEARCH_BAR>
             <CART data-testid='cart-icon-wrapper' style={style && style.cartStyle}>

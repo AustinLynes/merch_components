@@ -72,38 +72,16 @@ describe('Carousel no images', () => {
     const placeholder = getByTestId(/placeholder/i);
     expect(placeholder).not.toBe(null);
   })
-  it('displays three icons', () => {
-    const { getAllByTestId } = render(<Carousel images={[]} />);
-    const icons = getAllByTestId(/icon/i);
-    expect(icons).toHaveLength(3);
-  })
-  it('displays a unique plus icon', () => {
-    const { getByTestId } = render(<Carousel images={[]} />);
-    const plus_icon = getByTestId(/icon plus/i)
-    expect(plus_icon).not.toBe(null);
-  })
+
+  
 })
 describe('Functions()', () => {
   describe('increment function()', () => {
+
     it('can increment properly', () => {
-      // create a set of data that represents images
-      let mock_images = ['a.png', 'b.png', 'c.png']; // - 0, 1, 2
-      // create a counter that starts anywhere technically... i picked zero { 0 } because im 
-      // incrementing a counter so best place to start is the begining.. 
-      let mock_count = 0;
-      // the mock_repeatVal is the value on which the increment value should reset back to zero { 0 }
-      let mock_repeatVal = mock_images.length;
-      // after the first call of the mock function we expect the value to be { 1 }
-      expect(mock_count = mockIncrement(mock_count, mock_repeatVal)).toBe(1) // => 1
-      // after a second call of the mock function we expect the value to be { 2 }
-      expect(mock_count = mockIncrement(mock_count, mock_repeatVal)).toBe(2) // =>  2
-      // after a last call of the mock function we expect the value to NOT be { 3 } which
-      // is incrementally after 2..
-      expect(mock_count = mockIncrement(mock_count, mock_repeatVal)).not.toBe(3) // => 0
-      // we expect the count to now be zero because with the built in functionality of 
-      // the increment function we are mocking.. the given _count will check against _repeatVal
-      // and reset to { 0 } if it matches that value.
-      expect(mock_count).toBe(0); // => 0
+        const increment = jest.fn();
+        increment.mockReturnValue(increment(0,3)).mockReturnValue(increment(2,3)).mockReturnValue(increment(3,3))
+        console.log(increment)
     })
   })
   describe('decrement function()', () => {

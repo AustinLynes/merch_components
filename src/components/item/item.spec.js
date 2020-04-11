@@ -84,11 +84,7 @@ describe('Item', () => {
             const placeholder = getByTestId(/placeholder/i);
             expect(placeholder).not.toBe(null)
         })
-        it('plus icon', () => {
-            const { getByTestId } = render(<Item item={mock_item} />)
-            const plusIcon = getByTestId(/plus-icon/i);
-            expect(plusIcon).not.toBe(null)
-        })
+        
         it('text', () => {
             const { getByTestId } = render(<Item item={mock_item} />)
             const text = getByTestId(/text/i);
@@ -119,11 +115,7 @@ describe('Item', () => {
             expect(parseFloat(itemCost.innerHTML)).toBe(mock_item.itemCost)
         })
     })
-    it('close button', () => {
-        const { getByTestId } = render(<Item item={mock_item} />)
-        const closeButton = getByTestId(/close-button/i);
-        expect(closeButton).not.toBe(null)
-    })
+   
 })
 describe('Item with Image', () => {
     const mock_item = {
@@ -186,11 +178,7 @@ describe('Item with Image', () => {
             expect(parseFloat(itemCost.innerHTML)).toBe(mock_item.itemCost)
         })
     })
-    it('close button', () => {
-        const { getByTestId } = render(<Item item={mock_item} />)
-        const closeButton = getByTestId(/close-button/i);
-        expect(closeButton).not.toBe(null)
-    })
+   
 })
 describe('Sale Item', () => {
     const mock_item = {
@@ -271,11 +259,7 @@ describe('Sale Item', () => {
         const saleFlag = getByTestId(/item-sale-flag/i);
         expect(saleFlag).not.toBe(null)
     })
-    it('close button', () => {
-        const { getByTestId } = render(<Item item={mock_item} />)
-        const closeButton = getByTestId(/close-button/i);
-        expect(closeButton).not.toBe(null)
-    })
+   
 })
 describe('Item no Data => Placeholder', () => {
     it('placeholder', () => {
@@ -283,11 +267,7 @@ describe('Item no Data => Placeholder', () => {
         const placeholder = getByTestId(/placeholder/i);
         expect(placeholder).not.toBe(null)
     })
-    it('plus icon', () => {
-        const { getByTestId } = render(<Item  />)
-        const plusIcon = getByTestId(/plus-icon/i);
-        expect(plusIcon).not.toBe(null)
-    })
+    
     it('text', () => {
         const { getByTestId } = render(<Item  />)
         const text = getByTestId(/text/i);

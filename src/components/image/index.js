@@ -13,7 +13,7 @@ const Image = (props) => {
     } else {
         return (
             <IMAGE_PLACEHOLDER data-testid='placeholder' size={size}>
-                <ICON data-testid='icon' icon={faImage} />
+                <ICON data-testid='icon' />
                 <p data-testid='text' style={{ width: '100%', textAlign: 'center' }}>Tap to add a photo</p>
             </IMAGE_PLACEHOLDER>
         )

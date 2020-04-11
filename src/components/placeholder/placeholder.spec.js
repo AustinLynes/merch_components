@@ -16,11 +16,6 @@ describe('Placeholder', () => {
         const wrapper = getByTestId(/placeholder/i)
         expect(wrapper).not.toBe(null)
     })
-    it('icon', () => {
-        const { getByTestId } = render(<Placeholder />)
-        const plusIcon = getByTestId(/plus-icon/i)
-        expect(plusIcon).not.toBe(null)
-    })
     it('text', () => {
         const { getByTestId } = render(<Placeholder />)
         const text = getByTestId(/text/i)

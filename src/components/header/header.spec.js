@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react'
-import Header from './index'
+import React from "react";
+import { render, fireEvent } from "@testing-library/react"
+import Header from "./index"
 
 // Sorry only basic render tests for now.. time crunch
 /*
@@ -20,54 +20,56 @@ import Header from './index'
 *        [ X ] cart count text
 */ 
 
-describe('Header', () => {
-    describe('all components render properly', () => {
-        it('wrapper', () =>{
+describe("Header", () => {
+    describe("all components render properly", () => {
+        it("wrapper", () =>{
             const { getByTestId } = render(<Header />)
             const wrapper = getByTestId(/header-wrapper/i)
             expect(wrapper).not.toBe(null) 
         })
-        it('logo', ()=>{
-            const { getByTestId } = render(<Header />)
+        it("logo", ()=>{
+            const { getByTestId } = render(<Header logo='abc.png' />)
             const logo = getByTestId(/logo/i)
             expect(logo).not.toBe(null)
+            expect(logo).not.toBe(undefined)
         })
-        it('title wrapper', ()=>{
+      
+        it("title wrapper", ()=>{
             const { getByTestId } = render(<Header />)
             const wrapper = getByTestId(/title-wrapper/i)
             expect(wrapper).not.toBe(null)
         })
-        it('title text', ()=>{
-            const { getByTestId } = render(<Header />)
+        it("title text", ()=>{
+            const { getByTestId } = render(<Header title='StoreWorld' handleTitleChange={()=>{}} />)
             const text = getByTestId(/title-text/i)
             expect(text).not.toBe(null)
         })
-        it('search bar wrapper', ()=>{
+        it("search bar wrapper", ()=>{
             const { getByTestId } = render(<Header />)
             const wrapper = getByTestId(/searchbar-wrapper/i)
             expect(wrapper).not.toBe(null)
         })
-        it('query box', ()=>{
+        it("query box", ()=>{
             const { getByTestId } = render(<Header />)
             const queryBox = getByTestId(/query box/i)
             expect(queryBox).not.toBe(null)
         })
-        it('search button', ()=>{
+        it("search button", ()=>{
             const { getByTestId } = render(<Header />)
             const button = getByTestId(/search button/i)
             expect(button).not.toBe(null)
         })
-        it('cart icon wrapper', ()=>{
+        it("cart icon wrapper", ()=>{
             const { getByTestId } = render(<Header />)
             const wrapper = getByTestId(/cart-icon-wrapper/i)
             expect(wrapper).not.toBe(null)
         })
-        it('cart icon', ()=>{
+        it("cart icon", ()=>{
             const { getByTestId } = render(<Header />)
             const icon = getByTestId(/cart icon/i)
             expect(icon).not.toBe(null)
         })
-        it('cart count text', ()=>{
+        it("cart count text", ()=>{
             const { getByTestId } = render(<Header />)
             const text = getByTestId(/cart count text/i)
             expect(text).not.toBe(null)

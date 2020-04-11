@@ -1,7 +1,8 @@
 import React from 'react'
 import { LINKBAR, LINK, LINKCARD, ICON } from './style.js'
-import { faFacebook, faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook,  faTwitter,  faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { Placeholder } from '../placeholder/index.js';
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 const LinkBar = (props) => {
     const { links, style, ...rest } = props;
@@ -14,10 +15,10 @@ const LinkBar = (props) => {
                         <LINKCARD data-testid='link-cards' key={i}>
                             <ICON data-testid='link-card-icon' style={style && style.iconStyle} icon={
                                 link.name === 'facebook' ? faFacebook :
-                                    link.name === 'github' ? faGitHub :
+                                    link.name === 'github' ? faGithub :
                                         link.name === 'twitter' ? faTwitter :
                                             link.name === 'instagram' ? faInstagram :
-                                                link.name === 'linkedin' ? faLinkedinIn : null
+                                                link.name === 'linkedin' ? faLinkedinIn : faPlusCircle
                             } />
                             <LINK >{link.name}</LINK>
                         </LINKCARD>

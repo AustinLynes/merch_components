@@ -15,11 +15,7 @@ describe('Image no src', () => {
         const placeholder = getByTestId(/placeholder/i)
         expect(placeholder).not.toBe(null)
     })
-    it('renders a icon', () => {
-        const { getByTestId } = render(<Image />)
-        const icon = getByTestId(/icon/i)
-        expect(icon).not.toBe(null)
-    })
+
     it('renders a text element', () => {
         const { getByTestId } = render(<Image />)
         const text = getByTestId(/text/i)

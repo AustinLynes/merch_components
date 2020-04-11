@@ -15,7 +15,7 @@ describe('it renders without crashing', () => {
         }
     }
     it('button', () => {
-        const button = render(<Button name={__button.name} style={__button.style}/>);
+        const button = render(<Button name={__button.name} style={__button.style} />);
         expect(button.getByText('About')).not.toBe(null)
     })
 })
@@ -37,12 +37,6 @@ describe('it can be created with dynamic content', () => {
         const button = render(<Button name={__button.name} />)
         expect(button.getByText('About').name).toBe(__button.name)
     })
-
-    it('returns the correct background color', ()=>{
-        const button = render(<Button name={__button.name} style={__button.style}/>)
-        expect(button.getByText('About').style._values['background']).toEqual(__button.style.wrapperStyle.background)
-    })
-
 
 
 })
