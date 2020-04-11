@@ -3,19 +3,6 @@ Welcome to merch components a component library for building web-stores<br/>
 ## simplistic use for a simplistic app.. <br/>
 **Components** <br/>
 
-BREAKPOINTS LG 1440   md 996   sm 768   xs  360   xxs 120 
-COL         LG   12   md   9   sm   6   xs    3   xxs   1 
-                 1        1        2         4        12
-
-LINKED COMS =><br/> 
-               [x] ITEM <br/> 
-               [x] HEADER <br/> 
-               [x] BANNER_TEXT <br/> 
-               [x] IMAGE<br/> 
-               [ ] CAROUSEL <br/> 
-               [ ] BUTTON<br/> 
-               [ ] LINK_BAR <br/> 
-               [ ] FOOTER<br/> 
 ***
 [Basic Usage](#usage)<br/>
 [Container](#container)<br/>
