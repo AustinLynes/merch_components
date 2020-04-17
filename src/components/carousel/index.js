@@ -25,19 +25,30 @@ export const decrement = (_count, _repeatVal) => {
 }
 
 const Carousel = (props) => {
-    const { images, style, ...rest } = props;
+    const { images, style, cb, ...rest } = props;
     const [count, setCount] = useState(0);
+
+    const addFunctions = (e) => {
+        const { target } = e;
+        cb && cb();
+        if (target.name === 'left') {
+            setCount(decrement(count, images.length - 1))
+        }
+        else {
+            setCount(increment(count, images.length - 1))
+        }
+    }
 
     if (images && images.length > 0) {
         return (
             <CAROUSEL data-testid='wrapper' style={style && style.wrapperStyle}>
-                <ICON data-testid={'icon decrement'} draggable={false} style={style && style.leftIconStyle} onClick={() => setCount(decrement(count, images.length - 1))} />
+                <ICON data-testid={'icon decrement'} draggable={false} name='left' style={style && style.leftIconStyle} onClick={addFunctions} />
                 {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
                 }
-                <ICON data-testid={'icon increment'} draggable={false}  style={style && style.rightIconStyle} onClick={() => setCount(increment(count, images.length - 1))} />
+                <ICON data-testid={'icon increment'} draggable={false} style={style && style.rightIconStyle} onClick={addFunctions} />
             </CAROUSEL>
         )
     } else {

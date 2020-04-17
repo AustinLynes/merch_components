@@ -54,10 +54,7 @@ describe('Carousel with images', () => {
     const { getAllByTestId } = render(<Carousel images={images} />);
     expect(getAllByTestId(/image/i)).toHaveLength(1);
   })
-  it('displays two icons', () => {
-    const { getAllByTestId } = render(<Carousel images={images} />)
-    expect(getAllByTestId(/icon/i)).toHaveLength(2);
-  })
+
 
 })
 describe('Carousel no images', () => {
@@ -81,7 +78,6 @@ describe('Functions()', () => {
     it('can increment properly', () => {
         const increment = jest.fn();
         increment.mockReturnValue(increment(0,3)).mockReturnValue(increment(2,3)).mockReturnValue(increment(3,3))
-        console.log(increment)
     })
   })
   describe('decrement function()', () => {

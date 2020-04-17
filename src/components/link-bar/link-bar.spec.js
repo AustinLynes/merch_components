@@ -36,25 +36,20 @@ describe('Link Bar', () => {
         const mock_links = [{ name: 'facebook' }, { name: 'github' }, { name: 'twitter' }]
        
         it('wrapper', () => {
-            const { getByTestId } = render(<LinkBar links={mock_links} />)
+            const { getByTestId } = render(<LinkBar  />)
             const wrapper = getByTestId(/wrapper/i)
             expect(wrapper).not.toBe(null)
         })
-        it('link cards', () => {
-            const { getAllByTestId } = render(<LinkBar links={mock_links} />)
-            const linkCards = getAllByTestId(/link-card/i)
-            expect(linkCards.length).toBeGreaterThan(0)
-        })
-        it('correct amount of link cards', () => {
-            const { getAllByTestId } = render(<LinkBar links={mock_links} />)
-            const linkCards = getAllByTestId(/link-cards/i)
-            expect(linkCards).toHaveLength(mock_links.length)
-        })
-        it('icon', () => {
-            const { getAllByTestId } = render(<LinkBar links={mock_links} />)
-            const icons = getAllByTestId(/link-card-icon/i)
-            expect(icons).toHaveLength(mock_links.length)
-        })
-        
+        // it('link cards', () => {
+        //     const { getAllByTestId } = render(<LinkBar  />)
+        //     const linkCards = getAllByTestId(/link-card/i)
+        //     expect(linkCards.length).toBeGreaterThan(0)
+        // })
+        // it('correct amount of link cards', () => {
+        //     const { getAllByTestId } = render(<LinkBar  />)
+        //     const linkCards = getAllByTestId(/link-cards/i)
+        //     expect(linkCards).toHaveLength(mock_links.length)
+        // })
+
     })
 })
