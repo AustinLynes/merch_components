@@ -29,9 +29,8 @@ const Carousel = (props) => {
     const [count, setCount] = useState(0);
 
     const addFunctions = (e) => {
-        const { target } = e;
         cb && cb();
-        if (target.name === 'left') {
+        if (e.target.name === 'left') {
             setCount(decrement(count, images.length - 1))
         }
         else {
@@ -47,7 +46,7 @@ const Carousel = (props) => {
                     images.map((image, i) => (
                         i === count && <IMAGE draggable={false} id={`${i}_im`} data-testid='image' key={`${i}_im`} style={style && style.imageStyle} src={image} />)
                     )
-                }
+                             }
                 <ICON data-testid={'icon increment'} draggable={false} style={style && style.rightIconStyle} onClick={addFunctions} />
             </CAROUSEL>
         )
