@@ -29,7 +29,7 @@ const Carousel = (props) => {
     const [count, setCount] = useState(0);
 
     const addFunctions = (e) => {
-        cb && cb();
+        cb && cb(e);
         if (e.target.id === 'left') {
             setCount(decrement(count, images.length - 1))
         }
